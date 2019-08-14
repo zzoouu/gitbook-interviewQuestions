@@ -448,6 +448,9 @@
 <pre><code>&#x65B0;&#x5EFA;&#x5206;&#x652F;&#x5E76;&#x81EA;&#x52A8;&#x5207;&#x6362;
 </code></pre><p>git checkout -b &#x672C;&#x5730;&#x5206;&#x652F;&#x540D;
 ```</p>
+<p>&#x60C5;&#x666F;&#xFF1A;branchA&#x4E2D;&#x6709;&#x6587;&#x4EF6;B&#xFF0C;branchB&#x4E2D;&#x6709;&#x6587;&#x4EF6;B&#xFF0C;&#x60F3;&#x7528;branchA&#x4E2D;&#x6587;&#x4EF6;&#x66FF;&#x6362;branchB&#x4E2D;&#x7684;&#x6587;&#x4EF6;B&#xFF0C;&#x5207;&#x6362;&#x5230;branchB&#xFF0C;&#x6267;&#x884C;&#x547D;&#x4EE4;
+git checkout branchA -- filename
+&#x5373; git checkout branchA -- B</p>
 
                                 
                                 </section>
@@ -491,7 +494,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"常用操作","level":"1.7.1","depth":2,"next":{"title":"常见报错","level":"1.7.2","depth":2,"path":"git/2.常见报错.md","ref":"git/2.常见报错.md","articles":[]},"previous":{"title":"git","level":"1.7","depth":1,"path":"git/README.md","ref":"git/README.md","articles":[{"title":"常用操作","level":"1.7.1","depth":2,"path":"git/1.常用操作.md","ref":"git/1.常用操作.md","articles":[]},{"title":"常见报错","level":"1.7.2","depth":2,"path":"git/2.常见报错.md","ref":"git/2.常见报错.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zouzou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zouzou","language":"zh-hans","gitbook":"*","description":"questions and answers"},"file":{"path":"git/1.常用操作.md","mtime":"2019-08-14T03:00:23.127Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-14T03:03:58.695Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"常用操作","level":"1.7.1","depth":2,"next":{"title":"常见报错","level":"1.7.2","depth":2,"path":"git/2.常见报错.md","ref":"git/2.常见报错.md","articles":[]},"previous":{"title":"git","level":"1.7","depth":1,"path":"git/README.md","ref":"git/README.md","articles":[{"title":"常用操作","level":"1.7.1","depth":2,"path":"git/1.常用操作.md","ref":"git/1.常用操作.md","articles":[]},{"title":"常见报错","level":"1.7.2","depth":2,"path":"git/2.常见报错.md","ref":"git/2.常见报错.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zouzou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zouzou","language":"zh-hans","gitbook":"*","description":"questions and answers"},"file":{"path":"git/1.常用操作.md","mtime":"2019-08-14T04:09:44.357Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-14T04:10:00.062Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -499,10 +502,6 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
