@@ -37,10 +37,22 @@ git add .
 git commit -m "" --no-verify
 git push origin master
 
+git branch
+master ——gitbook build后生成的静态网站文件
+edit-branch ——原始代码
+backup ——备份原始代码
+
+git checkout edit-branch
+gitbook build ./ ./docs  指定目录生成指定名称文件夹(gitbook build默认在根目录下生成_book文件夹)
+git checkout master
+git checkout edit-branch -- docs(_book)
+mv docs/* ./ 将docs文件夹中的内容移动到根目录
+rm -rf docs  深处docs文件夹
+
+
+> gitbook登录超时，不再使用此方法，github上直接生成git pages
 登录gitbook(github)
 新建organization -> space
 连接github和gitbook(已创建的space)
 
-=======
-# gitbook-interviewQuestions
-gitbook托管面经总结
+
