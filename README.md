@@ -18,3 +18,26 @@
 ls -al
 shift cmd .
 
+### gitbook初次使用
+#### 环境
+node
+
+#### 安装GitBook
+npm install gitbook-cli -g
+
+gitbook init
+
+gitbook serve
+
+#### 发布gitbook项目
+git init
+git config user.name/user.email
+git remote add origin url
+git add .
+git commit -m "" --no-verify
+git push origin master
+
+登录gitbook(github)
+新建organization -> space
+连接github和gitbook(已创建的space)
+
