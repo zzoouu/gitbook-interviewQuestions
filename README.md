@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 简介
 本人前端菜鸟工程师一枚~
 
@@ -41,3 +42,7 @@ git push origin master
 新建organization -> space
 连接github和gitbook(已创建的space)
 
+=======
+# gitbook-interviewQuestions
+gitbook托管面经总结
+>>>>>>> a0613c1fd049e3f83b3c629272323e7a9e86c07b
