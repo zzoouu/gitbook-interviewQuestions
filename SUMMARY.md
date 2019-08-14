@@ -25,6 +25,7 @@
     * [2.常见报错](git/2.常见报错.md)
 * [mac](mac.md)
 * [VSCode](VSCode.md)
+* [Chrome](Chrome.md)
 
 
 
