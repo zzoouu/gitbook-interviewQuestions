@@ -45,6 +45,7 @@ backup ——备份原始代码
 git checkout edit-branch
 gitbook build ./ ./docs  指定目录生成指定名称文件夹(gitbook build默认在根目录下生成_book文件夹)
 git checkout master
+rm -rf * 删除所有内容
 git checkout edit-branch -- docs(_book)
 mv docs/* ./ 将docs文件夹中的内容移动到根目录
 rm -rf docs  深处docs文件夹
