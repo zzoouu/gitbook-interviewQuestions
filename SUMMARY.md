@@ -20,6 +20,11 @@
 * [笔试题](笔试题/README.md)
 * [HTML](README-HTML.md)
 * [CSS](README-CSS.md)
+* [git](git/README.md)
+    * [常用操作](git/1.常用操作.md)
+    * [常见报错](git/2.常见报错.md)
+* [mac](mac.md)
+
 
 
 
