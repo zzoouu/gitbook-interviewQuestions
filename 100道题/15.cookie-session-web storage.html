@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>7.判断数组 · zouzou</title>
+        <title>15.cookie-session-web storage · zouzou</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -45,10 +45,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="8.重绘和回流.html" />
+    <link rel="next" href="16.Ecent Loop.html" />
     
     
-    <link rel="prev" href="6.npm模块机制.html" />
+    <link rel="prev" href="14.跨域.html" />
     
 
     </head>
@@ -182,7 +182,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.7" data-path="7.判断数组.html">
+        <li class="chapter " data-level="1.2.7" data-path="7.判断数组.html">
             
                 <a href="7.判断数组.html">
             
@@ -286,7 +286,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.15" data-path="15.cookie-session-web storage.html">
+        <li class="chapter active" data-level="1.2.15" data-path="15.cookie-session-web storage.html">
             
                 <a href="15.cookie-session-web storage.html">
             
@@ -768,7 +768,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >7.判断数组</a>
+        <a href=".." >15.cookie-session-web storage</a>
     </h1>
 </div>
 
@@ -783,31 +783,76 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="instanceof">instanceof</h3>
-<p>instanceof&#x662F;&#x901A;&#x8FC7;&#x5224;&#x65AD;&#x5BF9;&#x8C61;&#x7684;&#x539F;&#x578B;&#x94FE;&#x4E0A;&#x662F;&#x5426;&#x5B58;&#x5728;&#x8BE5;&#x7C7B;&#x578B;&#x7684;prototype
-&#x4F7F;&#x7528;instanceof&#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x4E3A;&#x6570;&#x7EC4;&#xFF0C;instanceof&#x4F1A;&#x53BB;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x539F;&#x578B;&#x94FE;&#x4E0A;&#x53BB;&#x5BFB;&#x627E;&#x662F;&#x5426;&#x5B58;&#x5728;Array&#x7684;&#x539F;&#x578B;&#xFF0C;&#x82E5;&#x6709;&#x8FD4;&#x56DE;true&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;false</p>
+                                <h3 id="session&#x4E0E;cookie">session&#x4E0E;Cookie</h3>
+<h4 id="&#x533A;&#x522B;">&#x533A;&#x522B;</h4>
+<ol>
+<li>session&#x5B58;&#x50A8;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x3001;cookie&#x5B58;&#x50A8;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;</li>
+<li>session&#x5B58;&#x50A8;&#x7684;&#x662F;&#x5BF9;&#x8C61;&#xFF0C;cookie&#x5B58;&#x50A8;&#x7684;&#x662F;&#x5B57;&#x7B26;&#x4E32;</li>
+<li>session&#x4FDD;&#x5B58;&#x5728;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x4E0D;&#x77E5;&#x9053;&#x5176;&#x4E2D;&#x4FE1;&#x606F;&#xFF0C;cookie&#x4FDD;&#x5B58;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x80FD;&#x4E86;&#x89E3;&#x5176;&#x4E2D;&#x4FE1;&#x606F;</li>
+<li>session&#x66F4;&#x5B89;&#x5168;&#xFF0C;cookie&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x522B;&#x4EBA;&#x53EF;&#x4EE5;&#x5206;&#x6790;&#x672C;&#x5730;&#x5B58;&#x653E;&#x7684;cookie</li>
+<li>session&#x4F1A;&#x5728;&#x4E00;&#x5B9A;&#x65F6;&#x95F4;&#x5185;&#x4FDD;&#x5B58;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF0C;&#x82E5;&#x8BBF;&#x95EE;&#x589E;&#x591A;&#xFF0C;&#x4F1A;&#x5360;&#x7528;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6027;&#x80FD;&#xFF0C;&#x8003;&#x8651;&#x5230;&#x670D;&#x52A1;&#x5668;&#x6027;&#x80FD;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;cookie</li>
+<li>session&#x4E0D;&#x80FD;&#x533A;&#x5206;&#x8DEF;&#x5F84;&#xFF0C;cookie&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x8DEF;&#x5F84;&#xFF0C;&#x4E00;&#x4E2A;&#x7F51;&#x7AD9;&#x4E0B;&#x7684;&#x4E0D;&#x540C;&#x8DEF;&#x5F84;&#x4E0B;&#x7684;cookie&#x5C31;&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;&#x5230;&#xFF0C;&#x800C;session&#x5728;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x5730;&#x65B9;&#x90FD;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5230;</li>
+</ol>
+<h4 id="&#x8054;&#x7CFB;">&#x8054;&#x7CFB;</h4>
 <blockquote>
-<p>[] instanceof Array -&gt; true
-instanceof&#x53EA;&#x80FD;&#x5224;&#x65AD;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#xFF0C;&#x4E0D;&#x80FD;&#x5224;&#x65AD;&#x539F;&#x59CB;&#x7C7B;&#x578B;&#xFF0C;&#x4E14;&#x6240;&#x6709;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;instanceof Object&#x90FD;&#x4E3A;true</p>
+<p>session&#x4FDD;&#x5B58;&#x5728;&#x670D;&#x52A1;&#x7AEF;&#xFF0C;&#x8FFD;&#x8E2A;&#x7528;&#x6237;&#x72B6;&#x6001;&#xFF0C;&#x53EF;&#x4EE5;&#x4FDD;&#x5B58;&#x5728;&#x96C6;&#x7FA4;&#x3001;&#x6570;&#x636E;&#x5E93;&#x3001;&#x6587;&#x4EF6;&#x4E2D;  </p>
+<p>cookie&#x4FDD;&#x5B58;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x8BB0;&#x5F55;&#x7528;&#x6237;&#x7684;&#x4E00;&#x4E9B;&#x4FE1;&#x606F;&#xFF0C;&#x4E5F;&#x662F;&#x5B9E;&#x73B0;session&#x7684;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;</p>
+<ol>
+<li>&#x7531;&#x4E8E;http&#x662F;&#x65E0;&#x72B6;&#x6001;&#x7684;&#x534F;&#x8BAE;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x670D;&#x52A1;&#x7AEF;&#x9700;&#x8981;&#x8BB0;&#x5F55;&#x7528;&#x6237;&#x7684;&#x72B6;&#x6001;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x8BC6;&#x522B;&#x5177;&#x4F53;&#x7684;&#x7528;&#x6237;&#xFF0C;&#x5C31;&#x662F;session&#xFF0C;session&#x4FDD;&#x5B58;&#x5728;&#x670D;&#x52A1;&#x7AEF;&#xFF0C;&#x6709;&#x552F;&#x4E00;&#x7684;&#x6807;&#x8BC6;&#xFF0C;&#x6BD4;&#x5982;&#x8D2D;&#x7269;&#x8F66;&#xFF1A;&#x9700;&#x8981;&#x77E5;&#x9053;&#x662F;&#x54EA;&#x4E2A;&#x7528;&#x6237;&#xFF0C;&#x624D;&#x77E5;&#x9053;&#x4E70;&#x4E86;&#x4EC0;&#x4E48;&#x4E1C;&#x897F;</li>
+<li>&#x670D;&#x52A1;&#x7AEF;&#x5982;&#x4F55;&#x8BC6;&#x522B;&#x7279;&#x5B9A;&#x7684;&#x7528;&#x6237;&#x3002;&#x6BCF;&#x6B21;http&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x90FD;&#x4F1A;&#x53D1;&#x9001;&#x76F8;&#x5E94;&#x7684;cookie&#x5230;&#x670D;&#x52A1;&#x7AEF;&#xFF0C;&#x7528;cookie&#x6765;&#x5B9E;&#x73B0;session&#x8FFD;&#x8E2A;&#x3002;&#x7B2C;&#x4E00;&#x6B21;&#x521B;&#x5EFA;session&#x65F6;&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x4F1A;&#x5C06;cookie&#x4F20;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x91CC;&#x9762;&#x5305;&#x542B;&#x4E86;Session ID,&#x4EE5;&#x540E;&#x6BCF;&#x6B21;&#x8BF7;&#x6C42;id&#x90FD;&#x4F1A;&#x4F34;&#x968F;&#x7740;cookie&#x4F20;&#x5230;&#x670D;&#x52A1;&#x7AEF;&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x5C31;&#x77E5;&#x9053;&#x662F;&#x8C01;&#x4E86;</li>
+<li>&#x82E5;&#x6D4F;&#x89C8;&#x5668;&#x7981;&#x7528;cookie&#x4E86;&#xFF0C;&#x4F1A;&#x7528;&#x4E00;&#x79CD;URL&#x91CD;&#x5199;&#x7684;&#x6280;&#x672F;&#x6765;&#x8FDB;&#x884C;&#x4F1A;&#x8BDD;&#x8DDF;&#x8E2A;&#xFF0C;URL&#x4E2D;&#x4F20;&#x9012;sessionID&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x6839;&#x636E;URL&#x4E2D;&#x7684;&#x53C2;&#x6570;&#x6765;&#x8BC6;&#x522B;&#x7528;&#x6237;</li>
+<li>cookie&#x5E38;&#x7528;&#x7684;&#x5C31;&#x662F;&#x81EA;&#x52A8;&#x586B;&#x5145;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;</li>
+</ol>
 </blockquote>
-<h3 id="objectprototypetostringcall">Object.prototype.toString.call()</h3>
-<p>&#x6BCF;&#x4E00;&#x4E2A;&#x7EE7;&#x627F;Object&#x7684;&#x5BF9;&#x8C61;&#x90FD;&#x6709;toString()&#x65B9;&#x6CD5;&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE;[object type]&#xFF0C;type&#x4E3A;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x82E5;&#x975E;Object&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;toString(),&#x4F1A;&#x8FD4;&#x56DE;&#x5185;&#x5BB9;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;call&#x6216;apply&#x6765;&#x6539;&#x53D8;toString&#x7684;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;
-&#x5373;&#x4F7F;&#x662F;null&#x6216;&#x8005;undefine&#x90FD;&#x80FD;&#x8FDB;&#x884C;&#x5224;&#x65AD;</p>
-<pre><code>Object.prototype.toString.call([1,2]) // &quot;[object Array]&quot;
-Object.prototype.toString.call(&apos;An&apos;) // &quot;[object String]&quot;
-Object.prototype.toString.call(1) // &quot;[object Number]&quot;
-Object.prototype.toString.call(Symbol(1)) // &quot;[object Symbol]&quot;
-Object.prototype.toString.call(null) // &quot;[object Null]&quot;
-Object.prototype.toString.call(undefined) // &quot;[object Undefined]&quot;
-Object.prototype.toString.call(function(){}) // &quot;[object Function]&quot;
-Object.prototype.toString.call({name: &apos;An&apos;}) // &quot;[object Object]&quot;
-</code></pre><h3 id="arrayisarray">Array.isArray</h3>
-<p>&#x6765;&#x5224;&#x65AD;&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x4E3A;&#x6570;&#x7EC4;</p>
+<p><em>session&#x7684;&#x8FD0;&#x884C;&#x4F9D;&#x8D56;&#x4E8E;sessionID&#xFF0C;&#x800C;sessionID&#x5B58;&#x5728;&#x4E8E;cookie&#x4E2D;&#xFF0C;&#x4F46;&#x5E76;&#x4E0D;&#x4E00;&#x5B9A;&#x5FC5;&#x987B;&#x4F9D;&#x8D56;cookie&#x5B9E;&#x73B0;</em></p>
+<h3 id="localstorage&#x548C;sessionstorage&#x548C;cookie">localStorage&#x548C;sessionStorage&#x548C;cookie</h3>
+<h4 id="&#x533A;&#x522B;&#x4E0E;&#x8054;&#x7CFB;">&#x533A;&#x522B;&#x4E0E;&#x8054;&#x7CFB;</h4>
+<blockquote>
+<p>&#x90FD;&#x662F;&#x540C;&#x6E90;&#x7684;&#xFF0C;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x7AEF;</p>
 <ul>
-<li>Array.isArray&#x662F;es5&#x65B0;&#x589E;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5F53;&#x4E0D;&#x5B58;&#x5728;Array.isArray&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Object.prototype.toString.call()</li>
-<li>&#x82E5;&#x7528;&#x6765;&#x68C0;&#x6D4B;Array&#x5B9E;&#x4F8B;&#xFF0C;Array.isArray&#x6027;&#x80FD;&#x4F18;&#x4E8E;instanceof</li>
+<li>cookie&#x6BCF;&#x6B21;&#x8BF7;&#x6C42;&#x65F6;&#x90FD;&#x4F1A;&#x88AB;&#x4F20;&#x5230;&#x540E;&#x7AEF;&#xFF0C;&#x4F1A;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x548C;&#x670D;&#x52A1;&#x7AEF;&#x4E24;&#x8FB9;&#x6765;&#x56DE;&#x4F20;&#x9012;;localStorage&#x548C;sessionStorage&#x5219;&#x4E0D;&#x4F1A;&#x4E3B;&#x52A8;&#x4F20;&#x5230;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4FDD;&#x5B58;&#x5728;&#x672C;&#x5730;</li>
+<li>cookie&#x4F20;&#x9012;&#x7684;&#x6570;&#x636E;&#x5927;&#x5C0F;&#x4E0D;&#x80FD;&#x8D85;&#x8FC7;4k&#xFF0C;&#x56E0;&#x4E3A;&#x88AB;&#x643A;&#x5E26;&#x5728;http&#x4E2D;&#xFF0C;&#x6240;&#x4EE5;cookie&#x4E0D;&#x5B9C;&#x8FC7;&#x5927;&#xFF0C;localStorage&#x548C;sessionStorage&#x4E5F;&#x6709;&#x5927;&#x5C0F;&#x9650;&#x5236;&#xFF0C;&#x4F46;&#x6BD4;cookie&#x5927;&#xFF0C;&#x53EF;&#x4EE5;&#x8FBE;&#x5230;5M&#x6216;&#x8005;&#x66F4;&#x5927;</li>
+<li>sessionStorage&#x4F5C;&#x7528;&#x4E8E;&#x4F1A;&#x8BDD;&#x671F;&#x95F4;&#xFF0C;&#x5373;&#x5728;&#x7A97;&#x53E3;&#x5173;&#x95ED;&#x4E4B;&#x524D;&#x6709;&#x6548;&#xFF1B;localStorage&#x53EF;&#x4EE5;&#x4E00;&#x76F4;&#x5B58;&#x5728;&#xFF0C;&#x5373;&#x4F7F;&#x7A97;&#x53E3;&#x5173;&#x95ED;&#xFF0C;&#x672C;&#x5730;&#x5B58;&#x50A8;&#xFF1B;cookie&#x5728;&#x8BBE;&#x7F6E;&#x7684;&#x65F6;&#x95F4;&#x4E4B;&#x5185;&#x6709;&#x6548;</li>
+<li>sessionStorage&#x5728;&#x4E0D;&#x540C;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x7A97;&#x53E3;&#x4E2D;&#x4E0D;&#x80FD;&#x5171;&#x4EAB;&#xFF0C;localStorage&#x548C;cookie&#x5728;&#x540C;&#x6E90;&#x7A97;&#x53E3;&#x4E2D;&#x90FD;&#x662F;&#x5171;&#x4EAB;&#x7684;</li>
 </ul>
-<h3 id="arrconstructor--array">arr.constructor === Array</h3>
+<p>web storage&#x6709;setItem,getItem,removeItem,clear&#x7B49;&#x65B9;&#x6CD5;&#xFF0C;&#x800C;cookie&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x5C01;&#x88C5;&#x65B9;&#x6CD5;
+```
+sessionStorage.setItem(keyName,value);   // &#x5C06;value&#x5B58;&#x50A8;&#x5230;key&#x5B57;&#x6BB5;&#x4E2D;
+//&#x6216;&#x8005;
+sessionStorage.keyName=&apos;value&apos;;
+eg&#xFF1A;sessionStorage.setItem(&quot;name&quot;,&quot;thomas&quot;);</p>
+</blockquote>
+<p>localStorage.getItem(keyName);          //&#x83B7;&#x53D6;&#x6307;&#x5B9A;key&#x7684;&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7684;&#x503C;
+//&#x6216;&#x8005;
+var keyName=localStorage.key;
+eg:sessionStorage.getItem(&quot;name&quot;);</p>
+<p>sessionStorage.getItem(keyName);          //&#x83B7;&#x53D6;&#x6307;&#x5B9A;key&#x7684;&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7684;&#x503C;
+//&#x6216;&#x8005;
+var keyName=sessionStorage.key;
+eg: sessionStorage.getItem(&quot;name&quot;)</p>
+<p>sessionStorage.removeItem(keyName);     // &#x5220;&#x9664;&#x6307;&#x5B9A;ke&#x7684;&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7684;&#x503C;
+eg: sesisonStorage.removeItem(&quot;name&quot;)</p>
+<p>sessionStorage.clear()
+localStorage.length // &#x952E;&#x503C;&#x5BF9;&#x7684;&#x6570;&#x91CF;
+localStorage.key(index) // &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x7684;&#x952E;&#x540D;&#x79F0;</p>
+<pre><code>
+### cookie
+#### cookie&#x5927;&#x5C0F;&#x548C;&#x6570;&#x91CF;&#x7684;&#x9650;&#x5236;
+&#x6BCF;&#x4E2A;&#x6D4F;&#x89C8;&#x5668;&#x5BF9;cookie&#x7684;&#x5927;&#x5C0F;&#x548C;&#x6570;&#x91CF;&#x7684;&#x9650;&#x5236;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;
+&#x5355;&#x4E2A;&#x57DF;&#x540D;&#x8BBE;&#x7F6E;&#x7684;cookie&#x4E0D;&#x5E94;&#x8BE5;&#x8D85;&#x8FC7;30&#x4E2A;&#xFF0C;&#x4E14;&#x6BCF;&#x4E2A;cookie&#x4E0D;&#x5E94;&#x8BE5;&#x8D85;&#x8FC7;4k&#xFF0C;&#x8D85;&#x8FC7;&#x4EE5;&#x540E;&#xFF0C;cookie&#x4F1A;&#x88AB;&#x5FFD;&#x7565;&#xFF0C;&#x4E0D;&#x4F1A;&#x88AB;&#x8BBE;&#x7F6E;
+#### &#x5171;&#x4EAB;cookie
+&#x53EA;&#x8981;&#x6D4F;&#x89C8;&#x5668;&#x540C;&#x6E90;&#xFF0C;&#x57DF;&#x540D;&#x7AEF;&#x53E3;&#x76F8;&#x540C;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5171;&#x4EAB;cookie
+#### cookie&#x7684;&#x5C5E;&#x6027;
+1. Expires :&#x5177;&#x4F53;&#x5230;&#x671F;&#x65F6;&#x95F4;&#xFF0C;UTC&#x683C;&#x5F0F;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;null&#xFF0C;&#x82E5;&#x4E0D;&#x8BBE;&#x7F6E;&#xFF0C;&#x5219;&#x6D4F;&#x89C8;&#x5668;&#x5173;&#x95ED;&#x8BE5;Cookie&#x5C31;&#x4F1A;&#x88AB;&#x5220;&#x9664;
+2. Max-Age&#x5C5E;&#x6027;&#x6307;&#x5B9A;&#x4ECE;&#x73B0;&#x5728;&#x5F00;&#x59CB; Cookie &#x5B58;&#x5728;&#x7684;&#x79D2;&#x6570;&#xFF0C;&#x6BD4;&#x5982;60 * 60 * 24 * 365&#xFF08;&#x5373;&#x4E00;&#x5E74;&#xFF09;&#x3002;&#x8FC7;&#x4E86;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#x4EE5;&#x540E;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x5C31;&#x4E0D;&#x518D;&#x4FDD;&#x7559;&#x8FD9;&#x4E2A; Cookie
+3. &#x5982;&#x679C;&#x540C;&#x65F6;&#x6307;&#x5B9A;&#x4E86;Expires&#x548C;Max-Age&#xFF0C;&#x90A3;&#x4E48;Max-Age&#x7684;&#x503C;&#x5C06;&#x4F18;&#x5148;&#x751F;&#x6548;
+4. Path&#x6307;&#x5B9A;&#x6D4F;&#x89C8;&#x5668;&#x53D1;&#x51FA;http&#x8BF7;&#x6C42;&#x4E4B;&#x540E;&#xFF0C;&#x54EA;&#x4E9B;&#x8DEF;&#x5F84;&#x8981;&#x5E26;&#x4E0A;&#x8FD9;&#x4E2A;Cookie
+5. Secure&#x5C5E;&#x6027;&#x6307;&#x5B9A;&#x6D4F;&#x89C8;&#x5668;&#x53EA;&#x6709;&#x5728;&#x52A0;&#x5BC6;&#x534F;&#x8BAE; HTTPS &#x4E0B;&#xFF0C;&#x624D;&#x80FD;&#x5C06;&#x8FD9;&#x4E2A; Cookie &#x53D1;&#x9001;&#x5230;&#x670D;&#x52A1;&#x5668;&#x3002;&#x53E6;&#x4E00;&#x65B9;&#x9762;&#xFF0C;&#x5982;&#x679C;&#x5F53;&#x524D;&#x534F;&#x8BAE;&#x662F;HTTP&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x81EA;&#x52A8;&#x5FFD;&#x7565;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x6765;&#x7684;Secure&#x5C5E;&#x6027;&#x3002;&#x8BE5;&#x5C5E;&#x6027;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x5173;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x503C;&#x3002;&#x5982;&#x679C;&#x901A;&#x4FE1;&#x662F; HTTPS &#x534F;&#x8BAE;&#xFF0C;&#x8BE5;&#x5F00;&#x5173;&#x81EA;&#x52A8;&#x6253;&#x5F00;
+6. HttpOnly&#x5C5E;&#x6027;&#x6307;&#x5B9A;&#x8BE5; Cookie &#x65E0;&#x6CD5;&#x901A;&#x8FC7; JavaScript &#x811A;&#x672C;&#x62FF;&#x5230;&#xFF0C;
+&#x4E3B;&#x8981;&#x662F;Document.cookie&#x5C5E;&#x6027;&#x3001;XMLHttpRequest&#x5BF9;&#x8C61;&#x548C; Request API &#x90FD;&#x62FF;&#x4E0D;&#x5230;&#x8BE5;&#x5C5E;&#x6027;&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x9632;&#x6B62;&#x4E86;&#x8BE5; Cookie&#x88AB;&#x811A;&#x672C;&#x8BFB;&#x5230;&#xFF0C;&#x53EA;&#x6709;&#x6D4F;&#x89C8;&#x5668;&#x53D1;&#x51FA; HTTP &#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x624D;&#x4F1A;&#x5E26;&#x4E0A;&#x8BE5; Cookie&#x3002;
+</code></pre><p>&#x8BFB;&#x5199;&#x5F53;&#x524D;&#x7F51;&#x9875;&#x7684;cookie
+document.cookie = &apos;myname=laihuamin;path=/;domain=.baidu.com&apos;;
+```</p>
 
                                 
                                 </section>
@@ -835,12 +880,12 @@ Object.prototype.toString.call({name: &apos;An&apos;}) // &quot;[object Object]&
 
             
                 
-                <a href="6.npm模块机制.html" class="navigation navigation-prev " aria-label="Previous page: 6.npm模块机制">
+                <a href="14.跨域.html" class="navigation navigation-prev " aria-label="Previous page: 14.跨域">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="8.重绘和回流.html" class="navigation navigation-next " aria-label="Next page: 8.重绘和回流">
+                <a href="16.Ecent Loop.html" class="navigation navigation-next " aria-label="Next page: 16.Ecent Loop">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -851,7 +896,7 @@ Object.prototype.toString.call({name: &apos;An&apos;}) // &quot;[object Object]&
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"7.判断数组","level":"1.2.7","depth":2,"next":{"title":"8.重绘和回流","level":"1.2.8","depth":2,"path":"100道题/8.重绘和回流.md","ref":"100道题/8.重绘和回流.md","articles":[]},"previous":{"title":"6.npm模块机制","level":"1.2.6","depth":2,"path":"100道题/6.npm模块机制.md","ref":"100道题/6.npm模块机制.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zouzou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zouzou","language":"zh-hans","gitbook":"*","description":"questions and answers"},"file":{"path":"100道题/7.判断数组.md","mtime":"2019-08-16T01:58:23.458Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-16T06:10:49.547Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"15.cookie-session-web storage","level":"1.2.15","depth":2,"next":{"title":"16.Ecent Loop","level":"1.2.16","depth":2,"path":"100道题/16.Ecent Loop.md","ref":"100道题/16.Ecent Loop.md","articles":[]},"previous":{"title":"14.跨域","level":"1.2.14","depth":2,"path":"100道题/14.跨域.md","ref":"100道题/14.跨域.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zouzou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zouzou","language":"zh-hans","gitbook":"*","description":"questions and answers"},"file":{"path":"100道题/15.cookie-session-web storage.md","mtime":"2019-08-16T05:53:48.681Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-16T06:10:49.547Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
