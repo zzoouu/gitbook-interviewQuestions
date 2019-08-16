@@ -17,7 +17,19 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -41,6 +53,8 @@
         
     
     
+    
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -54,6 +68,22 @@
     
     <link rel="prev" href="1.常用操作.html" />
     
+
+    
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {};
+    </script>
 
     </head>
     <body>
@@ -787,12 +817,12 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h5 id="&#x89E3;&#x51B3;git-push&#x62A5;&#x9519;&#xFF1A;updates-were-rejected-because-the-remote-contains-work-that-you-do-not-have-locally">&#x89E3;&#x51B3;git push&#x62A5;&#x9519;&#xFF1A;Updates were rejected because the remote contains work that you do not have locally</h5>
+                                <h5 id="&#x89E3;&#x51B3;git-push&#x62A5;&#x9519;&#xFF1A;updates-were-rejected-because-the-remote-contains-work-that-you-do-not-have-locally"><a name="&#x89E3;&#x51B3;git-push&#x62A5;&#x9519;&#xFF1A;updates-were-rejected-because-the-remote-contains-work-that-you-do-not-have-locally" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x51B3;git-push&#x62A5;&#x9519;&#xFF1A;updates-were-rejected-because-the-remote-contains-work-that-you-do-not-have-locally"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x89E3;&#x51B3;git-push&#x62A5;&#x9519;&#xFF1A;updates-were-rejected-because-the-remote-contains-work-that-you-do-not-have-locally" class="plugin-anchor" href="#&#x89E3;&#x51B3;git-push&#x62A5;&#x9519;&#xFF1A;updates-were-rejected-because-the-remote-contains-work-that-you-do-not-have-locally"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x51B3;git push&#x62A5;&#x9519;&#xFF1A;Updates were rejected because the remote contains work that you do not have locally</h5>
 <p>&#x95EE;&#x9898;&#x539F;&#x56E0;&#xFF1A;</p>
 <p>&#x5176;&#x4ED6;&#x5730;&#x65B9;&#x5411;&#x540C;&#x4E00;&#x8FDC;&#x7AEF;&#x5E93;&#x63A8;&#x9001;&#x4E86;&#x4EE3;&#x7801;&#xFF0C;&#x5BFC;&#x81F4;&#x672C;&#x5730;&#x4E0D;&#x662F;&#x6700;&#x65B0;&#x7684;&#x3002;</p>
 <p>&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;</p>
 <p>&#x5148;&#x4ECE;&#x8FDC;&#x7AEF;pull&#x4E00;&#x4E0B;&#xFF0C;&#x6267;&#x884C;&#xFF1A;git pull</p>
-<h5 id="git-pull-&#x62A5;&#x9519;there-is-no-tracking-information-for-the-current-branch">git pull &#x62A5;&#x9519;There is no tracking information for the current branch...</h5>
+<h5 id="git-pull-&#x62A5;&#x9519;there-is-no-tracking-information-for-the-current-branch"><a name="git-pull-&#x62A5;&#x9519;there-is-no-tracking-information-for-the-current-branch" class="anchor-navigation-ex-anchor" href="#git-pull-&#x62A5;&#x9519;there-is-no-tracking-information-for-the-current-branch"><i class="fa fa-link" aria-hidden="true"></i></a><a name="git-pull-&#x62A5;&#x9519;there-is-no-tracking-information-for-the-current-branch" class="plugin-anchor" href="#git-pull-&#x62A5;&#x9519;there-is-no-tracking-information-for-the-current-branch"><i class="fa fa-link" aria-hidden="true"></i></a>git pull &#x62A5;&#x9519;There is no tracking information for the current branch...</h5>
 <p>&#x539F;&#x56E0;&#xFF1A; &#x672C;&#x5730;&#x7684;&#x5206;&#x652F;&#x548C;&#x8FDC;&#x7A0B;&#x7684;&#x5206;&#x652F;&#x6CA1;&#x6709;&#x5EFA;&#x7ACB;&#x5173;&#x8054;&#x5BFC;&#x81F4;&#x7684;</p>
 <ol>
 <li><p>&#x5220;&#x9664;&#x6389;&#x6CA1;&#x6709;&#x5EFA;&#x7ACB;&#x5173;&#x8054;&#x7684;&#x5206;&#x652F;&#xFF0C;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x6709;&#x5173;&#x8054;&#x7684;&#x7684;&#x5206;&#x652F;<br>git branch -D develop &#xFF08;&#x6CE8;&#x610F;&#x5148;&#x5207;&#x5230;master&#x5206;&#x652F;&#x4E0A;&#xFF0C;&#x5728;&#x8FDB;&#x884C;&#x5220;&#x9664;&#xFF09;
@@ -804,7 +834,7 @@ git branch -vv &#x68C0;&#x67E5;&#x662F;&#x5426;&#x771F;&#x6B63;&#x5EFA;&#x7ACB;&
 &#x518D;&#x901A;&#x8FC7;git branch -vv &#x786E;&#x8BA4;&#x662F;&#x5426;&#x5173;&#x8054;&#x6210;&#x529F;</p>
 </li>
 </ol>
-<h5 id="refusing-to-merge-unrelated-histories">refusing to merge unrelated histories</h5>
+<h5 id="refusing-to-merge-unrelated-histories"><a name="refusing-to-merge-unrelated-histories" class="anchor-navigation-ex-anchor" href="#refusing-to-merge-unrelated-histories"><i class="fa fa-link" aria-hidden="true"></i></a><a name="refusing-to-merge-unrelated-histories" class="plugin-anchor" href="#refusing-to-merge-unrelated-histories"><i class="fa fa-link" aria-hidden="true"></i></a>refusing to merge unrelated histories</h5>
 <p>&#x539F;&#x56E0;&#xFF1A; &#x672C;&#x5730;&#x4ED3;&#x5E93;&#x548C;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x72EC;&#x7ACB;&#x7684;&#x4E24;&#x4E2A;&#x4ED3;&#x5E93;&#x3002;<br>&#x5047;&#x5982;&#x6211;&#x4E4B;&#x524D;&#x662F;&#x76F4;&#x63A5;clone&#x7684;&#x65B9;&#x5F0F;&#x5728;&#x672C;&#x5730;&#x5EFA;&#x7ACB;&#x8D77;&#x8FDC;&#x7A0B;github&#x4ED3;&#x5E93;&#x7684;&#x514B;&#x9686;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x5C31;&#x4E0D;&#x4F1A;&#x6709;&#x8FD9;&#x95EE;&#x9898;&#x4E86;
 &#x89E3;&#x51B3;&#xFF1A; pull&#x547D;&#x4EE4;&#x540E;&#x7D27;&#x63A5;&#x7740;&#x4F7F;&#x7528;--allow-unrelated-history&#x9009;&#x9879;&#x6765;&#x89E3;&#x51B3;&#x95EE;&#x9898;<br>git pull origin master --allow-unrelated-histories</p>
 
@@ -850,7 +880,7 @@ git branch -vv &#x68C0;&#x67E5;&#x662F;&#x5426;&#x771F;&#x6B63;&#x5EFA;&#x7ACB;&
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2.常见报错","level":"1.7.2","depth":2,"next":{"title":"mac","level":"1.8","depth":1,"path":"mac.md","ref":"mac.md","articles":[]},"previous":{"title":"1.常用操作","level":"1.7.1","depth":2,"path":"git/1.常用操作.md","ref":"git/1.常用操作.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{},"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zouzou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zouzou","language":"zh-hans","gitbook":"*","description":"questions and answers"},"file":{"path":"git/2.常见报错.md","mtime":"2019-08-16T07:20:03.520Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-16T07:23:51.596Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"2.常见报错","level":"1.7.2","depth":2,"next":{"title":"mac","level":"1.8","depth":1,"path":"mac.md","ref":"mac.md","articles":[]},"previous":{"title":"1.常用操作","level":"1.7.1","depth":2,"path":"git/1.常用操作.md","ref":"git/1.常用操作.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github-buttons","sharing-plus","anchor-navigation-ex","favicon"],"styles":{},"pluginsConfig":{"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{},"github-buttons":{},"expandable-chapters-small":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"zouzou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zouzou","language":"zh-hans","gitbook":"*","description":"questions and answers"},"file":{"path":"git/2.常见报错.md","mtime":"2019-08-16T08:03:07.028Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-16T08:21:28.989Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -860,7 +890,19 @@ git branch -vv &#x68C0;&#x67E5;&#x662F;&#x5426;&#x771F;&#x6B63;&#x5EFA;&#x7ACB;&
     <script src="../gitbook/theme.js"></script>
     
         
-        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
         
     
         
@@ -877,10 +919,6 @@ git branch -vv &#x68C0;&#x67E5;&#x662F;&#x5426;&#x771F;&#x6B63;&#x5EFA;&#x7ACB;&
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

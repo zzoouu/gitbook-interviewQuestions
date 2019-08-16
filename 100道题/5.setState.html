@@ -17,7 +17,19 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -41,6 +53,8 @@
         
     
     
+    
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -54,6 +68,22 @@
     
     <link rel="prev" href="4.tcp三次握手四次挥手.html" />
     
+
+    
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {};
+    </script>
 
     </head>
     <body>
@@ -787,10 +817,10 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="setstate">setState</h3>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><ul><li><span class="title-icon "></span><a href="#setstate"><b>1.1.1. </b>setState</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h3 id="setstate"><a name="setstate" class="anchor-navigation-ex-anchor" href="#setstate"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. setState</h3>
 <p>setState&#x4E0D;&#x662F;&#x540C;&#x6B65;&#x7684;&#xFF0C;&#x6267;&#x884C;&#x4E4B;&#x540E;&#x4E0D;&#x4F1A;&#x7ACB;&#x523B;&#x5F97;&#x5230;state&#x7684;&#x503C;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;setState&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x83B7;&#x53D6;&#xFF0C;react&#x4F1A;&#x7EF4;&#x62A4;&#x4E00;&#x4E2A;state&#x7684;&#x66F4;&#x65B0;&#x961F;&#x5217;&#xFF0C;&#x6BCF;&#x6B21;&#x8C03;&#x7528;setState&#x4F1A;&#x628A;&#x5F53;&#x524D;&#x4FEE;&#x6539;&#x7684;state&#x6DFB;&#x52A0;&#x8FDB;&#x8FD9;&#x4E2A;&#x961F;&#x5217;&#xFF0C;&#x6700;&#x540E;&#xFF0C;react&#x4F1A;&#x5BF9;&#x8FD9;&#x4E2A;&#x961F;&#x5217;&#x8FDB;&#x884C;&#x5408;&#x5E76;&#x5904;&#x7406;&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C;&#x56DE;&#x8C03;&#xFF0C;&#x7136;&#x540E;&#x66F4;&#x65B0;&#x865A;&#x62DF;dom&#xFF0C;&#x518D;&#x8FDB;&#x884C;&#x6E32;&#x67D3;</p>
 <p>&#x597D;&#x5904;&#xFF1A;&#x5C06;state&#x7684;&#x66F4;&#x65B0;&#x5EF6;&#x7F13;&#x5230;&#x6700;&#x540E;&#x6279;&#x91CF;&#x5408;&#x5E76;&#x518D;&#x53BB;&#x6E32;&#x67D3;&#x5BF9;&#x4E8E;&#x6027;&#x80FD;&#x4F18;&#x5316;&#x6709;&#x597D;&#x5904;&#xFF0C;&#x5982;&#x679C;&#x6BCF;&#x6B21;&#x72B6;&#x6001;&#x7684;&#x66F4;&#x65B0;&#x90FD;&#x6E32;&#x67D3;&#x771F;&#x5B9E;&#x7684;dom&#x7684;&#x8BDD;&#xFF0C;&#x4F1A;&#x5E26;&#x6765;&#x5DE8;&#x5927;&#x7684;&#x6027;&#x80FD;&#x6D88;&#x8017;</p>
-<h4 id="&#x975E;&#x771F;&#x5B9E;&#x5F02;&#x6B65;">&#x975E;&#x771F;&#x5B9E;&#x5F02;&#x6B65;</h4>
+<h4 id="&#x975E;&#x771F;&#x5B9E;&#x5F02;&#x6B65;"><a name="&#x975E;&#x771F;&#x5B9E;&#x5F02;&#x6B65;" class="anchor-navigation-ex-anchor" href="#&#x975E;&#x771F;&#x5B9E;&#x5F02;&#x6B65;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x975E;&#x771F;&#x5B9E;&#x5F02;&#x6B65;" class="plugin-anchor" href="#&#x975E;&#x771F;&#x5B9E;&#x5F02;&#x6B65;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x975E;&#x771F;&#x5B9E;&#x5F02;&#x6B65;</h4>
 <p>react&#x5C01;&#x88C5;&#x4E86;&#x4E00;&#x7CFB;&#x5217; onClick,onChange&#x8FD9;&#x4E9B;&#x5408;&#x6210;&#x4E8B;&#x4EF6;&#xFF0C;setTimeout&#x53CA;&#x539F;&#x751F;&#x4E8B;&#x4EF6;&#x4E2D;&#x8C03;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x7ACB;&#x9A6C;&#x83B7;&#x53D6;&#x6700;&#x65B0;&#x7684;state,&#x5408;&#x6210;&#x4E8B;&#x4EF6;&#x5219;&#x4E0D;&#x884C;</p>
 <p>react&#x4F1A;&#x7EF4;&#x62A4;&#x4E00;&#x4E2A;&#x6807;&#x8BC6;(idBatchingUpdates),&#x5224;&#x65AD;&#x662F;&#x76F4;&#x63A5;&#x66F4;&#x65B0;&#x8FD8;&#x662F;&#x5148;&#x653E;&#x8FDB;state&#x961F;&#x5217;&#xFF0C;setTimeout&#x548C;&#x539F;&#x751F;&#x4E8B;&#x4EF6;&#x4F1A;&#x76F4;&#x63A5;&#x66F4;&#x65B0;state&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x7ACB;&#x523B;&#x5F97;&#x5230;&#x6700;&#x65B0;state&#xFF0C;&#x800C;&#x5408;&#x6210;&#x4E8B;&#x4EF6;&#x548C;react&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x4E2D;&#xFF0C;&#x662F;&#x53D7;react&#x63A7;&#x5236;&#x7684;&#xFF0C;isBatchingUpdates&#x8BBE;&#x7F6E;&#x4E3A;true&#xFF0C;&#x8D70;&#x5F02;&#x6B65;&#x7684;&#x4E00;&#x5957;</p>
 <pre><code>class Example extends React.Component {
@@ -867,7 +897,7 @@ ctrl + shift + tab</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"5.setState","level":"1.2.5","depth":2,"next":{"title":"6.npm模块机制","level":"1.2.6","depth":2,"path":"100道题/6.npm模块机制.md","ref":"100道题/6.npm模块机制.md","articles":[]},"previous":{"title":"4.tcp三次握手四次挥手","level":"1.2.4","depth":2,"path":"100道题/4.tcp三次握手四次挥手.md","ref":"100道题/4.tcp三次握手四次挥手.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{},"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zouzou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zouzou","language":"zh-hans","gitbook":"*","description":"questions and answers"},"file":{"path":"100道题/5.setState.md","mtime":"2019-08-16T07:20:03.469Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-16T07:23:51.596Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"5.setState","level":"1.2.5","depth":2,"next":{"title":"6.npm模块机制","level":"1.2.6","depth":2,"path":"100道题/6.npm模块机制.md","ref":"100道题/6.npm模块机制.md","articles":[]},"previous":{"title":"4.tcp三次握手四次挥手","level":"1.2.4","depth":2,"path":"100道题/4.tcp三次握手四次挥手.md","ref":"100道题/4.tcp三次握手四次挥手.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github-buttons","sharing-plus","anchor-navigation-ex","favicon"],"styles":{},"pluginsConfig":{"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{},"github-buttons":{},"expandable-chapters-small":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"zouzou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zouzou","language":"zh-hans","gitbook":"*","description":"questions and answers"},"file":{"path":"100道题/5.setState.md","mtime":"2019-08-16T08:03:06.945Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-16T08:21:28.989Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -877,7 +907,19 @@ ctrl + shift + tab</p>
     <script src="../gitbook/theme.js"></script>
     
         
-        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
         
     
         
@@ -894,10 +936,6 @@ ctrl + shift + tab</p>
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

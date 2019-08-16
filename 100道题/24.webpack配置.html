@@ -17,7 +17,19 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -41,6 +53,8 @@
         
     
     
+    
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -54,6 +68,22 @@
     
     <link rel="prev" href="23.webpack项目搭建.html" />
     
+
+    
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {};
+    </script>
 
     </head>
     <body>
@@ -787,14 +817,14 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="webpack">webpack</h3>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><ul><li><span class="title-icon "></span><a href="#webpack"><b>1.1.1. </b>webpack</a></li><li><span class="title-icon "></span><a href="#module-loader"><b>1.1.2. </b>module loader</a></li><li><span class="title-icon "></span><a href="#soucemap"><b>1.1.3. </b>souceMap</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h3 id="webpack"><a name="webpack" class="anchor-navigation-ex-anchor" href="#webpack"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. webpack</h3>
 <blockquote>
 <p>webpack&#x662F;&#x4E00;&#x4E2A;&#x6A21;&#x7248;&#x6253;&#x5305;&#x5DE5;&#x5177;</p>
 </blockquote>
 <pre><code>import Header from &apos;./header.js&apos;
 </code></pre><p>&#x672A;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#x65F6;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x65E0;&#x6CD5;&#x8BC6;&#x522B;&#xFF0C;&#x4F1A;&#x62A5;&#x9519;<br>webpack&#x57FA;&#x4E8E;node&#xFF0C;node&#x7248;&#x672C;&#x5C3D;&#x91CF;&#x8981;&#x65B0;&#xFF0C;&#x901F;&#x5EA6;&#x66F4;&#x5FEB;
 <em>node&#x5B98;&#x7F51;&#x4E2D;&#xFF1A;LTS&#xFF1B;long time supported &#x66F4;&#x7A33;&#x5B9A;</em></p>
-<h4 id="&#x6A21;&#x5757;&#xFF08;modules&#xFF09;">&#x6A21;&#x5757;&#xFF08;modules&#xFF09;</h4>
+<h4 id="&#x6A21;&#x5757;&#xFF08;modules&#xFF09;"><a name="&#x6A21;&#x5757;&#xFF08;modules&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x6A21;&#x5757;&#xFF08;modules&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6A21;&#x5757;&#xFF08;modules&#xFF09;" class="plugin-anchor" href="#&#x6A21;&#x5757;&#xFF08;modules&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6A21;&#x5757;&#xFF08;modules&#xFF09;</h4>
 <pre><code>// ES module
 import Header from &apos;./header.js&apos;
 export default Header
@@ -817,7 +847,7 @@ define require
 @import
 
 // url(...)&#x6216;&lt;img src=&quot;...&quot; /&gt;
-</code></pre><h5 id="es-module">ES Module</h5>
+</code></pre><h5 id="es-module"><a name="es-module" class="anchor-navigation-ex-anchor" href="#es-module"><i class="fa fa-link" aria-hidden="true"></i></a><a name="es-module" class="plugin-anchor" href="#es-module"><i class="fa fa-link" aria-hidden="true"></i></a>ES Module</h5>
 <ul>
 <li>import module from &apos;./module.js&apos;  </li>
 <li><p>import { module } from &apos;./module.js&apos;</p>
@@ -830,7 +860,7 @@ define require
 import(&apos;path/to/module&apos;) -&gt; Promise</p>
 </li>
 </ul>
-<h5 id="commonjs">CommonJS</h5>
+<h5 id="commonjs"><a name="commonjs" class="anchor-navigation-ex-anchor" href="#commonjs"><i class="fa fa-link" aria-hidden="true"></i></a><a name="commonjs" class="plugin-anchor" href="#commonjs"><i class="fa fa-link" aria-hidden="true"></i></a>CommonJS</h5>
 <ul>
 <li><p>require(dependency:String)  </p>
 </li>
@@ -841,7 +871,7 @@ import(&apos;path/to/module&apos;) -&gt; Promise</p>
 <li><p>require.ensure() &#x53EF;&#x88AB;import()&#x53D6;&#x4EE3;<br>require.ensure(dependencies: String[],callback:function(require), erroeCallback:function(error),chunkName:String)<br>&#x5C06;dependencies&#x53C2;&#x6570;&#x5176;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#x62C6;&#x5206;&#x5230;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684; bundle &#x4E2D;&#xFF0C;&#x88AB;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;&#x3002;&#x5F53;&#x4F7F;&#x7528; &#x8FD9;&#x662F;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x4F9D;&#x8D56;&#x3002;&#x5728;&#x6A21;&#x5757;&#x6267;&#x884C;&#x65F6;&#x624D;&#x8FD0;&#x884C;&#x4EE3;&#x7801;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x6EE1;&#x8DB3;&#x67D0;&#x4E9B;&#x6761;&#x4EF6;&#x65F6;&#x624D;&#x52A0;&#x8F7D;&#x4F9D;&#x8D56;&#x9879;</p>
 </li>
 </ul>
-<h5 id="amd">AMD</h5>
+<h5 id="amd"><a name="amd" class="anchor-navigation-ex-anchor" href="#amd"><i class="fa fa-link" aria-hidden="true"></i></a><a name="amd" class="plugin-anchor" href="#amd"><i class="fa fa-link" aria-hidden="true"></i></a>AMD</h5>
 <p>define require</p>
 <pre><code>mkdir webpack
 npm init --yes
@@ -867,7 +897,7 @@ npm install webpack@&#x7248;&#x672C;&#x53F7;
 
 // &#x6253;&#x5305;index.js&#x6587;&#x4EF6;
 npx webpack index.js
-</code></pre><h4 id="&#x914D;&#x7F6E;&#x6587;&#x4EF6;">&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h4>
+</code></pre><h4 id="&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><a name="&#x914D;&#x7F6E;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x914D;&#x7F6E;&#x6587;&#x4EF6;" class="plugin-anchor" href="#&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h4>
 <blockquote>
 <p>webpack&#x9ED8;&#x8BA4;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E3A;webpack.config.js</p>
 </blockquote>
@@ -891,13 +921,13 @@ module.exports = {
 <p>npx webpack &#x672A;&#x63A5;&#x8981;&#x6253;&#x5305;&#x7684;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x4F1A;&#x4E3B;&#x52A8;&#x53BB;&#x627E;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x6587;&#x4EF6;(webpack.config.js)&#xFF0C;&#x627E;&#x5230;&#x5176;&#x5165;&#x53E3;&#x6587;&#x4EF6;   </p>
 <p>npx webpack --config webpackconfig.js  &#x6307;&#x5B9A;webpack.config.js&#x4E3A;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
 </blockquote>
-<h4 id="webpack&#x8FD0;&#x884C;">webpack&#x8FD0;&#x884C;</h4>
+<h4 id="webpack&#x8FD0;&#x884C;"><a name="webpack&#x8FD0;&#x884C;" class="anchor-navigation-ex-anchor" href="#webpack&#x8FD0;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="webpack&#x8FD0;&#x884C;" class="plugin-anchor" href="#webpack&#x8FD0;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>webpack&#x8FD0;&#x884C;</h4>
 <ul>
 <li>global&#xFF1A;webpack index.js</li>
 <li>local: npx webpack index.js</li>
 <li>npm scripts: npm run srcipt(package.json)</li>
 </ul>
-<h4 id="webpack&#x6253;&#x5305;&#x8F93;&#x51FA;&#x5185;&#x5BB9;">webpack&#x6253;&#x5305;&#x8F93;&#x51FA;&#x5185;&#x5BB9;</h4>
+<h4 id="webpack&#x6253;&#x5305;&#x8F93;&#x51FA;&#x5185;&#x5BB9;"><a name="webpack&#x6253;&#x5305;&#x8F93;&#x51FA;&#x5185;&#x5BB9;" class="anchor-navigation-ex-anchor" href="#webpack&#x6253;&#x5305;&#x8F93;&#x51FA;&#x5185;&#x5BB9;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="webpack&#x6253;&#x5305;&#x8F93;&#x51FA;&#x5185;&#x5BB9;" class="plugin-anchor" href="#webpack&#x6253;&#x5305;&#x8F93;&#x51FA;&#x5185;&#x5BB9;"><i class="fa fa-link" aria-hidden="true"></i></a>webpack&#x6253;&#x5305;&#x8F93;&#x51FA;&#x5185;&#x5BB9;</h4>
 <pre><code>Hash: &#x6253;&#x5305;&#x7684;&#x552F;&#x4E00;hash&#x503C;
 Version: &#x6253;&#x5305;&#x7528;&#x5230;&#x7684;webpack&#x7248;&#x672C;
 Time: &#x6253;&#x5305;&#x7684;&#x6574;&#x4F53;&#x8017;&#x65F6;
@@ -909,7 +939,7 @@ ChunkName:  &#x6BCF;&#x4E2A;js&#x5BF9;&#x5E94;&#x7684;&#x540D;&#x5B57;&#xFF08;ma
 entry: {
     main: &apos;index.js&apos;
 }
-</code></pre><h4 id="modeproductiondevelopment">mode:production/development</h4>
+</code></pre><h4 id="modeproductiondevelopment"><a name="modeproductiondevelopment" class="anchor-navigation-ex-anchor" href="#modeproductiondevelopment"><i class="fa fa-link" aria-hidden="true"></i></a><a name="modeproductiondevelopment" class="plugin-anchor" href="#modeproductiondevelopment"><i class="fa fa-link" aria-hidden="true"></i></a>mode:production/development</h4>
 <p>production: &#x6253;&#x5305;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x88AB;&#x538B;&#x7F29;&#x4E3A;&#x4E00;&#x884C;
 development: &#x6253;&#x5305;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x4E0D;&#x88AB;&#x538B;&#x7F29;</p>
 <pre><code>module.exports = {
@@ -917,7 +947,7 @@ development: &#x6253;&#x5305;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x4E0D;&#x88AB;&#x
     mode: &apos;production&apos;
     ...
 }
-</code></pre><h3 id="module-loader">module loader</h3>
+</code></pre><h3 id="module-loader"><a name="module-loader" class="anchor-navigation-ex-anchor" href="#module-loader"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. module loader</h3>
 <p>js css image...&#x90FD;&#x662F;&#x6A21;&#x5757;&#xFF08;module&#xFF09;
 file-loader &#x6307;&#x660E;&#x5982;&#x4F55;&#x5904;&#x7406;&#x56FE;&#x7247;
 &#x5148;&#x5C06;&#x56FE;&#x7247;&#x6253;&#x5305;&#x5230;dist&#x4E2D;&#xFF0C;&#x6539;&#x53D8;&#x4E86;&#x540D;&#x5B57;&#xFF0C;&#x5C06;&#x5176;&#x76F8;&#x5BF9;&#x4E8E;dist&#x7684;&#x540D;&#x5B57;&#x5730;&#x5740;&#x8FD4;&#x56DE;&#x7ED9;&#x996E;&#x7528;&#x5904;
@@ -974,7 +1004,7 @@ new CleanWebpackPlugin([&apos;dist&apos;])
 </code></pre><p> path: path.resolve(__dirname, &quot;public/assets&quot;),
 publicPath: &quot;<a href="https://cdn.example.com/assets/" target="_blank">https://cdn.example.com/assets/</a>&quot;
  ```</p>
-<h3 id="soucemap">souceMap</h3>
+<h3 id="soucemap"><a name="soucemap" class="anchor-navigation-ex-anchor" href="#soucemap"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. souceMap</h3>
 <p> devtool: &apos;souce-map&apos; &#x6620;&#x5C04;&#x5173;&#x7CFB;&#x5728;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6587;&#x4EF6;&#x91CC;&#x9762;
  devtool: &apos;inline-source-map&apos; &#x6620;&#x5C04;&#x5173;&#x7CFB;&#x4EE5;base64 &#x653E;&#x5728;main.js&#x672B;&#x5C3E;
  devtool:&apos;cheap-inline-source-map&apos;  &#x53EA;&#x8981;&#x544A;&#x8BC9;&#x884C;&#x5C31;&#x597D;&#x4E86;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x5230;&#x5217;&#xFF0C;&#x66F4;&#x5FEB;&#xFF0C;&#x6027;&#x80FD;&#x66F4;&#x597D;&#x4E00;&#x70B9;&#xFF0C;&#x53EA;&#x7BA1;&#x7406;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#xFF0C;&#x4E0D;&#x7BA1;&#x7406;&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;</p>
@@ -1027,7 +1057,7 @@ publicPath: &quot;<a href="https://cdn.example.com/assets/" target="_blank">http
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"24.webpack配置","level":"1.2.24","depth":2,"next":{"title":"LeetCode","level":"1.3","depth":1,"path":"LeetCode/README.md","ref":"LeetCode/README.md","articles":[{"title":"263.ugly-number","level":"1.3.1","depth":2,"path":"LeetCode/md/263.ugly-number.md","ref":"LeetCode/md/263.ugly-number.md","articles":[]},{"title":"283.move-zeroes","level":"1.3.2","depth":2,"path":"LeetCode/md/283.move-zeroes.md","ref":"LeetCode/md/283.move-zeroes.md","articles":[]},{"title":"342.power-of-four","level":"1.3.3","depth":2,"path":"LeetCode/md/342.power-of-four.md","ref":"LeetCode/md/342.power-of-four.md","articles":[]},{"title":"349.intersection-of-two-arrays","level":"1.3.4","depth":2,"path":"LeetCode/md/349.intersection-of-two-arrays.md","ref":"LeetCode/md/349.intersection-of-two-arrays.md","articles":[]},{"title":"371.sum-of-two-integers","level":"1.3.5","depth":2,"path":"LeetCode/md/371.sum-of-two-integers.md","ref":"LeetCode/md/371.sum-of-two-integers.md","articles":[]},{"title":"437.path-sum-iii","level":"1.3.6","depth":2,"path":"LeetCode/md/437.path-sum-iii.md","ref":"LeetCode/md/437.path-sum-iii.md","articles":[]},{"title":"560.subarray-sum-equals-k","level":"1.3.7","depth":2,"path":"LeetCode/md/560.subarray-sum-equals-k.md","ref":"LeetCode/md/560.subarray-sum-equals-k.md","articles":[]},{"title":"0575.distribute-candies","level":"1.3.8","depth":2,"path":"LeetCode/md/0575.distribute-candies.md","ref":"LeetCode/md/0575.distribute-candies.md","articles":[]}]},"previous":{"title":"23.webpack项目搭建","level":"1.2.23","depth":2,"path":"100道题/23.webpack项目搭建.md","ref":"100道题/23.webpack项目搭建.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{},"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zouzou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zouzou","language":"zh-hans","gitbook":"*","description":"questions and answers"},"file":{"path":"100道题/24.webpack配置.md","mtime":"2019-08-16T07:20:03.467Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-16T07:23:51.596Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"24.webpack配置","level":"1.2.24","depth":2,"next":{"title":"LeetCode","level":"1.3","depth":1,"path":"LeetCode/README.md","ref":"LeetCode/README.md","articles":[{"title":"263.ugly-number","level":"1.3.1","depth":2,"path":"LeetCode/md/263.ugly-number.md","ref":"LeetCode/md/263.ugly-number.md","articles":[]},{"title":"283.move-zeroes","level":"1.3.2","depth":2,"path":"LeetCode/md/283.move-zeroes.md","ref":"LeetCode/md/283.move-zeroes.md","articles":[]},{"title":"342.power-of-four","level":"1.3.3","depth":2,"path":"LeetCode/md/342.power-of-four.md","ref":"LeetCode/md/342.power-of-four.md","articles":[]},{"title":"349.intersection-of-two-arrays","level":"1.3.4","depth":2,"path":"LeetCode/md/349.intersection-of-two-arrays.md","ref":"LeetCode/md/349.intersection-of-two-arrays.md","articles":[]},{"title":"371.sum-of-two-integers","level":"1.3.5","depth":2,"path":"LeetCode/md/371.sum-of-two-integers.md","ref":"LeetCode/md/371.sum-of-two-integers.md","articles":[]},{"title":"437.path-sum-iii","level":"1.3.6","depth":2,"path":"LeetCode/md/437.path-sum-iii.md","ref":"LeetCode/md/437.path-sum-iii.md","articles":[]},{"title":"560.subarray-sum-equals-k","level":"1.3.7","depth":2,"path":"LeetCode/md/560.subarray-sum-equals-k.md","ref":"LeetCode/md/560.subarray-sum-equals-k.md","articles":[]},{"title":"0575.distribute-candies","level":"1.3.8","depth":2,"path":"LeetCode/md/0575.distribute-candies.md","ref":"LeetCode/md/0575.distribute-candies.md","articles":[]}]},"previous":{"title":"23.webpack项目搭建","level":"1.2.23","depth":2,"path":"100道题/23.webpack项目搭建.md","ref":"100道题/23.webpack项目搭建.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github-buttons","sharing-plus","anchor-navigation-ex","favicon"],"styles":{},"pluginsConfig":{"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{},"github-buttons":{},"expandable-chapters-small":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"zouzou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zouzou","language":"zh-hans","gitbook":"*","description":"questions and answers"},"file":{"path":"100道题/24.webpack配置.md","mtime":"2019-08-16T08:03:06.944Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-16T08:21:28.989Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1037,7 +1067,19 @@ publicPath: &quot;<a href="https://cdn.example.com/assets/" target="_blank">http
     <script src="../gitbook/theme.js"></script>
     
         
-        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
         
     
         
@@ -1054,10 +1096,6 @@ publicPath: &quot;<a href="https://cdn.example.com/assets/" target="_blank">http
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         
