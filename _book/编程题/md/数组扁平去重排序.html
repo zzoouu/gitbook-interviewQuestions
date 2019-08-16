@@ -1,0 +1,912 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数组扁平去重排序 · zouzou</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zouzou">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="找最多.html" />
+    
+    
+    <link rel="prev" href="转entry对象.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../100道题/">
+            
+                <a href="../../100道题/">
+            
+                    
+                    100道题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../100道题/1.实现new.html">
+            
+                <a href="../../100道题/1.实现new.html">
+            
+                    
+                    1.实现new
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../100道题/2.js异步.html">
+            
+                <a href="../../100道题/2.js异步.html">
+            
+                    
+                    2.js异步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../100道题/3.http2多路复用.html">
+            
+                <a href="../../100道题/3.http2多路复用.html">
+            
+                    
+                    3.http2多路复用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../100道题/4.tcp三次握手四次挥手.html">
+            
+                <a href="../../100道题/4.tcp三次握手四次挥手.html">
+            
+                    
+                    4.tcp三次握手四次挥手
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../100道题/5.setState.html">
+            
+                <a href="../../100道题/5.setState.html">
+            
+                    
+                    5.setState
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../100道题/6.npm模块机制.html">
+            
+                <a href="../../100道题/6.npm模块机制.html">
+            
+                    
+                    6.npm模块机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../100道题/7.判断数组.html">
+            
+                <a href="../../100道题/7.判断数组.html">
+            
+                    
+                    7.判断数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../100道题/8.重绘和回流.html">
+            
+                <a href="../../100道题/8.重绘和回流.html">
+            
+                    
+                    8.重绘和回流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../../100道题/9.观察者模式和发布订阅模式.html">
+            
+                <a href="../../100道题/9.观察者模式和发布订阅模式.html">
+            
+                    
+                    9.观察者模式和发布订阅模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../../100道题/10.Redux和Vuex的设计思想.html">
+            
+                <a href="../../100道题/10.Redux和Vuex的设计思想.html">
+            
+                    
+                    10.Redux和Vuex的设计思想
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../../100道题/11.浏览器和node事件循环的区别.html">
+            
+                <a href="../../100道题/11.浏览器和node事件循环的区别.html">
+            
+                    
+                    11.浏览器和node事件循环的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../../100道题/12.模块化发展历程.html">
+            
+                <a href="../../100道题/12.模块化发展历程.html">
+            
+                    
+                    12.模块化发展历程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../../100道题/13.let和const.html">
+            
+                <a href="../../100道题/13.let和const.html">
+            
+                    
+                    13.let和const
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../../100道题/14.跨域.html">
+            
+                <a href="../../100道题/14.跨域.html">
+            
+                    
+                    14.跨域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../../100道题/15.cookie-session-web storage.html">
+            
+                <a href="../../100道题/15.cookie-session-web storage.html">
+            
+                    
+                    15.cookie-session-web storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../../100道题/16.Ecent Loop.html">
+            
+                <a href="../../100道题/16.Ecent Loop.html">
+            
+                    
+                    16.Ecent Loop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../../100道题/17.浏览器缓存.html">
+            
+                <a href="../../100道题/17.浏览器缓存.html">
+            
+                    
+                    17.浏览器缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../../100道题/18.react小书.html">
+            
+                <a href="../../100道题/18.react小书.html">
+            
+                    
+                    18.react小书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="../../100道题/19.js-puzzleers.html">
+            
+                <a href="../../100道题/19.js-puzzleers.html">
+            
+                    
+                    19.js-puzzleers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="../../100道题/20.mobx-react.html">
+            
+                <a href="../../100道题/20.mobx-react.html">
+            
+                    
+                    20.mobx-react
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="../../100道题/21.链式取值之函子MayBe.html">
+            
+                <a href="../../100道题/21.链式取值之函子MayBe.html">
+            
+                    
+                    21.链式取值之函子MayBe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="../../100道题/22.contentType.html">
+            
+                <a href="../../100道题/22.contentType.html">
+            
+                    
+                    22.contentType
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="../../100道题/23.webpack项目搭建.html">
+            
+                <a href="../../100道题/23.webpack项目搭建.html">
+            
+                    
+                    23.webpack项目搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="../../100道题/24.webpack配置.html">
+            
+                <a href="../../100道题/24.webpack配置.html">
+            
+                    
+                    24.webpack配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../LeetCode/">
+            
+                <a href="../../LeetCode/">
+            
+                    
+                    LeetCode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../LeetCode/md/263.ugly-number.html">
+            
+                <a href="../../LeetCode/md/263.ugly-number.html">
+            
+                    
+                    263.ugly-number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../LeetCode/md/283.move-zeroes.html">
+            
+                <a href="../../LeetCode/md/283.move-zeroes.html">
+            
+                    
+                    283.move-zeroes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../LeetCode/md/342.power-of-four.html">
+            
+                <a href="../../LeetCode/md/342.power-of-four.html">
+            
+                    
+                    342.power-of-four
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../LeetCode/md/349.intersection-of-two-arrays.html">
+            
+                <a href="../../LeetCode/md/349.intersection-of-two-arrays.html">
+            
+                    
+                    349.intersection-of-two-arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../LeetCode/md/371.sum-of-two-integers.html">
+            
+                <a href="../../LeetCode/md/371.sum-of-two-integers.html">
+            
+                    
+                    371.sum-of-two-integers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../LeetCode/md/437.path-sum-iii.html">
+            
+                <a href="../../LeetCode/md/437.path-sum-iii.html">
+            
+                    
+                    437.path-sum-iii
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../../LeetCode/md/560.subarray-sum-equals-k.html">
+            
+                <a href="../../LeetCode/md/560.subarray-sum-equals-k.html">
+            
+                    
+                    560.subarray-sum-equals-k
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../../LeetCode/md/0575.distribute-candies.html">
+            
+                <a href="../../LeetCode/md/0575.distribute-candies.html">
+            
+                    
+                    0575.distribute-candies
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    编程题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="flat.html">
+            
+                <a href="flat.html">
+            
+                    
+                    flat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="for.html">
+            
+                <a href="for.html">
+            
+                    
+                    for
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="转entry对象.html">
+            
+                <a href="转entry对象.html">
+            
+                    
+                    转entry对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4" data-path="数组扁平去重排序.html">
+            
+                <a href="数组扁平去重排序.html">
+            
+                    
+                    数组扁平去重排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="找最多.html">
+            
+                <a href="找最多.html">
+            
+                    
+                    找最多
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../README-HTML.html">
+            
+                <a href="../../README-HTML.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../README-CSS.html">
+            
+                <a href="../../README-CSS.html">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../git/">
+            
+                <a href="../../git/">
+            
+                    
+                    git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../git/1.常用操作.html">
+            
+                <a href="../../git/1.常用操作.html">
+            
+                    
+                    1.常用操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../git/2.常见报错.html">
+            
+                <a href="../../git/2.常见报错.html">
+            
+                    
+                    2.常见报错
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../mac.html">
+            
+                <a href="../../mac.html">
+            
+                    
+                    mac
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../VSCode.html">
+            
+                <a href="../../VSCode.html">
+            
+                    
+                    VSCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../Chrome.html">
+            
+                <a href="../../Chrome.html">
+            
+                    
+                    Chrome
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >数组扁平去重排序</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x6241;&#x5E73;&#x3001;&#x53BB;&#x91CD;&#x3001;&#x6392;&#x5E8F;">&#x6241;&#x5E73;&#x3001;&#x53BB;&#x91CD;&#x3001;&#x6392;&#x5E8F;</h3>
+<blockquote>
+<p>var arr = [ [1, 2, 2], [3, 4, 5, 5], [6, 7, 8, 9, [11, 12, [12, 13, [14] ] ] ], 10]</p>
+</blockquote>
+<h4 id="&#x6570;&#x7EC4;&#x6241;&#x5E73;">&#x6570;&#x7EC4;&#x6241;&#x5E73;</h4>
+<pre><code>arr.flat(Infinity)
+arr.join(&apos;,&apos;)
+arr.toString()
+</code></pre><h4 id="&#x6570;&#x7EC4;&#x53BB;&#x91CD;">&#x6570;&#x7EC4;&#x53BB;&#x91CD;</h4>
+<pre><code>new Set(arr)
+</code></pre><p>&#x6570;&#x7EC4;&#x4E2D;&#x5305;&#x542B;&#x6570;&#x7EC4;&#x6216;&#x5BF9;&#x8C61;&#x53BB;&#x91CD;</p>
+<blockquote>
+<p>&#x5982;&#x4F20;&#x5165;&#x7684;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x4E3A;[123, [1, 2, 3], [1, &quot;2&quot;, 3], [1, 2, 3], &quot;meili&quot;]&#xFF0C;&#x5219;&#x8F93;&#x51FA;&#xFF1A;[123, [1, 2, 3], [1, &quot;2&quot;, 3], &quot;meili&quot;]</p>
+<p>&#x5982;&#x4F20;&#x5165;&#x7684;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x4E3A;[123, {a: 1}, {a: {b: 1}}, {a: &quot;1&quot;}, {a: {b: 1}}, &quot;meili&quot;]&#xFF0C;&#x5219;&#x8F93;&#x51FA;&#xFF1A;[123, {a: 1}, {a: {b: 1}}, {a: &quot;1&quot;}, &quot;meili&quot;]</p>
+<pre><code> function flattern(arr){
+     var map = new Map()
+     arr.forEach(item =&gt; {
+         map.set(JSON.stringify(item), item)
+     })
+     return [...map.values()]
+ }
+function flattern(arr){
+    return [...new Set(arr.map(item =&gt; JSON.stringify(item)))].map(item =&gt; JSON.parse(item))
+}
+</code></pre><h3 id="&#x6392;&#x5E8F;">&#x6392;&#x5E8F;</h3>
+<pre><code>arr.sort((a,b) =&gt; a-b)
+</code></pre><p>&#x89E3;&#x6CD5;&#xFF1A;</p>
+<pre><code>var arr = [ [1, 2, 2], [3, 4, 5, 5], [6, 7, 8, 9, [11, 12, [12, 13, [14] ] ] ], 10]
+ // es6
+ [...new Set(arr.flat(Infinity)].sort((a,b) =&gt; a-b)
+ //
+ arr.toString().split(&apos;,&apos;)
+</code></pre></blockquote>
+<pre><code>function flattern(arr){
+    let newArr = []
+    arr.map(item =&gt;{
+        if(Array.isArray(item)){
+            newArr = newArr.concat(flattern(item))
+        }else{
+            newArr.push(item)
+        }
+    })
+    return newArr
+}
+</code></pre><blockquote>
+<p>concat&#x4E0D;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;&#xFF0C;&#x9700;&#x8D4B;&#x503C;</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="转entry对象.html" class="navigation navigation-prev " aria-label="Previous page: 转entry对象">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="找最多.html" class="navigation navigation-next " aria-label="Next page: 找最多">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数组扁平去重排序","level":"1.4.4","depth":2,"next":{"title":"找最多","level":"1.4.5","depth":2,"path":"编程题/md/找最多.md","ref":"编程题/md/找最多.md","articles":[]},"previous":{"title":"转entry对象","level":"1.4.3","depth":2,"path":"编程题/md/转entry对象.md","ref":"编程题/md/转entry对象.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zouzou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zouzou","language":"zh-hans","gitbook":"*","description":"questions and answers"},"file":{"path":"编程题/md/数组扁平去重排序.md","mtime":"2019-08-16T06:08:48.826Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-16T06:10:49.547Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

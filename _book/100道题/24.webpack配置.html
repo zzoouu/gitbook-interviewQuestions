@@ -1,0 +1,1062 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>24.webpack配置 · zouzou</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zouzou">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../LeetCode/" />
+    
+    
+    <link rel="prev" href="23.webpack项目搭建.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    100道题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1.实现new.html">
+            
+                <a href="1.实现new.html">
+            
+                    
+                    1.实现new
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="2.js异步.html">
+            
+                <a href="2.js异步.html">
+            
+                    
+                    2.js异步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="3.http2多路复用.html">
+            
+                <a href="3.http2多路复用.html">
+            
+                    
+                    3.http2多路复用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="4.tcp三次握手四次挥手.html">
+            
+                <a href="4.tcp三次握手四次挥手.html">
+            
+                    
+                    4.tcp三次握手四次挥手
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="5.setState.html">
+            
+                <a href="5.setState.html">
+            
+                    
+                    5.setState
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="6.npm模块机制.html">
+            
+                <a href="6.npm模块机制.html">
+            
+                    
+                    6.npm模块机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="7.判断数组.html">
+            
+                <a href="7.判断数组.html">
+            
+                    
+                    7.判断数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="8.重绘和回流.html">
+            
+                <a href="8.重绘和回流.html">
+            
+                    
+                    8.重绘和回流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="9.观察者模式和发布订阅模式.html">
+            
+                <a href="9.观察者模式和发布订阅模式.html">
+            
+                    
+                    9.观察者模式和发布订阅模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="10.Redux和Vuex的设计思想.html">
+            
+                <a href="10.Redux和Vuex的设计思想.html">
+            
+                    
+                    10.Redux和Vuex的设计思想
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="11.浏览器和node事件循环的区别.html">
+            
+                <a href="11.浏览器和node事件循环的区别.html">
+            
+                    
+                    11.浏览器和node事件循环的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="12.模块化发展历程.html">
+            
+                <a href="12.模块化发展历程.html">
+            
+                    
+                    12.模块化发展历程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="13.let和const.html">
+            
+                <a href="13.let和const.html">
+            
+                    
+                    13.let和const
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="14.跨域.html">
+            
+                <a href="14.跨域.html">
+            
+                    
+                    14.跨域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="15.cookie-session-web storage.html">
+            
+                <a href="15.cookie-session-web storage.html">
+            
+                    
+                    15.cookie-session-web storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="16.Ecent Loop.html">
+            
+                <a href="16.Ecent Loop.html">
+            
+                    
+                    16.Ecent Loop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="17.浏览器缓存.html">
+            
+                <a href="17.浏览器缓存.html">
+            
+                    
+                    17.浏览器缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="18.react小书.html">
+            
+                <a href="18.react小书.html">
+            
+                    
+                    18.react小书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="19.js-puzzleers.html">
+            
+                <a href="19.js-puzzleers.html">
+            
+                    
+                    19.js-puzzleers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="20.mobx-react.html">
+            
+                <a href="20.mobx-react.html">
+            
+                    
+                    20.mobx-react
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="21.链式取值之函子MayBe.html">
+            
+                <a href="21.链式取值之函子MayBe.html">
+            
+                    
+                    21.链式取值之函子MayBe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="22.contentType.html">
+            
+                <a href="22.contentType.html">
+            
+                    
+                    22.contentType
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="23.webpack项目搭建.html">
+            
+                <a href="23.webpack项目搭建.html">
+            
+                    
+                    23.webpack项目搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.24" data-path="24.webpack配置.html">
+            
+                <a href="24.webpack配置.html">
+            
+                    
+                    24.webpack配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../LeetCode/">
+            
+                <a href="../LeetCode/">
+            
+                    
+                    LeetCode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../LeetCode/md/263.ugly-number.html">
+            
+                <a href="../LeetCode/md/263.ugly-number.html">
+            
+                    
+                    263.ugly-number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../LeetCode/md/283.move-zeroes.html">
+            
+                <a href="../LeetCode/md/283.move-zeroes.html">
+            
+                    
+                    283.move-zeroes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../LeetCode/md/342.power-of-four.html">
+            
+                <a href="../LeetCode/md/342.power-of-four.html">
+            
+                    
+                    342.power-of-four
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../LeetCode/md/349.intersection-of-two-arrays.html">
+            
+                <a href="../LeetCode/md/349.intersection-of-two-arrays.html">
+            
+                    
+                    349.intersection-of-two-arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../LeetCode/md/371.sum-of-two-integers.html">
+            
+                <a href="../LeetCode/md/371.sum-of-two-integers.html">
+            
+                    
+                    371.sum-of-two-integers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../LeetCode/md/437.path-sum-iii.html">
+            
+                <a href="../LeetCode/md/437.path-sum-iii.html">
+            
+                    
+                    437.path-sum-iii
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../LeetCode/md/560.subarray-sum-equals-k.html">
+            
+                <a href="../LeetCode/md/560.subarray-sum-equals-k.html">
+            
+                    
+                    560.subarray-sum-equals-k
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../LeetCode/md/0575.distribute-candies.html">
+            
+                <a href="../LeetCode/md/0575.distribute-candies.html">
+            
+                    
+                    0575.distribute-candies
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../编程题/">
+            
+                <a href="../编程题/">
+            
+                    
+                    编程题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../编程题/md/flat.html">
+            
+                <a href="../编程题/md/flat.html">
+            
+                    
+                    flat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../编程题/md/for.html">
+            
+                <a href="../编程题/md/for.html">
+            
+                    
+                    for
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../编程题/md/转entry对象.html">
+            
+                <a href="../编程题/md/转entry对象.html">
+            
+                    
+                    转entry对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../编程题/md/数组扁平去重排序.html">
+            
+                <a href="../编程题/md/数组扁平去重排序.html">
+            
+                    
+                    数组扁平去重排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../编程题/md/找最多.html">
+            
+                <a href="../编程题/md/找最多.html">
+            
+                    
+                    找最多
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../README-HTML.html">
+            
+                <a href="../README-HTML.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../README-CSS.html">
+            
+                <a href="../README-CSS.html">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../git/">
+            
+                <a href="../git/">
+            
+                    
+                    git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../git/1.常用操作.html">
+            
+                <a href="../git/1.常用操作.html">
+            
+                    
+                    1.常用操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../git/2.常见报错.html">
+            
+                <a href="../git/2.常见报错.html">
+            
+                    
+                    2.常见报错
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../mac.html">
+            
+                <a href="../mac.html">
+            
+                    
+                    mac
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../VSCode.html">
+            
+                <a href="../VSCode.html">
+            
+                    
+                    VSCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Chrome.html">
+            
+                <a href="../Chrome.html">
+            
+                    
+                    Chrome
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >24.webpack配置</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="webpack">webpack</h3>
+<blockquote>
+<p>webpack&#x662F;&#x4E00;&#x4E2A;&#x6A21;&#x7248;&#x6253;&#x5305;&#x5DE5;&#x5177;</p>
+</blockquote>
+<pre><code>import Header from &apos;./header.js&apos;
+</code></pre><p>&#x672A;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#x65F6;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x65E0;&#x6CD5;&#x8BC6;&#x522B;&#xFF0C;&#x4F1A;&#x62A5;&#x9519;<br>webpack&#x57FA;&#x4E8E;node&#xFF0C;node&#x7248;&#x672C;&#x5C3D;&#x91CF;&#x8981;&#x65B0;&#xFF0C;&#x901F;&#x5EA6;&#x66F4;&#x5FEB;
+<em>node&#x5B98;&#x7F51;&#x4E2D;&#xFF1A;LTS&#xFF1B;long time supported &#x66F4;&#x7A33;&#x5B9A;</em></p>
+<h4 id="&#x6A21;&#x5757;&#xFF08;modules&#xFF09;">&#x6A21;&#x5757;&#xFF08;modules&#xFF09;</h4>
+<pre><code>// ES module
+import Header from &apos;./header.js&apos;
+export default Header
+
+// CommonJS(node)
+const path = require(&apos;path&apos;) // &#x5F02;&#x6B65;
+const path = require.resolve(&apos;path&apos;) // &#x540C;&#x6B65;
+
+// 
+const path = require.ensure(&apos;path&apos;)
+module.exports = Header
+
+// AMD
+define require
+
+
+// CMD
+
+// css/sass/less
+@import
+
+// url(...)&#x6216;&lt;img src=&quot;...&quot; /&gt;
+</code></pre><h5 id="es-module">ES Module</h5>
+<ul>
+<li>import module from &apos;./module.js&apos;  </li>
+<li><p>import { module } from &apos;./module.js&apos;</p>
+</li>
+<li><p>export default module</p>
+</li>
+<li><p>export const module = {}</p>
+</li>
+<li><p>import():<br>&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#xFF0C;&#x8C03;&#x7528;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x4F5C;&#x4E3A;&#x5206;&#x79BB;&#x7684;&#x6A21;&#x5757;&#x8D77;&#x70B9;
+import(&apos;path/to/module&apos;) -&gt; Promise</p>
+</li>
+</ul>
+<h5 id="commonjs">CommonJS</h5>
+<ul>
+<li><p>require(dependency:String)  </p>
+</li>
+<li><p>require(&apos;path&apos;)  &#x5F02;&#x6B65;  </p>
+</li>
+<li><p>require.resolve(&apos;path&apos;)  &#x540C;&#x6B65;&#x65B9;&#x5F0F;&#x83B7;&#x53D6;&#x6A21;&#x5757;id  </p>
+</li>
+<li><p>require.ensure() &#x53EF;&#x88AB;import()&#x53D6;&#x4EE3;<br>require.ensure(dependencies: String[],callback:function(require), erroeCallback:function(error),chunkName:String)<br>&#x5C06;dependencies&#x53C2;&#x6570;&#x5176;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#x62C6;&#x5206;&#x5230;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684; bundle &#x4E2D;&#xFF0C;&#x88AB;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;&#x3002;&#x5F53;&#x4F7F;&#x7528; &#x8FD9;&#x662F;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x4F9D;&#x8D56;&#x3002;&#x5728;&#x6A21;&#x5757;&#x6267;&#x884C;&#x65F6;&#x624D;&#x8FD0;&#x884C;&#x4EE3;&#x7801;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x6EE1;&#x8DB3;&#x67D0;&#x4E9B;&#x6761;&#x4EF6;&#x65F6;&#x624D;&#x52A0;&#x8F7D;&#x4F9D;&#x8D56;&#x9879;</p>
+</li>
+</ul>
+<h5 id="amd">AMD</h5>
+<p>define require</p>
+<pre><code>mkdir webpack
+npm init --yes
+
+// &#x5168;&#x5C40;&#x5B89;&#x88C5;webpack&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x9047;&#x5230;&#x4E0D;&#x540C;&#x9879;&#x76EE;&#x8FD0;&#x7528;&#x7684;webpack&#x7248;&#x672C;&#x4E0D;&#x4E00;&#x6837;
+npm install webpack webpack-cli -g
+(npm uninstall webpack webpacl-cli -g)
+
+cd &#x9879;&#x76EE;&#x76EE;&#x5F55;
+
+// &#x9879;&#x76EE;&#x672C;&#x5730;&#x5B89;&#x88C5;webpack
+npm install webpack webpack-cli -D
+
+// npx&#xFF1A;&#x5728;&#x5F53;&#x524D;&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x4E2D;&#x7684;node_modules&#x4E2D;&#x67E5;&#x627E;webpack
+npx webpack -v
+
+// &#x5168;&#x5C40;&#x67E5;&#x627E;web webpack
+npm webpack -v
+
+// &#x5B89;&#x88C5;&#x524D;&#x67E5;&#x770B;webpack&#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x7248;&#x672C;&#x53F7;
+npm info webpack
+npm install webpack@&#x7248;&#x672C;&#x53F7;
+
+// &#x6253;&#x5305;index.js&#x6587;&#x4EF6;
+npx webpack index.js
+</code></pre><h4 id="&#x914D;&#x7F6E;&#x6587;&#x4EF6;">&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h4>
+<blockquote>
+<p>webpack&#x9ED8;&#x8BA4;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E3A;webpack.config.js</p>
+</blockquote>
+<pre><code>const path require(&apos;path&apos;)
+
+module.exports = {
+    // &#x9879;&#x76EE;&#x6253;&#x5305;&#x7684;&#x5165;&#x53E3;&#x6587;&#x4EF6;
+    entry: &apos;./index.js&apos;
+
+    // &#x9879;&#x76EE;&#x6253;&#x5305;&#x7684;&#x51FA;&#x53E3;&#x6587;&#x4EF6;
+    output: {
+        // &#x6253;&#x5305;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x540D;
+        filename: &apos;bundle.js&apos;,
+        // &#x9879;&#x76EE;&#x6253;&#x5305;&#x540E;&#x7684;&#x76EE;&#x5F55;&#x540D;
+        path: path.resolve(_dirname,&apos;bundle&apos;)
+        // &#x6253;&#x5305;&#x5230;&#x4E86; bundle/bundle.js,&#x65E0;path&#xFF0C;&#x5219;&#x9ED8;&#x8BA4;&#x6253;&#x5305;&#x5230;dist
+        // _dirname&#x4E3A;webpack.config.js&#x6240;&#x5728;&#x76EE;&#x5F55;&#x518D;&#x5C06;dirname&#x4E0E;bundle &#x7ED3;&#x5408;&#x5F97;&#x5230;&#x65B0;&#x76EE;&#x5F55;
+    }
+}
+</code></pre><blockquote>
+<p>npx webpack &#x672A;&#x63A5;&#x8981;&#x6253;&#x5305;&#x7684;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x4F1A;&#x4E3B;&#x52A8;&#x53BB;&#x627E;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x6587;&#x4EF6;(webpack.config.js)&#xFF0C;&#x627E;&#x5230;&#x5176;&#x5165;&#x53E3;&#x6587;&#x4EF6;   </p>
+<p>npx webpack --config webpackconfig.js  &#x6307;&#x5B9A;webpack.config.js&#x4E3A;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+</blockquote>
+<h4 id="webpack&#x8FD0;&#x884C;">webpack&#x8FD0;&#x884C;</h4>
+<ul>
+<li>global&#xFF1A;webpack index.js</li>
+<li>local: npx webpack index.js</li>
+<li>npm scripts: npm run srcipt(package.json)</li>
+</ul>
+<h4 id="webpack&#x6253;&#x5305;&#x8F93;&#x51FA;&#x5185;&#x5BB9;">webpack&#x6253;&#x5305;&#x8F93;&#x51FA;&#x5185;&#x5BB9;</h4>
+<pre><code>Hash: &#x6253;&#x5305;&#x7684;&#x552F;&#x4E00;hash&#x503C;
+Version: &#x6253;&#x5305;&#x7528;&#x5230;&#x7684;webpack&#x7248;&#x672C;
+Time: &#x6253;&#x5305;&#x7684;&#x6574;&#x4F53;&#x8017;&#x65F6;
+Asset: bundle.js &#x6253;&#x5305;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x540D;
+Size: &#x6587;&#x4EF6;&#x7684;&#x5927;&#x5C0F;
+Chunks: &#x6BCF;&#x4E2A;js&#x5BF9;&#x5E94;&#x7684;id
+ChunkName:  &#x6BCF;&#x4E2A;js&#x5BF9;&#x5E94;&#x7684;&#x540D;&#x5B57;&#xFF08;main&#xFF09;
+
+entry: {
+    main: &apos;index.js&apos;
+}
+</code></pre><h4 id="modeproductiondevelopment">mode:production/development</h4>
+<p>production: &#x6253;&#x5305;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x88AB;&#x538B;&#x7F29;&#x4E3A;&#x4E00;&#x884C;
+development: &#x6253;&#x5305;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x4E0D;&#x88AB;&#x538B;&#x7F29;</p>
+<pre><code>module.exports = {
+    ...
+    mode: &apos;production&apos;
+    ...
+}
+</code></pre><h3 id="module-loader">module loader</h3>
+<p>js css image...&#x90FD;&#x662F;&#x6A21;&#x5757;&#xFF08;module&#xFF09;
+file-loader &#x6307;&#x660E;&#x5982;&#x4F55;&#x5904;&#x7406;&#x56FE;&#x7247;
+&#x5148;&#x5C06;&#x56FE;&#x7247;&#x6253;&#x5305;&#x5230;dist&#x4E2D;&#xFF0C;&#x6539;&#x53D8;&#x4E86;&#x540D;&#x5B57;&#xFF0C;&#x5C06;&#x5176;&#x76F8;&#x5BF9;&#x4E8E;dist&#x7684;&#x540D;&#x5B57;&#x5730;&#x5740;&#x8FD4;&#x56DE;&#x7ED9;&#x996E;&#x7528;&#x5904;
+loader&#xFF1A;&#x5982;&#x4F55;&#x6253;&#x5305;&#x5904;&#x7406;&#x6A21;&#x5757;</p>
+<pre><code>module.exports = {
+    ...
+    // &#x5982;&#x4F55;&#x5904;&#x7406;&#x6A21;&#x5757;
+    module: {
+        rules: [
+            {
+                test: /\.jpg$/,
+                use: {
+                    loader: &apos;file-loader&apos;
+                }
+            }
+        ]
+    }
+    ...
+}
+</code></pre><p>&#x770B;&#xFF1A; &#x5B98;&#x7F51;modules&#x51E0;&#x79CD;&#x6A21;&#x5757;&#x5F15;&#x5165;&#x65B9;&#x6CD5;&#x548C;getstarted</p>
+<blockquote>
+<p>loader &#x4ECE;&#x4E0A;&#x5230;&#x4E0B;&#xFF0C;&#x4ECE;&#x53F3;&#x5230;&#x5DE6;
+```
+modules.exports = {
+    rules: [
+        {
+            test: /.css$/,
+            use: [
+            {
+                loader: &apos;css-loader&apos;,
+                options: {
+                // &#x4FDD;&#x8BC1;&#x591A;&#x5C42;&#x5BFC;&#x5165;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x6BCF;&#x6B21;&#x90FD;&#x53EF;&#x4EE5;&#x6309;&#x987A;&#x5E8F;&#x7528;&#x5230;&#x6240;&#x6709;loader
+                    imoprtLoaders: 2
+                    //&#x5F00;&#x542F;css&#x6A21;&#x5757;&#x5316;
+                    modules: true
+                }
+            },
+            {
+                loader: &apos;sass-loader&apos;
+            }
+            ]</p>
+</blockquote>
+<pre><code>    }
+]
+</code></pre><p>}</p>
+<pre><code>
+### clean-webpack-plugin
+&#x6BCF;&#x6B21;&#x91CD;&#x65B0;&#x6253;&#x5305;&#x6E05;&#x7406;dist&#x76EE;&#x5F55;
+new CleanWebpackPlugin([&apos;dist&apos;])
+
+
+### publicPath
+ &#x76F8;&#x5BF9;&#x4E8E;&#x670D;&#x52A1;&#x7684; URL(Server-relative URL)&#xFF0C;&#x76F8;&#x5BF9;&#x4E8E;&#x534F;&#x8BAE;&#x7684; URL(protocol-relative URL) &#x6216;&#x7EDD;&#x5BF9; URL(absolute URL) &#x4E5F;&#x53EF;&#x662F;&#x53EF;&#x80FD;&#x7528;&#x5230;&#x7684;&#xFF0C;&#x6216;&#x8005;&#x6709;&#x65F6;&#x5FC5;&#x987B;&#x7528;&#x5230;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;&#x5F53;&#x5C06;&#x8D44;&#x6E90;&#x6258;&#x7BA1;&#x5230; CDN &#x65F6;&#x3002;
+</code></pre><p> path: path.resolve(__dirname, &quot;public/assets&quot;),
+publicPath: &quot;<a href="https://cdn.example.com/assets/" target="_blank">https://cdn.example.com/assets/</a>&quot;
+ ```</p>
+<h3 id="soucemap">souceMap</h3>
+<p> devtool: &apos;souce-map&apos; &#x6620;&#x5C04;&#x5173;&#x7CFB;&#x5728;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6587;&#x4EF6;&#x91CC;&#x9762;
+ devtool: &apos;inline-source-map&apos; &#x6620;&#x5C04;&#x5173;&#x7CFB;&#x4EE5;base64 &#x653E;&#x5728;main.js&#x672B;&#x5C3E;
+ devtool:&apos;cheap-inline-source-map&apos;  &#x53EA;&#x8981;&#x544A;&#x8BC9;&#x884C;&#x5C31;&#x597D;&#x4E86;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x5230;&#x5217;&#xFF0C;&#x66F4;&#x5FEB;&#xFF0C;&#x6027;&#x80FD;&#x66F4;&#x597D;&#x4E00;&#x70B9;&#xFF0C;&#x53EA;&#x7BA1;&#x7406;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#xFF0C;&#x4E0D;&#x7BA1;&#x7406;&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;</p>
+<p> mode: &apos;development&apos;
+ cheap-module-eval-source-map</p>
+<p> &#x7EBF;&#x4E0A;&#x4EE3;&#x7801;&#x4E00;&#x822C;&#x4E0D;&#x9700;&#x8981;sore-map
+ mode: &apos;production&apos;
+ &#x7EBF;&#x4E0A;&#x4E00;&#x822C;&#x4E3A;&#xFF1A;  cheap-module-source-map
+&#x4E00;&#x4E2A;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#xFF0C;&#x53EF;&#x4EE5;&#x8BF4;&#x660E;&#x9519;&#x8BEF;&#x4EE3;&#x7801;&#x5728;&#x6E90;&#x4EE3;&#x7801;&#x7684;&#x4F4D;&#x7F6E;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="23.webpack项目搭建.html" class="navigation navigation-prev " aria-label="Previous page: 23.webpack项目搭建">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../LeetCode/" class="navigation navigation-next " aria-label="Next page: LeetCode">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"24.webpack配置","level":"1.2.24","depth":2,"next":{"title":"LeetCode","level":"1.3","depth":1,"path":"LeetCode/README.md","ref":"LeetCode/README.md","articles":[{"title":"263.ugly-number","level":"1.3.1","depth":2,"path":"LeetCode/md/263.ugly-number.md","ref":"LeetCode/md/263.ugly-number.md","articles":[]},{"title":"283.move-zeroes","level":"1.3.2","depth":2,"path":"LeetCode/md/283.move-zeroes.md","ref":"LeetCode/md/283.move-zeroes.md","articles":[]},{"title":"342.power-of-four","level":"1.3.3","depth":2,"path":"LeetCode/md/342.power-of-four.md","ref":"LeetCode/md/342.power-of-four.md","articles":[]},{"title":"349.intersection-of-two-arrays","level":"1.3.4","depth":2,"path":"LeetCode/md/349.intersection-of-two-arrays.md","ref":"LeetCode/md/349.intersection-of-two-arrays.md","articles":[]},{"title":"371.sum-of-two-integers","level":"1.3.5","depth":2,"path":"LeetCode/md/371.sum-of-two-integers.md","ref":"LeetCode/md/371.sum-of-two-integers.md","articles":[]},{"title":"437.path-sum-iii","level":"1.3.6","depth":2,"path":"LeetCode/md/437.path-sum-iii.md","ref":"LeetCode/md/437.path-sum-iii.md","articles":[]},{"title":"560.subarray-sum-equals-k","level":"1.3.7","depth":2,"path":"LeetCode/md/560.subarray-sum-equals-k.md","ref":"LeetCode/md/560.subarray-sum-equals-k.md","articles":[]},{"title":"0575.distribute-candies","level":"1.3.8","depth":2,"path":"LeetCode/md/0575.distribute-candies.md","ref":"LeetCode/md/0575.distribute-candies.md","articles":[]}]},"previous":{"title":"23.webpack项目搭建","level":"1.2.23","depth":2,"path":"100道题/23.webpack项目搭建.md","ref":"100道题/23.webpack项目搭建.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zouzou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zouzou","language":"zh-hans","gitbook":"*","description":"questions and answers"},"file":{"path":"100道题/24.webpack配置.md","mtime":"2019-08-16T06:05:41.077Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-16T06:10:49.547Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
