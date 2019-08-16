@@ -17,7 +17,19 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -41,6 +53,8 @@
         
     
     
+    
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -54,6 +68,22 @@
     
     <link rel="prev" href="19.js-puzzleers.html" />
     
+
+    
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {};
+    </script>
 
     </head>
     <body>
@@ -787,12 +817,12 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="mobox-react"><a href="https://github.com/mobxjs/mobx-react" target="_blank">mobox-react</a></h3>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><ul><li><span class="title-icon "></span><a href="#mobox-react"><b>1.1.1. </b>mobox-react</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h3 id="mobox-react"><a name="mobox-react" class="anchor-navigation-ex-anchor" href="#mobox-react"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. mobox-react</h3>
 <blockquote>
 <p>&#x5305;&#x542B;react<strong>&#x7EC4;&#x4EF6;&#x5305;&#x88C5;&#x5668;</strong>&#x7684;&#x5305;&#xFF0C;&#x7528;&#x4E8E;&#x5C06;react&#x548C;mobx&#x7ED3;&#x5408;&#x4F7F;&#x7528;&#xFF0C;&#x5BFC;&#x51FA;observer&#x88C5;&#x9970;&#x5668;&#x548C;&#x5176;&#x4ED6;&#x5DE5;&#x5177;</p>
 </blockquote>
-<h4 id="&#x57FA;&#x4E8E;&#x7C7B;&#x7684;&#x7EC4;&#x4EF6;observer&#x548C;observer">&#x57FA;&#x4E8E;&#x7C7B;&#x7684;&#x7EC4;&#x4EF6;observer&#x548C;@observer</h4>
-<h5 id="observer">observer</h5>
+<h4 id="&#x57FA;&#x4E8E;&#x7C7B;&#x7684;&#x7EC4;&#x4EF6;observer&#x548C;observer"><a name="&#x57FA;&#x4E8E;&#x7C7B;&#x7684;&#x7EC4;&#x4EF6;observer&#x548C;observer" class="anchor-navigation-ex-anchor" href="#&#x57FA;&#x4E8E;&#x7C7B;&#x7684;&#x7EC4;&#x4EF6;observer&#x548C;observer"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x57FA;&#x4E8E;&#x7C7B;&#x7684;&#x7EC4;&#x4EF6;observer&#x548C;observer" class="plugin-anchor" href="#&#x57FA;&#x4E8E;&#x7C7B;&#x7684;&#x7EC4;&#x4EF6;observer&#x548C;observer"><i class="fa fa-link" aria-hidden="true"></i></a>&#x57FA;&#x4E8E;&#x7C7B;&#x7684;&#x7EC4;&#x4EF6;observer&#x548C;@observer</h4>
+<h5 id="observer"><a name="observer" class="anchor-navigation-ex-anchor" href="#observer"><i class="fa fa-link" aria-hidden="true"></i></a><a name="observer" class="plugin-anchor" href="#observer"><i class="fa fa-link" aria-hidden="true"></i></a>observer</h5>
 <p>&#x88AB;&#x88C5;&#x9970;&#x7684;&#x7C7B;&#x7EC4;&#x4EF6;&#x6216;&#x8005;&#x72EC;&#x7ACB;&#x6E32;&#x67D3;&#x7684;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x88AB;&#x8F6C;&#x6362;&#x4E3A;&#x201C;&#x53CD;&#x5E94;&#x7EC4;&#x4EF6;&#x201D;&#xFF0C;&#x8FD9;&#x4E9B;&#x201C;&#x53CD;&#x5E94;&#x7EC4;&#x4EF6;&#x201D;&#x53EF;&#x4EE5;&#x8FFD;&#x8E2A;&#x90A3;&#x4E9B;&#x53EF;&#x89C2;&#x5BDF;&#x5BF9;&#x8C61;,&#x4E14;&#x5728;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x503C;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x81EA;&#x52A8;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x7EC4;&#x4EF6;</p>
 <p>&#x5F53;&#x7528;&#x4E8E;&#x7C7B;&#x7EC4;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#xFF0C;this.props&#x548C;this.state&#x5C06;&#x8FDB;&#x884C;&#x89C2;&#x5BDF;&#xFF0C;&#x8BE5;&#x7EC4;&#x4EF6;&#x5728;props&#x548C;state&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x4F5C;&#x51FA;&#x53CD;&#x5E94;&#x91CD;&#x65B0;&#x6E32;&#x67D3;</p>
 <p>&#x6240;&#x6709;&#x5448;&#x73B0;&#x53EF;&#x89C2;&#x5BDF;&#x6570;&#x636E;&#x7684;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x88AB;&#x6807;&#x8BB0;&#x4E3A;observer&#xFF0C;&#x53CD;&#x4E4B;&#xFF0C;&#x82E5;&#x4E3A;&#x4E86;&#x51CF;&#x5C11;&#x901A;&#x7528;&#x7EC4;&#x4EF6;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#xFF0C;&#x53EF;&#x4EE5;&#x53EA;&#x4F20;&#x9012;&#x666E;&#x901A;&#x6570;&#x636E;</p>
@@ -819,7 +849,7 @@
 
 // 3
 const Mobx3 = observer(({ obj }) =&gt; &lt;h1&gt;observer&lt;/h1&gt;)
-</code></pre><h4 id="observer">Observer</h4>
+</code></pre><h4 id="observer_1"><a name="observer_1" class="anchor-navigation-ex-anchor" href="#observer_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="observer" class="plugin-anchor" href="#observer"><i class="fa fa-link" aria-hidden="true"></i></a>Observer</h4>
 <p>Observer&#x662F;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF0C;&#x5B83;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x65E0;&#x53C2;&#x6570;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x53EA;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;react&#x7EC4;&#x4EF6;&#xFF0C;&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x7EC4;&#x4EF6;&#x5C06;&#x88AB;&#x8DDF;&#x8E2A;&#x5728;&#x9700;&#x8981;&#x65F6;&#x81EA;&#x52A8;&#x91CD;&#x65B0;&#x6E32;&#x67D3;</p>
 <p>&#x7528;&#x6CD5;&#xFF1A; </p>
 <pre><code>class Mobx extends React.Component {
@@ -842,7 +872,7 @@ const obj = observerble({ name: &apos;lijian&apos; })
 ReactDOM.render(&lt;App obj={obj}/&gt;,document.body)
 
 obj.name = &apos;xxx&apos; // obj &#x6539;&#x53D8;&#xFF0C;Observer&#x533A;&#x57DF;&#x91CD;&#x65B0;&#x6E32;&#x67D3;
-</code></pre><h4 id="provider&#x548C;inject">provider&#x548C;inject</h4>
+</code></pre><h4 id="provider&#x548C;inject"><a name="provider&#x548C;inject" class="anchor-navigation-ex-anchor" href="#provider&#x548C;inject"><i class="fa fa-link" aria-hidden="true"></i></a><a name="provider&#x548C;inject" class="plugin-anchor" href="#provider&#x548C;inject"><i class="fa fa-link" aria-hidden="true"></i></a>provider&#x548C;inject</h4>
 <blockquote>
 <p>provider&#x548C;inject &#x7528;&#x4E8E;&#x4F20;&#x9012;stores&#xFF08;&#x6570;&#x636E;&#xFF09;  </p>
 </blockquote>
@@ -912,7 +942,7 @@ obj.name = &apos;xxx&apos; // obj &#x6539;&#x53D8;&#xFF0C;Observer&#x533A;&#x57D
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"20.mobx-react","level":"1.2.20","depth":2,"next":{"title":"21.链式取值之函子MayBe","level":"1.2.21","depth":2,"path":"100道题/21.链式取值之函子MayBe.md","ref":"100道题/21.链式取值之函子MayBe.md","articles":[]},"previous":{"title":"19.js-puzzleers","level":"1.2.19","depth":2,"path":"100道题/19.js-puzzleers.md","ref":"100道题/19.js-puzzleers.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{},"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zouzou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zouzou","language":"zh-hans","gitbook":"*","description":"questions and answers"},"file":{"path":"100道题/20.mobx-react.md","mtime":"2019-08-16T07:20:03.466Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-16T07:23:51.596Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"20.mobx-react","level":"1.2.20","depth":2,"next":{"title":"21.链式取值之函子MayBe","level":"1.2.21","depth":2,"path":"100道题/21.链式取值之函子MayBe.md","ref":"100道题/21.链式取值之函子MayBe.md","articles":[]},"previous":{"title":"19.js-puzzleers","level":"1.2.19","depth":2,"path":"100道题/19.js-puzzleers.md","ref":"100道题/19.js-puzzleers.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github-buttons","sharing-plus","anchor-navigation-ex","favicon"],"styles":{},"pluginsConfig":{"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{},"github-buttons":{},"expandable-chapters-small":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"zouzou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zouzou","language":"zh-hans","gitbook":"*","description":"questions and answers"},"file":{"path":"100道题/20.mobx-react.md","mtime":"2019-08-16T08:03:06.942Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-16T08:21:28.989Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -922,7 +952,19 @@ obj.name = &apos;xxx&apos; // obj &#x6539;&#x53D8;&#xFF0C;Observer&#x533A;&#x57D
     <script src="../gitbook/theme.js"></script>
     
         
-        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
         
     
         
@@ -939,10 +981,6 @@ obj.name = &apos;xxx&apos; // obj &#x6539;&#x53D8;&#xFF0C;Observer&#x533A;&#x57D
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

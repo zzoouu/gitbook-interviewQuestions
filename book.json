@@ -10,6 +10,13 @@
         "readme": "README.md"
     },
     "plugins": [
-        "expandable-chapters"
+        "-sharing",
+        "splitter",
+        "expandable-chapters-small",
+        "anchors",
+        "github-buttons",
+        "sharing-plus",
+        "anchor-navigation-ex",
+        "favicon"
     ]
 }

@@ -17,7 +17,19 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -41,6 +53,8 @@
         
     
     
+    
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -54,6 +68,22 @@
     
     <link rel="prev" href="6.npm模块机制.html" />
     
+
+    
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {};
+    </script>
 
     </head>
     <body>
@@ -787,14 +817,14 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="instanceof">instanceof</h3>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><ul><li><span class="title-icon "></span><a href="#instanceof"><b>1.1.1. </b>instanceof</a></li><li><span class="title-icon "></span><a href="#objectprototypetostringcall"><b>1.1.2. </b>Object.prototype.toString.call()</a></li><li><span class="title-icon "></span><a href="#arrayisarray"><b>1.1.3. </b>Array.isArray</a></li><li><span class="title-icon "></span><a href="#arrconstructor--array"><b>1.1.4. </b>arr.constructor === Array</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h3 id="instanceof"><a name="instanceof" class="anchor-navigation-ex-anchor" href="#instanceof"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. instanceof</h3>
 <p>instanceof&#x662F;&#x901A;&#x8FC7;&#x5224;&#x65AD;&#x5BF9;&#x8C61;&#x7684;&#x539F;&#x578B;&#x94FE;&#x4E0A;&#x662F;&#x5426;&#x5B58;&#x5728;&#x8BE5;&#x7C7B;&#x578B;&#x7684;prototype
 &#x4F7F;&#x7528;instanceof&#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x4E3A;&#x6570;&#x7EC4;&#xFF0C;instanceof&#x4F1A;&#x53BB;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x539F;&#x578B;&#x94FE;&#x4E0A;&#x53BB;&#x5BFB;&#x627E;&#x662F;&#x5426;&#x5B58;&#x5728;Array&#x7684;&#x539F;&#x578B;&#xFF0C;&#x82E5;&#x6709;&#x8FD4;&#x56DE;true&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;false</p>
 <blockquote>
 <p>[] instanceof Array -&gt; true
 instanceof&#x53EA;&#x80FD;&#x5224;&#x65AD;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#xFF0C;&#x4E0D;&#x80FD;&#x5224;&#x65AD;&#x539F;&#x59CB;&#x7C7B;&#x578B;&#xFF0C;&#x4E14;&#x6240;&#x6709;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;instanceof Object&#x90FD;&#x4E3A;true</p>
 </blockquote>
-<h3 id="objectprototypetostringcall">Object.prototype.toString.call()</h3>
+<h3 id="objectprototypetostringcall"><a name="objectprototypetostringcall" class="anchor-navigation-ex-anchor" href="#objectprototypetostringcall"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. Object.prototype.toString.call()</h3>
 <p>&#x6BCF;&#x4E00;&#x4E2A;&#x7EE7;&#x627F;Object&#x7684;&#x5BF9;&#x8C61;&#x90FD;&#x6709;toString()&#x65B9;&#x6CD5;&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE;[object type]&#xFF0C;type&#x4E3A;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x82E5;&#x975E;Object&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;toString(),&#x4F1A;&#x8FD4;&#x56DE;&#x5185;&#x5BB9;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;call&#x6216;apply&#x6765;&#x6539;&#x53D8;toString&#x7684;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;
 &#x5373;&#x4F7F;&#x662F;null&#x6216;&#x8005;undefine&#x90FD;&#x80FD;&#x8FDB;&#x884C;&#x5224;&#x65AD;</p>
 <pre><code>Object.prototype.toString.call([1,2]) // &quot;[object Array]&quot;
@@ -805,13 +835,13 @@ Object.prototype.toString.call(null) // &quot;[object Null]&quot;
 Object.prototype.toString.call(undefined) // &quot;[object Undefined]&quot;
 Object.prototype.toString.call(function(){}) // &quot;[object Function]&quot;
 Object.prototype.toString.call({name: &apos;An&apos;}) // &quot;[object Object]&quot;
-</code></pre><h3 id="arrayisarray">Array.isArray</h3>
+</code></pre><h3 id="arrayisarray"><a name="arrayisarray" class="anchor-navigation-ex-anchor" href="#arrayisarray"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. Array.isArray</h3>
 <p>&#x6765;&#x5224;&#x65AD;&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x4E3A;&#x6570;&#x7EC4;</p>
 <ul>
 <li>Array.isArray&#x662F;es5&#x65B0;&#x589E;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5F53;&#x4E0D;&#x5B58;&#x5728;Array.isArray&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Object.prototype.toString.call()</li>
 <li>&#x82E5;&#x7528;&#x6765;&#x68C0;&#x6D4B;Array&#x5B9E;&#x4F8B;&#xFF0C;Array.isArray&#x6027;&#x80FD;&#x4F18;&#x4E8E;instanceof</li>
 </ul>
-<h3 id="arrconstructor--array">arr.constructor === Array</h3>
+<h3 id="arrconstructor--array"><a name="arrconstructor--array" class="anchor-navigation-ex-anchor" href="#arrconstructor--array"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.4. arr.constructor === Array</h3>
 
                                 
                                 </section>
@@ -855,7 +885,7 @@ Object.prototype.toString.call({name: &apos;An&apos;}) // &quot;[object Object]&
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"7.判断数组","level":"1.2.7","depth":2,"next":{"title":"8.重绘和回流","level":"1.2.8","depth":2,"path":"100道题/8.重绘和回流.md","ref":"100道题/8.重绘和回流.md","articles":[]},"previous":{"title":"6.npm模块机制","level":"1.2.6","depth":2,"path":"100道题/6.npm模块机制.md","ref":"100道题/6.npm模块机制.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{},"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zouzou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zouzou","language":"zh-hans","gitbook":"*","description":"questions and answers"},"file":{"path":"100道题/7.判断数组.md","mtime":"2019-08-16T07:20:03.469Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-16T07:23:51.596Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"7.判断数组","level":"1.2.7","depth":2,"next":{"title":"8.重绘和回流","level":"1.2.8","depth":2,"path":"100道题/8.重绘和回流.md","ref":"100道题/8.重绘和回流.md","articles":[]},"previous":{"title":"6.npm模块机制","level":"1.2.6","depth":2,"path":"100道题/6.npm模块机制.md","ref":"100道题/6.npm模块机制.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github-buttons","sharing-plus","anchor-navigation-ex","favicon"],"styles":{},"pluginsConfig":{"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{},"github-buttons":{},"expandable-chapters-small":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"zouzou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zouzou","language":"zh-hans","gitbook":"*","description":"questions and answers"},"file":{"path":"100道题/7.判断数组.md","mtime":"2019-08-16T08:03:06.946Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-16T08:21:28.989Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -865,7 +895,19 @@ Object.prototype.toString.call({name: &apos;An&apos;}) // &quot;[object Object]&
     <script src="../gitbook/theme.js"></script>
     
         
-        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
         
     
         
@@ -882,10 +924,6 @@ Object.prototype.toString.call({name: &apos;An&apos;}) // &quot;[object Object]&
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

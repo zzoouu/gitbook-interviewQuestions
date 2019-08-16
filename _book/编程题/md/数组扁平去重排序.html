@@ -17,7 +17,19 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -41,6 +53,8 @@
         
     
     
+    
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -54,6 +68,22 @@
     
     <link rel="prev" href="转entry对象.html" />
     
+
+    
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {};
+    </script>
 
     </head>
     <body>
@@ -787,15 +817,15 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="&#x6241;&#x5E73;&#x3001;&#x53BB;&#x91CD;&#x3001;&#x6392;&#x5E8F;">&#x6241;&#x5E73;&#x3001;&#x53BB;&#x91CD;&#x3001;&#x6392;&#x5E8F;</h3>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><ul><li><span class="title-icon "></span><a href="#&#x6241;&#x5E73;&#x3001;&#x53BB;&#x91CD;&#x3001;&#x6392;&#x5E8F;"><b>1.1.1. </b>&#x6241;&#x5E73;&#x3001;&#x53BB;&#x91CD;&#x3001;&#x6392;&#x5E8F;</a></li><li><span class="title-icon "></span><a href="#&#x6392;&#x5E8F;"><b>1.1.2. </b>&#x6392;&#x5E8F;</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h3 id="&#x6241;&#x5E73;&#x3001;&#x53BB;&#x91CD;&#x3001;&#x6392;&#x5E8F;"><a name="&#x6241;&#x5E73;&#x3001;&#x53BB;&#x91CD;&#x3001;&#x6392;&#x5E8F;" class="anchor-navigation-ex-anchor" href="#&#x6241;&#x5E73;&#x3001;&#x53BB;&#x91CD;&#x3001;&#x6392;&#x5E8F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. &#x6241;&#x5E73;&#x3001;&#x53BB;&#x91CD;&#x3001;&#x6392;&#x5E8F;</h3>
 <blockquote>
 <p>var arr = [ [1, 2, 2], [3, 4, 5, 5], [6, 7, 8, 9, [11, 12, [12, 13, [14] ] ] ], 10]</p>
 </blockquote>
-<h4 id="&#x6570;&#x7EC4;&#x6241;&#x5E73;">&#x6570;&#x7EC4;&#x6241;&#x5E73;</h4>
+<h4 id="&#x6570;&#x7EC4;&#x6241;&#x5E73;"><a name="&#x6570;&#x7EC4;&#x6241;&#x5E73;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x7EC4;&#x6241;&#x5E73;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6570;&#x7EC4;&#x6241;&#x5E73;" class="plugin-anchor" href="#&#x6570;&#x7EC4;&#x6241;&#x5E73;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x7EC4;&#x6241;&#x5E73;</h4>
 <pre><code>arr.flat(Infinity)
 arr.join(&apos;,&apos;)
 arr.toString()
-</code></pre><h4 id="&#x6570;&#x7EC4;&#x53BB;&#x91CD;">&#x6570;&#x7EC4;&#x53BB;&#x91CD;</h4>
+</code></pre><h4 id="&#x6570;&#x7EC4;&#x53BB;&#x91CD;"><a name="&#x6570;&#x7EC4;&#x53BB;&#x91CD;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x7EC4;&#x53BB;&#x91CD;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6570;&#x7EC4;&#x53BB;&#x91CD;" class="plugin-anchor" href="#&#x6570;&#x7EC4;&#x53BB;&#x91CD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x7EC4;&#x53BB;&#x91CD;</h4>
 <pre><code>new Set(arr)
 </code></pre><p>&#x6570;&#x7EC4;&#x4E2D;&#x5305;&#x542B;&#x6570;&#x7EC4;&#x6216;&#x5BF9;&#x8C61;&#x53BB;&#x91CD;</p>
 <blockquote>
@@ -811,7 +841,7 @@ arr.toString()
 function flattern(arr){
     return [...new Set(arr.map(item =&gt; JSON.stringify(item)))].map(item =&gt; JSON.parse(item))
 }
-</code></pre><h3 id="&#x6392;&#x5E8F;">&#x6392;&#x5E8F;</h3>
+</code></pre><h3 id="&#x6392;&#x5E8F;"><a name="&#x6392;&#x5E8F;" class="anchor-navigation-ex-anchor" href="#&#x6392;&#x5E8F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. &#x6392;&#x5E8F;</h3>
 <pre><code>arr.sort((a,b) =&gt; a-b)
 </code></pre><p>&#x89E3;&#x6CD5;&#xFF1A;</p>
 <pre><code>var arr = [ [1, 2, 2], [3, 4, 5, 5], [6, 7, 8, 9, [11, 12, [12, 13, [14] ] ] ], 10]
@@ -877,7 +907,7 @@ function flattern(arr){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"数组扁平去重排序","level":"1.4.4","depth":2,"next":{"title":"找最多","level":"1.4.5","depth":2,"path":"编程题/md/找最多.md","ref":"编程题/md/找最多.md","articles":[]},"previous":{"title":"转entry对象","level":"1.4.3","depth":2,"path":"编程题/md/转entry对象.md","ref":"编程题/md/转entry对象.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{},"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zouzou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zouzou","language":"zh-hans","gitbook":"*","description":"questions and answers"},"file":{"path":"编程题/md/数组扁平去重排序.md","mtime":"2019-08-16T07:20:03.523Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-16T07:23:51.596Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"数组扁平去重排序","level":"1.4.4","depth":2,"next":{"title":"找最多","level":"1.4.5","depth":2,"path":"编程题/md/找最多.md","ref":"编程题/md/找最多.md","articles":[]},"previous":{"title":"转entry对象","level":"1.4.3","depth":2,"path":"编程题/md/转entry对象.md","ref":"编程题/md/转entry对象.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github-buttons","sharing-plus","anchor-navigation-ex","favicon"],"styles":{},"pluginsConfig":{"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{},"github-buttons":{},"expandable-chapters-small":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"zouzou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zouzou","language":"zh-hans","gitbook":"*","description":"questions and answers"},"file":{"path":"编程题/md/数组扁平去重排序.md","mtime":"2019-08-16T08:03:07.035Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-16T08:21:28.989Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -887,7 +917,19 @@ function flattern(arr){
     <script src="../../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
         
     
         
@@ -904,10 +946,6 @@ function flattern(arr){
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         
