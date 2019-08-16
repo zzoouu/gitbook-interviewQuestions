@@ -8,5 +8,8 @@
     },
     "structure":{
         "readme": "README.md"
-    }
+    },
+    "plugins": [
+        "expandable-chapters"
+    ]
 }
