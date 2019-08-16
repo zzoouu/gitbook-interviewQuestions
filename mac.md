@@ -12,6 +12,6 @@ cmd + shift + .
 1. 打开终端根目录下: /User/yourname
 2. 新建文件: touch .bash_profile
 3. 编辑文件: code .bach_profile
-4. 编辑内容: alias st="git status"  
-也可用&&将命令连起来
+4. 编辑内容: alias st="git status;git branch"    
+多个命令用分号在字符串中连接起来
 5. 运行:source .bach_profile或重启终端
