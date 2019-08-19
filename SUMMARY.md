@@ -35,6 +35,10 @@
     * [437.path-sum-iii](LeetCode/md/437.path-sum-iii.md)
     * [560.subarray-sum-equals-k](LeetCode/md/560.subarray-sum-equals-k.md)
     * [0575.distribute-candies](LeetCode/md/0575.distribute-candies.md)
+* [算法]
+    * [排序]
+        * [快速排序](算/排序/快速排序.md)
+        * [选择排序](算/排序/选择排序.md)
 * [编程题](编程题/README.md)
     * [flat](编程题/md/flat.md)
     * [for](编程题/md/for.md)
