@@ -1,0 +1,1460 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>webpack配置 · zouzou</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zouzou">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../算法/排序/快速排序.html" />
+    
+    
+    <link rel="prev" href="webpack项目搭建.html" />
+    
+
+    
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../HTTP/跨域.html">
+            
+                <a href="../HTTP/跨域.html">
+            
+                    
+                    HTTP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../HTTP/跨域.html">
+            
+                <a href="../HTTP/跨域.html">
+            
+                    
+                    跨域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../HTTP/浏览器缓存.html">
+            
+                <a href="../HTTP/浏览器缓存.html">
+            
+                    
+                    浏览器缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../HTTP/输入一个URL.html">
+            
+                <a href="../HTTP/输入一个URL.html">
+            
+                    
+                    输入一个URL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../HTTP/contentType.html">
+            
+                <a href="../HTTP/contentType.html">
+            
+                    
+                    contentType
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../HTTP/cookie-session-web storage.html">
+            
+                <a href="../HTTP/cookie-session-web storage.html">
+            
+                    
+                    cookie-session-web storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../HTTP/get和post区别.html">
+            
+                <a href="../HTTP/get和post区别.html">
+            
+                    
+                    get和post区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../HTTP/http2多路复用.html">
+            
+                <a href="../HTTP/http2多路复用.html">
+            
+                    
+                    http2多路复用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../HTTP/HTTP报文.html">
+            
+                <a href="../HTTP/HTTP报文.html">
+            
+                    
+                    HTTP报文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../HTTP/HTTP和HTTPS.html">
+            
+                <a href="../HTTP/HTTP和HTTPS.html">
+            
+                    
+                    HTTP和HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../HTTP/HTTP状态码.html">
+            
+                <a href="../HTTP/HTTP状态码.html">
+            
+                    
+                    HTTP状态码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../HTTP/tcp三次握手四次挥手.html">
+            
+                <a href="../HTTP/tcp三次握手四次挥手.html">
+            
+                    
+                    tcp三次握手四次挥手
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../JS/实现new.html">
+            
+                <a href="../JS/实现new.html">
+            
+                    
+                    JS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../JS/实现new.html">
+            
+                <a href="../JS/实现new.html">
+            
+                    
+                    实现new
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../JS/js异步.html">
+            
+                <a href="../JS/js异步.html">
+            
+                    
+                    js异步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../JS/this.html">
+            
+                <a href="../JS/this.html">
+            
+                    
+                    this
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../JS/箭头函数.html">
+            
+                <a href="../JS/箭头函数.html">
+            
+                    
+                    箭头函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../JS/Promise.all.html">
+            
+                <a href="../JS/Promise.all.html">
+            
+                    
+                    Promise.all
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../JS/symbol.html">
+            
+                <a href="../JS/symbol.html">
+            
+                    
+                    symbol
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../JS/数组扁平去重排序.html">
+            
+                <a href="../JS/数组扁平去重排序.html">
+            
+                    
+                    数组扁平去重排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../JS/深浅拷贝.html">
+            
+                <a href="../JS/深浅拷贝.html">
+            
+                    
+                    深浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../JS/判断两个对象是否相等.html">
+            
+                <a href="../JS/判断两个对象是否相等.html">
+            
+                    
+                    判断两个对象是否相等
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../JS/链式取值之函子MayBe.html">
+            
+                <a href="../JS/链式取值之函子MayBe.html">
+            
+                    
+                    链式取值之函子MayBe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../JS/判断数组.html">
+            
+                <a href="../JS/判断数组.html">
+            
+                    
+                    判断数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../JS/观察者模式和发布订阅模式.html">
+            
+                <a href="../JS/观察者模式和发布订阅模式.html">
+            
+                    
+                    观察者模式和发布订阅模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../JS/let和const.html">
+            
+                <a href="../JS/let和const.html">
+            
+                    
+                    let和const
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../JS/js-puzzleers..md">
+            
+                <span>
+            
+                    
+                    js-puzzleers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../CSS/npm模块机制.html">
+            
+                <a href="../CSS/npm模块机制.html">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../CSS/npm模块机制.html">
+            
+                <a href="../CSS/npm模块机制.html">
+            
+                    
+                    npm模块机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../CSS/Ecent Loop.html">
+            
+                <a href="../CSS/Ecent Loop.html">
+            
+                    
+                    EcentLoop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../CSS/重绘和回流.html">
+            
+                <a href="../CSS/重绘和回流.html">
+            
+                    
+                    重绘和回流
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="setState.html">
+            
+                <a href="setState.html">
+            
+                    
+                    框架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="setState.html">
+            
+                <a href="setState.html">
+            
+                    
+                    setState
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="Redux和Vuex的设计思想.html">
+            
+                <a href="Redux和Vuex的设计思想.html">
+            
+                    
+                    Redux和Vuex的设计思想
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="react小书.html">
+            
+                <a href="react小书.html">
+            
+                    
+                    react小书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="mobx-react.html">
+            
+                <a href="mobx-react.html">
+            
+                    
+                    mobx-react
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="webpack项目搭建.html">
+            
+                <a href="webpack项目搭建.html">
+            
+                    
+                    webpack项目搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.6" data-path="webpack配置.html">
+            
+                <a href="webpack配置.html">
+            
+                    
+                    webpack配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../算法/排序/快速排序.html">
+            
+                <a href="../算法/排序/快速排序.html">
+            
+                    
+                    算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../算法/排序/快速排序.html">
+            
+                <a href="../算法/排序/快速排序.html">
+            
+                    
+                    排序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../算法/排序/快速排序.html">
+            
+                <a href="../算法/排序/快速排序.html">
+            
+                    
+                    快速排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../算法/排序/选择排序.html">
+            
+                <a href="../算法/排序/选择排序.html">
+            
+                    
+                    选择排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../算法/排序/冒泡排序.html">
+            
+                <a href="../算法/排序/冒泡排序.html">
+            
+                    
+                    冒泡排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../算法/排序/插入排序.html">
+            
+                <a href="../算法/排序/插入排序.html">
+            
+                    
+                    插入排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.5" data-path="../算法/排序、动态规划.md">
+            
+                <span>
+            
+                    
+                    归并排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../算法/动态规划.html">
+            
+                <a href="../算法/动态规划.html">
+            
+                    
+                    动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../算法/数据结构/数组.html">
+            
+                <a href="../算法/数据结构/数组.html">
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../算法/数据结构/数组.html">
+            
+                <a href="../算法/数据结构/数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../编程题/">
+            
+                <a href="../编程题/">
+            
+                    
+                    编程题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../编程题/md/flat.html">
+            
+                <a href="../编程题/md/flat.html">
+            
+                    
+                    flat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../编程题/md/for.html">
+            
+                <a href="../编程题/md/for.html">
+            
+                    
+                    for
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../编程题/md/转entry对象.html">
+            
+                <a href="../编程题/md/转entry对象.html">
+            
+                    
+                    转entry对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../编程题/md/数组扁平去重排序.html">
+            
+                <a href="../编程题/md/数组扁平去重排序.html">
+            
+                    
+                    数组扁平去重排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../编程题/md/找最多.html">
+            
+                <a href="../编程题/md/找最多.html">
+            
+                    
+                    找最多
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../LeetCode/">
+            
+                <a href="../LeetCode/">
+            
+                    
+                    LeetCode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../LeetCode/md/263.ugly-number.html">
+            
+                <a href="../LeetCode/md/263.ugly-number.html">
+            
+                    
+                    263.ugly-number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../LeetCode/md/283.move-zeroes.html">
+            
+                <a href="../LeetCode/md/283.move-zeroes.html">
+            
+                    
+                    283.move-zeroes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../LeetCode/md/342.power-of-four.html">
+            
+                <a href="../LeetCode/md/342.power-of-four.html">
+            
+                    
+                    342.power-of-four
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../LeetCode/md/349.intersection-of-two-arrays.html">
+            
+                <a href="../LeetCode/md/349.intersection-of-two-arrays.html">
+            
+                    
+                    349.intersection-of-two-arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../LeetCode/md/371.sum-of-two-integers.html">
+            
+                <a href="../LeetCode/md/371.sum-of-two-integers.html">
+            
+                    
+                    371.sum-of-two-integers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../LeetCode/md/437.path-sum-iii.html">
+            
+                <a href="../LeetCode/md/437.path-sum-iii.html">
+            
+                    
+                    437.path-sum-iii
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../LeetCode/md/560.subarray-sum-equals-k.html">
+            
+                <a href="../LeetCode/md/560.subarray-sum-equals-k.html">
+            
+                    
+                    560.subarray-sum-equals-k
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../LeetCode/md/0575.distribute-candies.html">
+            
+                <a href="../LeetCode/md/0575.distribute-candies.html">
+            
+                    
+                    0575.distribute-candies
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../README-HTML.html">
+            
+                <a href="../README-HTML.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../README-CSS.html">
+            
+                <a href="../README-CSS.html">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../git/">
+            
+                <a href="../git/">
+            
+                    
+                    git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../git/1.常用操作.html">
+            
+                <a href="../git/1.常用操作.html">
+            
+                    
+                    1.常用操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../git/2.常见报错.html">
+            
+                <a href="../git/2.常见报错.html">
+            
+                    
+                    2.常见报错
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../git/3.git基本流程.html">
+            
+                <a href="../git/3.git基本流程.html">
+            
+                    
+                    3.git基本流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../mac.html">
+            
+                <a href="../mac.html">
+            
+                    
+                    mac
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../VSCode.html">
+            
+                <a href="../VSCode.html">
+            
+                    
+                    VSCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../Chrome.html">
+            
+                <a href="../Chrome.html">
+            
+                    
+                    Chrome
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >webpack配置</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><ul><li><span class="title-icon "></span><a href="#webpack"><b>1.1.1. </b>webpack</a></li><li><span class="title-icon "></span><a href="#module-loader"><b>1.1.2. </b>module loader</a></li><li><span class="title-icon "></span><a href="#soucemap"><b>1.1.3. </b>souceMap</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h3 id="webpack"><a name="webpack" class="anchor-navigation-ex-anchor" href="#webpack"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. webpack</h3>
+<blockquote>
+<p>webpack&#x662F;&#x4E00;&#x4E2A;&#x6A21;&#x7248;&#x6253;&#x5305;&#x5DE5;&#x5177;</p>
+</blockquote>
+<pre><code>import Header from &apos;./header.js&apos;
+</code></pre><p>&#x672A;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#x65F6;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x65E0;&#x6CD5;&#x8BC6;&#x522B;&#xFF0C;&#x4F1A;&#x62A5;&#x9519;<br>webpack&#x57FA;&#x4E8E;node&#xFF0C;node&#x7248;&#x672C;&#x5C3D;&#x91CF;&#x8981;&#x65B0;&#xFF0C;&#x901F;&#x5EA6;&#x66F4;&#x5FEB;
+<em>node&#x5B98;&#x7F51;&#x4E2D;&#xFF1A;LTS&#xFF1B;long time supported &#x66F4;&#x7A33;&#x5B9A;</em></p>
+<h4 id="&#x6A21;&#x5757;&#xFF08;modules&#xFF09;"><a name="&#x6A21;&#x5757;&#xFF08;modules&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x6A21;&#x5757;&#xFF08;modules&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6A21;&#x5757;&#xFF08;modules&#xFF09;" class="plugin-anchor" href="#&#x6A21;&#x5757;&#xFF08;modules&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6A21;&#x5757;&#xFF08;modules&#xFF09;</h4>
+<pre><code>// ES module
+import Header from &apos;./header.js&apos;
+export default Header
+
+// CommonJS(node)
+const path = require(&apos;path&apos;) // &#x5F02;&#x6B65;
+const path = require.resolve(&apos;path&apos;) // &#x540C;&#x6B65;
+
+// 
+const path = require.ensure(&apos;path&apos;)
+module.exports = Header
+
+// AMD
+define require
+
+
+// CMD
+
+// css/sass/less
+@import
+
+// url(...)&#x6216;&lt;img src=&quot;...&quot; /&gt;
+</code></pre><h5 id="es-module"><a name="es-module" class="anchor-navigation-ex-anchor" href="#es-module"><i class="fa fa-link" aria-hidden="true"></i></a><a name="es-module" class="plugin-anchor" href="#es-module"><i class="fa fa-link" aria-hidden="true"></i></a>ES Module</h5>
+<ul>
+<li>import module from &apos;./module.js&apos;  </li>
+<li><p>import { module } from &apos;./module.js&apos;</p>
+</li>
+<li><p>export default module</p>
+</li>
+<li><p>export const module = {}</p>
+</li>
+<li><p>import():<br>&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#xFF0C;&#x8C03;&#x7528;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x4F5C;&#x4E3A;&#x5206;&#x79BB;&#x7684;&#x6A21;&#x5757;&#x8D77;&#x70B9;
+import(&apos;path/to/module&apos;) -&gt; Promise</p>
+</li>
+</ul>
+<h5 id="commonjs"><a name="commonjs" class="anchor-navigation-ex-anchor" href="#commonjs"><i class="fa fa-link" aria-hidden="true"></i></a><a name="commonjs" class="plugin-anchor" href="#commonjs"><i class="fa fa-link" aria-hidden="true"></i></a>CommonJS</h5>
+<ul>
+<li><p>require(dependency:String)  </p>
+</li>
+<li><p>require(&apos;path&apos;)  &#x5F02;&#x6B65;  </p>
+</li>
+<li><p>require.resolve(&apos;path&apos;)  &#x540C;&#x6B65;&#x65B9;&#x5F0F;&#x83B7;&#x53D6;&#x6A21;&#x5757;id  </p>
+</li>
+<li><p>require.ensure() &#x53EF;&#x88AB;import()&#x53D6;&#x4EE3;<br>require.ensure(dependencies: String[],callback:function(require), erroeCallback:function(error),chunkName:String)<br>&#x5C06;dependencies&#x53C2;&#x6570;&#x5176;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#x62C6;&#x5206;&#x5230;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684; bundle &#x4E2D;&#xFF0C;&#x88AB;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;&#x3002;&#x5F53;&#x4F7F;&#x7528; &#x8FD9;&#x662F;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x4F9D;&#x8D56;&#x3002;&#x5728;&#x6A21;&#x5757;&#x6267;&#x884C;&#x65F6;&#x624D;&#x8FD0;&#x884C;&#x4EE3;&#x7801;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x6EE1;&#x8DB3;&#x67D0;&#x4E9B;&#x6761;&#x4EF6;&#x65F6;&#x624D;&#x52A0;&#x8F7D;&#x4F9D;&#x8D56;&#x9879;</p>
+</li>
+</ul>
+<h5 id="amd"><a name="amd" class="anchor-navigation-ex-anchor" href="#amd"><i class="fa fa-link" aria-hidden="true"></i></a><a name="amd" class="plugin-anchor" href="#amd"><i class="fa fa-link" aria-hidden="true"></i></a>AMD</h5>
+<p>define require</p>
+<pre><code>mkdir webpack
+npm init --yes
+
+// &#x5168;&#x5C40;&#x5B89;&#x88C5;webpack&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x9047;&#x5230;&#x4E0D;&#x540C;&#x9879;&#x76EE;&#x8FD0;&#x7528;&#x7684;webpack&#x7248;&#x672C;&#x4E0D;&#x4E00;&#x6837;
+npm install webpack webpack-cli -g
+(npm uninstall webpack webpacl-cli -g)
+
+cd &#x9879;&#x76EE;&#x76EE;&#x5F55;
+
+// &#x9879;&#x76EE;&#x672C;&#x5730;&#x5B89;&#x88C5;webpack
+npm install webpack webpack-cli -D
+
+// npx&#xFF1A;&#x5728;&#x5F53;&#x524D;&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x4E2D;&#x7684;node_modules&#x4E2D;&#x67E5;&#x627E;webpack
+npx webpack -v
+
+// &#x5168;&#x5C40;&#x67E5;&#x627E;web webpack
+npm webpack -v
+
+// &#x5B89;&#x88C5;&#x524D;&#x67E5;&#x770B;webpack&#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x7248;&#x672C;&#x53F7;
+npm info webpack
+npm install webpack@&#x7248;&#x672C;&#x53F7;
+
+// &#x6253;&#x5305;index.js&#x6587;&#x4EF6;
+npx webpack index.js
+</code></pre><h4 id="&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><a name="&#x914D;&#x7F6E;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x914D;&#x7F6E;&#x6587;&#x4EF6;" class="plugin-anchor" href="#&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h4>
+<blockquote>
+<p>webpack&#x9ED8;&#x8BA4;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E3A;webpack.config.js</p>
+</blockquote>
+<pre><code>const path require(&apos;path&apos;)
+
+module.exports = {
+    // &#x9879;&#x76EE;&#x6253;&#x5305;&#x7684;&#x5165;&#x53E3;&#x6587;&#x4EF6;
+    entry: &apos;./index.js&apos;
+
+    // &#x9879;&#x76EE;&#x6253;&#x5305;&#x7684;&#x51FA;&#x53E3;&#x6587;&#x4EF6;
+    output: {
+        // &#x6253;&#x5305;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x540D;
+        filename: &apos;bundle.js&apos;,
+        // &#x9879;&#x76EE;&#x6253;&#x5305;&#x540E;&#x7684;&#x76EE;&#x5F55;&#x540D;
+        path: path.resolve(_dirname,&apos;bundle&apos;)
+        // &#x6253;&#x5305;&#x5230;&#x4E86; bundle/bundle.js,&#x65E0;path&#xFF0C;&#x5219;&#x9ED8;&#x8BA4;&#x6253;&#x5305;&#x5230;dist
+        // _dirname&#x4E3A;webpack.config.js&#x6240;&#x5728;&#x76EE;&#x5F55;&#x518D;&#x5C06;dirname&#x4E0E;bundle &#x7ED3;&#x5408;&#x5F97;&#x5230;&#x65B0;&#x76EE;&#x5F55;
+    }
+}
+</code></pre><blockquote>
+<p>npx webpack &#x672A;&#x63A5;&#x8981;&#x6253;&#x5305;&#x7684;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x4F1A;&#x4E3B;&#x52A8;&#x53BB;&#x627E;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x6587;&#x4EF6;(webpack.config.js)&#xFF0C;&#x627E;&#x5230;&#x5176;&#x5165;&#x53E3;&#x6587;&#x4EF6;   </p>
+<p>npx webpack --config webpackconfig.js  &#x6307;&#x5B9A;webpack.config.js&#x4E3A;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+</blockquote>
+<h4 id="webpack&#x8FD0;&#x884C;"><a name="webpack&#x8FD0;&#x884C;" class="anchor-navigation-ex-anchor" href="#webpack&#x8FD0;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="webpack&#x8FD0;&#x884C;" class="plugin-anchor" href="#webpack&#x8FD0;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>webpack&#x8FD0;&#x884C;</h4>
+<ul>
+<li>global&#xFF1A;webpack index.js</li>
+<li>local: npx webpack index.js</li>
+<li>npm scripts: npm run srcipt(package.json)</li>
+</ul>
+<h4 id="webpack&#x6253;&#x5305;&#x8F93;&#x51FA;&#x5185;&#x5BB9;"><a name="webpack&#x6253;&#x5305;&#x8F93;&#x51FA;&#x5185;&#x5BB9;" class="anchor-navigation-ex-anchor" href="#webpack&#x6253;&#x5305;&#x8F93;&#x51FA;&#x5185;&#x5BB9;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="webpack&#x6253;&#x5305;&#x8F93;&#x51FA;&#x5185;&#x5BB9;" class="plugin-anchor" href="#webpack&#x6253;&#x5305;&#x8F93;&#x51FA;&#x5185;&#x5BB9;"><i class="fa fa-link" aria-hidden="true"></i></a>webpack&#x6253;&#x5305;&#x8F93;&#x51FA;&#x5185;&#x5BB9;</h4>
+<pre><code>Hash: &#x6253;&#x5305;&#x7684;&#x552F;&#x4E00;hash&#x503C;
+Version: &#x6253;&#x5305;&#x7528;&#x5230;&#x7684;webpack&#x7248;&#x672C;
+Time: &#x6253;&#x5305;&#x7684;&#x6574;&#x4F53;&#x8017;&#x65F6;
+Asset: bundle.js &#x6253;&#x5305;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x540D;
+Size: &#x6587;&#x4EF6;&#x7684;&#x5927;&#x5C0F;
+Chunks: &#x6BCF;&#x4E2A;js&#x5BF9;&#x5E94;&#x7684;id
+ChunkName:  &#x6BCF;&#x4E2A;js&#x5BF9;&#x5E94;&#x7684;&#x540D;&#x5B57;&#xFF08;main&#xFF09;
+
+entry: {
+    main: &apos;index.js&apos;
+}
+</code></pre><h4 id="modeproductiondevelopment"><a name="modeproductiondevelopment" class="anchor-navigation-ex-anchor" href="#modeproductiondevelopment"><i class="fa fa-link" aria-hidden="true"></i></a><a name="modeproductiondevelopment" class="plugin-anchor" href="#modeproductiondevelopment"><i class="fa fa-link" aria-hidden="true"></i></a>mode:production/development</h4>
+<p>production: &#x6253;&#x5305;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x88AB;&#x538B;&#x7F29;&#x4E3A;&#x4E00;&#x884C;
+development: &#x6253;&#x5305;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x4E0D;&#x88AB;&#x538B;&#x7F29;</p>
+<pre><code>module.exports = {
+    ...
+    mode: &apos;production&apos;
+    ...
+}
+</code></pre><h3 id="module-loader"><a name="module-loader" class="anchor-navigation-ex-anchor" href="#module-loader"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. module loader</h3>
+<p>js css image...&#x90FD;&#x662F;&#x6A21;&#x5757;&#xFF08;module&#xFF09;
+file-loader &#x6307;&#x660E;&#x5982;&#x4F55;&#x5904;&#x7406;&#x56FE;&#x7247;
+&#x5148;&#x5C06;&#x56FE;&#x7247;&#x6253;&#x5305;&#x5230;dist&#x4E2D;&#xFF0C;&#x6539;&#x53D8;&#x4E86;&#x540D;&#x5B57;&#xFF0C;&#x5C06;&#x5176;&#x76F8;&#x5BF9;&#x4E8E;dist&#x7684;&#x540D;&#x5B57;&#x5730;&#x5740;&#x8FD4;&#x56DE;&#x7ED9;&#x996E;&#x7528;&#x5904;
+loader&#xFF1A;&#x5982;&#x4F55;&#x6253;&#x5305;&#x5904;&#x7406;&#x6A21;&#x5757;</p>
+<pre><code>module.exports = {
+    ...
+    // &#x5982;&#x4F55;&#x5904;&#x7406;&#x6A21;&#x5757;
+    module: {
+        rules: [
+            {
+                test: /\.jpg$/,
+                use: {
+                    loader: &apos;file-loader&apos;
+                }
+            }
+        ]
+    }
+    ...
+}
+</code></pre><p>&#x770B;&#xFF1A; &#x5B98;&#x7F51;modules&#x51E0;&#x79CD;&#x6A21;&#x5757;&#x5F15;&#x5165;&#x65B9;&#x6CD5;&#x548C;getstarted</p>
+<blockquote>
+<p>loader &#x4ECE;&#x4E0A;&#x5230;&#x4E0B;&#xFF0C;&#x4ECE;&#x53F3;&#x5230;&#x5DE6;
+```
+modules.exports = {
+    rules: [
+        {
+            test: /.css$/,
+            use: [
+            {
+                loader: &apos;css-loader&apos;,
+                options: {
+                // &#x4FDD;&#x8BC1;&#x591A;&#x5C42;&#x5BFC;&#x5165;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x6BCF;&#x6B21;&#x90FD;&#x53EF;&#x4EE5;&#x6309;&#x987A;&#x5E8F;&#x7528;&#x5230;&#x6240;&#x6709;loader
+                    imoprtLoaders: 2
+                    //&#x5F00;&#x542F;css&#x6A21;&#x5757;&#x5316;
+                    modules: true
+                }
+            },
+            {
+                loader: &apos;sass-loader&apos;
+            }
+            ]</p>
+</blockquote>
+<pre><code>    }
+]
+</code></pre><p>}</p>
+<pre><code>
+### clean-webpack-plugin
+&#x6BCF;&#x6B21;&#x91CD;&#x65B0;&#x6253;&#x5305;&#x6E05;&#x7406;dist&#x76EE;&#x5F55;
+new CleanWebpackPlugin([&apos;dist&apos;])
+
+
+### publicPath
+ &#x76F8;&#x5BF9;&#x4E8E;&#x670D;&#x52A1;&#x7684; URL(Server-relative URL)&#xFF0C;&#x76F8;&#x5BF9;&#x4E8E;&#x534F;&#x8BAE;&#x7684; URL(protocol-relative URL) &#x6216;&#x7EDD;&#x5BF9; URL(absolute URL) &#x4E5F;&#x53EF;&#x662F;&#x53EF;&#x80FD;&#x7528;&#x5230;&#x7684;&#xFF0C;&#x6216;&#x8005;&#x6709;&#x65F6;&#x5FC5;&#x987B;&#x7528;&#x5230;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;&#x5F53;&#x5C06;&#x8D44;&#x6E90;&#x6258;&#x7BA1;&#x5230; CDN &#x65F6;&#x3002;
+</code></pre><p> path: path.resolve(__dirname, &quot;public/assets&quot;),
+publicPath: &quot;<a href="https://cdn.example.com/assets/" target="_blank">https://cdn.example.com/assets/</a>&quot;
+ ```</p>
+<h3 id="soucemap"><a name="soucemap" class="anchor-navigation-ex-anchor" href="#soucemap"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. souceMap</h3>
+<p> devtool: &apos;souce-map&apos; &#x6620;&#x5C04;&#x5173;&#x7CFB;&#x5728;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6587;&#x4EF6;&#x91CC;&#x9762;
+ devtool: &apos;inline-source-map&apos; &#x6620;&#x5C04;&#x5173;&#x7CFB;&#x4EE5;base64 &#x653E;&#x5728;main.js&#x672B;&#x5C3E;
+ devtool:&apos;cheap-inline-source-map&apos;  &#x53EA;&#x8981;&#x544A;&#x8BC9;&#x884C;&#x5C31;&#x597D;&#x4E86;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x5230;&#x5217;&#xFF0C;&#x66F4;&#x5FEB;&#xFF0C;&#x6027;&#x80FD;&#x66F4;&#x597D;&#x4E00;&#x70B9;&#xFF0C;&#x53EA;&#x7BA1;&#x7406;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#xFF0C;&#x4E0D;&#x7BA1;&#x7406;&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;</p>
+<p> mode: &apos;development&apos;
+ cheap-module-eval-source-map</p>
+<p> &#x7EBF;&#x4E0A;&#x4EE3;&#x7801;&#x4E00;&#x822C;&#x4E0D;&#x9700;&#x8981;sore-map
+ mode: &apos;production&apos;
+ &#x7EBF;&#x4E0A;&#x4E00;&#x822C;&#x4E3A;&#xFF1A;  cheap-module-source-map
+&#x4E00;&#x4E2A;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#xFF0C;&#x53EF;&#x4EE5;&#x8BF4;&#x660E;&#x9519;&#x8BEF;&#x4EE3;&#x7801;&#x5728;&#x6E90;&#x4EE3;&#x7801;&#x7684;&#x4F4D;&#x7F6E;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="webpack项目搭建.html" class="navigation navigation-prev " aria-label="Previous page: webpack项目搭建">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../算法/排序/快速排序.html" class="navigation navigation-next " aria-label="Next page: 算法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"webpack配置","level":"1.5.6","depth":2,"next":{"title":"算法","level":"1.6","depth":1,"path":"算法/排序/快速排序.md","ref":"算法/排序/快速排序.md","articles":[{"title":"排序","level":"1.6.1","depth":2,"path":"算法/排序/快速排序.md","ref":"算法/排序/快速排序.md","articles":[{"title":"快速排序","level":"1.6.1.1","depth":3,"path":"算法/排序/快速排序.md","ref":"算法/排序/快速排序.md","articles":[]},{"title":"选择排序","level":"1.6.1.2","depth":3,"path":"算法/排序/选择排序.md","ref":"算法/排序/选择排序.md","articles":[]},{"title":"冒泡排序","level":"1.6.1.3","depth":3,"path":"算法/排序/冒泡排序.md","ref":"算法/排序/冒泡排序.md","articles":[]},{"title":"插入排序","level":"1.6.1.4","depth":3,"path":"算法/排序/插入排序.md","ref":"算法/排序/插入排序.md","articles":[]},{"title":"归并排序","level":"1.6.1.5","depth":3,"path":"算法/排序、动态规划.md","ref":"算法/排序、动态规划.md","articles":[]}]},{"title":"动态规划","level":"1.6.2","depth":2,"path":"算法/动态规划.md","ref":"算法/动态规划.md","articles":[]},{"title":"数据结构","level":"1.6.3","depth":2,"path":"算法/数据结构/数组.md","ref":"算法/数据结构/数组.md","articles":[{"title":"数组","level":"1.6.3.1","depth":3,"path":"算法/数据结构/数组.md","ref":"算法/数据结构/数组.md","articles":[]}]}]},"previous":{"title":"webpack项目搭建","level":"1.5.5","depth":2,"path":"框架/webpack项目搭建.md","ref":"框架/webpack项目搭建.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github-buttons","sharing-plus","anchor-navigation-ex","favicon","livereload"],"styles":{},"pluginsConfig":{"livereload":{},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{},"github-buttons":{},"expandable-chapters-small":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"zouzou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zouzou","language":"zh-hans","gitbook":"*","description":"questions and answers"},"file":{"path":"框架/webpack配置.md","mtime":"2019-08-23T10:30:59.752Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-23T10:31:40.549Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

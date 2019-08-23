@@ -1,0 +1,11 @@
+### get 和 post 
+- get重点在从服务器获取资源，post重点在像服务器发送数据
+- get是通过url请求，参数可见(cookie)
+- post请求是将参数放在request(请求报文中)发送给服务器，参数不可见
+- 从传输的角度，HTTP在网络上是明文传输，只要在网络节点上捉包，就能完整的获取数据报文
+- get发送数据，长度是受限制的，get通过url传递参数，url的长度是受到限制的(url最长2048)个字符，get数据类型ASCII
+- post发送数据数据长度不受限制，数据类型也无限制，允许二进制数据
+- HTTP没有body和url的长度限制，对url限制的大多数是浏览器和服务器的原因，服务器主要是因为处理较长的url要消耗较多的资源，为了性能和安全(防止恶意构造长url来攻击)，会给url长度加上限制
+- get能被缓存，post不能缓存
+- get的参数保留在浏览器的历史记录中，post的参数不会保存在浏览器历史中
+- 编码类型：get：application/x-www-form-urlencoded;post: application/x-www-form/urlencided || multipart/form-data

@@ -1,0 +1,1410 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>跨域 · zouzou</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zouzou">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="浏览器缓存.html" />
+    
+    
+    <link rel="prev" href="跨域.html" />
+    
+
+    
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="跨域.html">
+            
+                <a href="跨域.html">
+            
+                    
+                    HTTP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="跨域.html">
+            
+                <a href="跨域.html">
+            
+                    
+                    跨域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="浏览器缓存.html">
+            
+                <a href="浏览器缓存.html">
+            
+                    
+                    浏览器缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="输入一个URL.html">
+            
+                <a href="输入一个URL.html">
+            
+                    
+                    输入一个URL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="contentType.html">
+            
+                <a href="contentType.html">
+            
+                    
+                    contentType
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="cookie-session-web storage.html">
+            
+                <a href="cookie-session-web storage.html">
+            
+                    
+                    cookie-session-web storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="get和post区别.html">
+            
+                <a href="get和post区别.html">
+            
+                    
+                    get和post区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="http2多路复用.html">
+            
+                <a href="http2多路复用.html">
+            
+                    
+                    http2多路复用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="HTTP报文.html">
+            
+                <a href="HTTP报文.html">
+            
+                    
+                    HTTP报文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="HTTP和HTTPS.html">
+            
+                <a href="HTTP和HTTPS.html">
+            
+                    
+                    HTTP和HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="HTTP状态码.html">
+            
+                <a href="HTTP状态码.html">
+            
+                    
+                    HTTP状态码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="tcp三次握手四次挥手.html">
+            
+                <a href="tcp三次握手四次挥手.html">
+            
+                    
+                    tcp三次握手四次挥手
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../JS/实现new.html">
+            
+                <a href="../JS/实现new.html">
+            
+                    
+                    JS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../JS/实现new.html">
+            
+                <a href="../JS/实现new.html">
+            
+                    
+                    实现new
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../JS/js异步.html">
+            
+                <a href="../JS/js异步.html">
+            
+                    
+                    js异步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../JS/this.html">
+            
+                <a href="../JS/this.html">
+            
+                    
+                    this
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../JS/箭头函数.html">
+            
+                <a href="../JS/箭头函数.html">
+            
+                    
+                    箭头函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../JS/Promise.all.html">
+            
+                <a href="../JS/Promise.all.html">
+            
+                    
+                    Promise.all
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../JS/symbol.html">
+            
+                <a href="../JS/symbol.html">
+            
+                    
+                    symbol
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../JS/数组扁平去重排序.html">
+            
+                <a href="../JS/数组扁平去重排序.html">
+            
+                    
+                    数组扁平去重排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../JS/深浅拷贝.html">
+            
+                <a href="../JS/深浅拷贝.html">
+            
+                    
+                    深浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../JS/判断两个对象是否相等.html">
+            
+                <a href="../JS/判断两个对象是否相等.html">
+            
+                    
+                    判断两个对象是否相等
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../JS/链式取值之函子MayBe.html">
+            
+                <a href="../JS/链式取值之函子MayBe.html">
+            
+                    
+                    链式取值之函子MayBe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../JS/判断数组.html">
+            
+                <a href="../JS/判断数组.html">
+            
+                    
+                    判断数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../JS/观察者模式和发布订阅模式.html">
+            
+                <a href="../JS/观察者模式和发布订阅模式.html">
+            
+                    
+                    观察者模式和发布订阅模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../JS/let和const.html">
+            
+                <a href="../JS/let和const.html">
+            
+                    
+                    let和const
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../JS/js-puzzleers..md">
+            
+                <span>
+            
+                    
+                    js-puzzleers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../CSS/npm模块机制.html">
+            
+                <a href="../CSS/npm模块机制.html">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../CSS/npm模块机制.html">
+            
+                <a href="../CSS/npm模块机制.html">
+            
+                    
+                    npm模块机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../CSS/Ecent Loop.html">
+            
+                <a href="../CSS/Ecent Loop.html">
+            
+                    
+                    EcentLoop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../CSS/重绘和回流.html">
+            
+                <a href="../CSS/重绘和回流.html">
+            
+                    
+                    重绘和回流
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../框架/setState.html">
+            
+                <a href="../框架/setState.html">
+            
+                    
+                    框架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../框架/setState.html">
+            
+                <a href="../框架/setState.html">
+            
+                    
+                    setState
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../框架/Redux和Vuex的设计思想.html">
+            
+                <a href="../框架/Redux和Vuex的设计思想.html">
+            
+                    
+                    Redux和Vuex的设计思想
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../框架/react小书.html">
+            
+                <a href="../框架/react小书.html">
+            
+                    
+                    react小书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../框架/mobx-react.html">
+            
+                <a href="../框架/mobx-react.html">
+            
+                    
+                    mobx-react
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../框架/webpack项目搭建.html">
+            
+                <a href="../框架/webpack项目搭建.html">
+            
+                    
+                    webpack项目搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../框架/webpack配置.html">
+            
+                <a href="../框架/webpack配置.html">
+            
+                    
+                    webpack配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../算法/排序/快速排序.html">
+            
+                <a href="../算法/排序/快速排序.html">
+            
+                    
+                    算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../算法/排序/快速排序.html">
+            
+                <a href="../算法/排序/快速排序.html">
+            
+                    
+                    排序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../算法/排序/快速排序.html">
+            
+                <a href="../算法/排序/快速排序.html">
+            
+                    
+                    快速排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../算法/排序/选择排序.html">
+            
+                <a href="../算法/排序/选择排序.html">
+            
+                    
+                    选择排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../算法/排序/冒泡排序.html">
+            
+                <a href="../算法/排序/冒泡排序.html">
+            
+                    
+                    冒泡排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../算法/排序/插入排序.html">
+            
+                <a href="../算法/排序/插入排序.html">
+            
+                    
+                    插入排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.5" data-path="../算法/排序、动态规划.md">
+            
+                <span>
+            
+                    
+                    归并排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../算法/动态规划.html">
+            
+                <a href="../算法/动态规划.html">
+            
+                    
+                    动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../算法/数据结构/数组.html">
+            
+                <a href="../算法/数据结构/数组.html">
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../算法/数据结构/数组.html">
+            
+                <a href="../算法/数据结构/数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../编程题/">
+            
+                <a href="../编程题/">
+            
+                    
+                    编程题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../编程题/md/flat.html">
+            
+                <a href="../编程题/md/flat.html">
+            
+                    
+                    flat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../编程题/md/for.html">
+            
+                <a href="../编程题/md/for.html">
+            
+                    
+                    for
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../编程题/md/转entry对象.html">
+            
+                <a href="../编程题/md/转entry对象.html">
+            
+                    
+                    转entry对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../编程题/md/数组扁平去重排序.html">
+            
+                <a href="../编程题/md/数组扁平去重排序.html">
+            
+                    
+                    数组扁平去重排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../编程题/md/找最多.html">
+            
+                <a href="../编程题/md/找最多.html">
+            
+                    
+                    找最多
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../LeetCode/">
+            
+                <a href="../LeetCode/">
+            
+                    
+                    LeetCode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../LeetCode/md/263.ugly-number.html">
+            
+                <a href="../LeetCode/md/263.ugly-number.html">
+            
+                    
+                    263.ugly-number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../LeetCode/md/283.move-zeroes.html">
+            
+                <a href="../LeetCode/md/283.move-zeroes.html">
+            
+                    
+                    283.move-zeroes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../LeetCode/md/342.power-of-four.html">
+            
+                <a href="../LeetCode/md/342.power-of-four.html">
+            
+                    
+                    342.power-of-four
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../LeetCode/md/349.intersection-of-two-arrays.html">
+            
+                <a href="../LeetCode/md/349.intersection-of-two-arrays.html">
+            
+                    
+                    349.intersection-of-two-arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../LeetCode/md/371.sum-of-two-integers.html">
+            
+                <a href="../LeetCode/md/371.sum-of-two-integers.html">
+            
+                    
+                    371.sum-of-two-integers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../LeetCode/md/437.path-sum-iii.html">
+            
+                <a href="../LeetCode/md/437.path-sum-iii.html">
+            
+                    
+                    437.path-sum-iii
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../LeetCode/md/560.subarray-sum-equals-k.html">
+            
+                <a href="../LeetCode/md/560.subarray-sum-equals-k.html">
+            
+                    
+                    560.subarray-sum-equals-k
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../LeetCode/md/0575.distribute-candies.html">
+            
+                <a href="../LeetCode/md/0575.distribute-candies.html">
+            
+                    
+                    0575.distribute-candies
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../README-HTML.html">
+            
+                <a href="../README-HTML.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../README-CSS.html">
+            
+                <a href="../README-CSS.html">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../git/">
+            
+                <a href="../git/">
+            
+                    
+                    git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../git/1.常用操作.html">
+            
+                <a href="../git/1.常用操作.html">
+            
+                    
+                    1.常用操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../git/2.常见报错.html">
+            
+                <a href="../git/2.常见报错.html">
+            
+                    
+                    2.常见报错
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../git/3.git基本流程.html">
+            
+                <a href="../git/3.git基本流程.html">
+            
+                    
+                    3.git基本流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../mac.html">
+            
+                <a href="../mac.html">
+            
+                    
+                    mac
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../VSCode.html">
+            
+                <a href="../VSCode.html">
+            
+                    
+                    VSCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../Chrome.html">
+            
+                <a href="../Chrome.html">
+            
+                    
+                    Chrome
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >跨域</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><ul><li><span class="title-icon "></span><a href="#&#x8DE8;&#x57DF;cross-origin"><b>1.1.1. </b>&#x8DE8;&#x57DF;(cross-origin)</a></li><li><span class="title-icon "></span><a href="#&#x8DE8;&#x57DF;&#x7684;&#x65B9;&#x6CD5;"><b>1.1.2. </b>&#x8DE8;&#x57DF;&#x7684;&#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#postmessage"><b>1.1.3. </b>postMessage</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h3 id="&#x8DE8;&#x57DF;cross-origin"><a name="&#x8DE8;&#x57DF;cross-origin" class="anchor-navigation-ex-anchor" href="#&#x8DE8;&#x57DF;cross-origin"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. &#x8DE8;&#x57DF;(cross-origin)</h3>
+<blockquote>
+<p>&#x8DE8;&#x57DF;&#x95EE;&#x9898;&#x7684;&#x51FA;&#x73B0;  </p>
+</blockquote>
+<p>&#x6D4F;&#x89C8;&#x5668;&#x6709;&#x540C;&#x6E90;&#x9650;&#x5236;&#xFF0C;&#x4F1A;&#x62D2;&#x7EDD;&#x8DE8;&#x57DF;&#x8BF7;&#x6C42;
+&#x4F46;&#x5E76;&#x4E0D;&#x662F;&#x62D2;&#x7EDD;&#x6240;&#x6709;&#x7684;&#x8DE8;&#x57DF;&#x8BF7;&#x6C42;&#xFF0C;&#x5B9E;&#x9645;&#x62D2;&#x7EDD;&#x7684;&#x662F;&#x8DE8;&#x57DF;&#x7684;&#x8BFB;&#x64CD;&#x4F5C;<br>&#x540C;&#x6E90;&#x9650;&#x5236;&#x7B56;&#x7565;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#xFF1A;</p>
+<ul>
+<li>&#x5141;&#x8BB8;&#x8DE8;&#x57DF;&#x5199;&#x64CD;&#x4F5C;,&#x5982;&#x94FE;&#x63A5;&#xFF0C;&#x91CD;&#x5B9A;&#x5411;</li>
+<li>&#x5141;&#x8BB8;&#x8DE8;&#x57DF;&#x8D44;&#x6E90;&#x5D4C;&#x5165;&#xFF0C;&#x5982;img,script</li>
+<li>&#x4E0D;&#x5141;&#x8BB8;&#x8DE8;&#x57DF;&#x8BFB;&#x64CD;&#x4F5C;</li>
+</ul>
+<blockquote>
+<p>&#x8DE8;&#x57DF;&#xFF0C;&#x975E;&#x540C;&#x6E90;</p>
+</blockquote>
+<p>&#x540C;&#x6E90;&#xFF1A;&#x534F;&#x8BAE;&#x3001;&#x7AEF;&#x53E3;&#x3001;&#x57DF;&#x540D;&#x4E09;&#x8005;&#x76F8;&#x540C;</p>
+<blockquote>
+<p>&#x8DE8;&#x57DF;&#x9700;&#x6C42;</p>
+</blockquote>
+<p>&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x804C;&#x8D23;&#xFF0C;&#x5206;&#x6563;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF0C;&#x5BF9;&#x5E94;&#x4E0D;&#x540C;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x9700;&#x8981;&#x8C03;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x9700;&#x8981;&#x8DE8;&#x57DF;</p>
+<h3 id="&#x8DE8;&#x57DF;&#x7684;&#x65B9;&#x6CD5;"><a name="&#x8DE8;&#x57DF;&#x7684;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x8DE8;&#x57DF;&#x7684;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. &#x8DE8;&#x57DF;&#x7684;&#x65B9;&#x6CD5;</h3>
+<h4 id="jsonp"><a name="jsonp" class="anchor-navigation-ex-anchor" href="#jsonp"><i class="fa fa-link" aria-hidden="true"></i></a><a name="jsonp" class="plugin-anchor" href="#jsonp"><i class="fa fa-link" aria-hidden="true"></i></a>jsonp</h4>
+<p>&#x539F;&#x7406;&#xFF1A;&#x5229;&#x7528;script&#x6807;&#x7B7E;&#x6CA1;&#x6709;&#x540C;&#x6E90;&#x9650;&#x5236;&#x7684;&#x4F18;&#x52BF;&#xFF08;&#x4E0A;&#x6587;&#x7684;&#x8DE8;&#x57DF;&#x8D44;&#x6E90;&#x5D4C;&#x5165;&#xFF09;&#xFF0C;&#x901A;&#x8FC7;&#x5728;script&#x7684;scr&#x4E2D;&#x63D2;&#x5165;&#x5E26;&#x6709;callback&#x53C2;&#x6570;&#x7684;get&#x8BF7;&#x6C42;&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x5C06;&#x63A5;&#x53E3;&#x6570;&#x636E;&#x62FC;&#x51D1;&#x5230;callback&#x51FD;&#x6570;&#x4E2D;&#x8FD4;&#x56DE;&#x7ED9;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x89E3;&#x6790;&#x6267;&#x884C;&#xFF0C;&#x4ECE;&#x800C;&#x62FF;&#x5230;callback&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x524D;&#x540E;&#x7AEF;&#x914D;&#x5408;
+1&#x3001;&#x539F;&#x751F;js</p>
+<pre><code>const script = document.createElement(&apos;script&apos;)
+script.type = &apos;text/javascript&apos;
+script.src = &apos;http://www.domain.com?callback=handleCallback&apos;
+document.head.appendChild(script)
+function handleCallback(res){
+    ....
+}
+</code></pre><p>2&#x3001;jquery ajax</p>
+<pre><code>$.ajax({
+    url: &apos;http://www.domain.com&apos;,
+    type: &apos;get&apos;,
+    dataType: &apos;jsonp&apos;,
+    jsonpCallback: &apos;handleCallback&apos;
+    data: {}
+})
+</code></pre><p>3&#x3001;vue axios</p>
+<pre><code>this.$http = axios
+this.$http.jsonp(&apos;http://www.domain.com&apos;,{
+    params: {},
+    jsonp &apos;handlecallback&apos;
+}).then(res =&gt; ...)
+</code></pre><p>node</p>
+<pre><code>var querystring = require(&apos;querystring&apos;);
+var http = require(&apos;http&apos;);
+var server = http.createServer();
+
+server.on(&apos;request&apos;, function(req, res) {
+    var params = querystring.parse(req.url.split(&apos;?&apos;)[1]);
+    var fn = params.callback;
+
+    // jsonp&#x8FD4;&#x56DE;&#x8BBE;&#x7F6E;
+    res.writeHead(200, { &apos;Content-Type&apos;: &apos;text/javascript&apos; });
+    res.write(fn + &apos;(&apos; + JSON.stringify(params) + &apos;)&apos;);
+
+    res.end();
+});
+
+server.listen(&apos;8080&apos;);
+console.log(&apos;Server is running at port 8080...&apos;);
+</code></pre><blockquote>
+<p>&#x7F3A;&#x70B9;&#xFF1A;&#x53EA;&#x80FD;&#x53D1;&#x9001;get&#x8BF7;&#x6C42;&#xFF0C;XMLHttpRequest&#x9519;&#x8BEF;&#x5904;&#x7406;&#x673A;&#x5236;&#x66F4;&#x597D; &#x4F18;&#x70B9;&#xFF1A;&#x517C;&#x5BB9;&#x6027;&#x597D;</p>
+</blockquote>
+<h4 id="cors&#x8DE8;&#x57DF;&#x8D44;&#x6E90;&#x5171;&#x4EAB;"><a name="cors&#x8DE8;&#x57DF;&#x8D44;&#x6E90;&#x5171;&#x4EAB;" class="anchor-navigation-ex-anchor" href="#cors&#x8DE8;&#x57DF;&#x8D44;&#x6E90;&#x5171;&#x4EAB;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="cors&#x8DE8;&#x57DF;&#x8D44;&#x6E90;&#x5171;&#x4EAB;" class="plugin-anchor" href="#cors&#x8DE8;&#x57DF;&#x8D44;&#x6E90;&#x5171;&#x4EAB;"><i class="fa fa-link" aria-hidden="true"></i></a>CORS(&#x8DE8;&#x57DF;&#x8D44;&#x6E90;&#x5171;&#x4EAB;)</h4>
+<p>cross-origin-resource-sharing:&#x5141;&#x8BB8;&#x6D4F;&#x89C8;&#x5668;&#x5411;&#x8DE8;&#x57DF;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;XMLHttpRequest&#x8BF7;&#x6C42;&#xFF0C;&#x5BA2;&#x670D;ajax&#x53EA;&#x80FD;&#x540C;&#x6E90;&#x4F7F;&#x7528;&#x7684;&#x7F3A;&#x70B9;&#xFF0C;&#x9700;&#x8981;&#x6D4F;&#x89C8;&#x5668;&#x548C;&#x670D;&#x52A1;&#x7AEF;&#x540C;&#x65F6;&#x652F;&#x6301;</p>
+<blockquote>
+<p>&#x8DE8;&#x57DF;&#x8BF7;&#x6C42;&#xFF1A;&#x7B80;&#x5355;&#x8BF7;&#x6C42;&#xFF0C;&#x975E;&#x7B80;&#x5355;&#x8BF7;&#x6C42;</p>
+<h5 id="&#x7B80;&#x5355;&#x8BF7;&#x6C42;&#xFF1A;&#x540C;&#x65F6;&#x6EE1;&#x8DB3;&#x4EE5;&#x4E0B;&#x4E24;&#x4E2A;&#x6761;&#x4EF6;"><a name="&#x7B80;&#x5355;&#x8BF7;&#x6C42;&#xFF1A;&#x540C;&#x65F6;&#x6EE1;&#x8DB3;&#x4EE5;&#x4E0B;&#x4E24;&#x4E2A;&#x6761;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x5355;&#x8BF7;&#x6C42;&#xFF1A;&#x540C;&#x65F6;&#x6EE1;&#x8DB3;&#x4EE5;&#x4E0B;&#x4E24;&#x4E2A;&#x6761;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B80;&#x5355;&#x8BF7;&#x6C42;&#xFF1A;&#x540C;&#x65F6;&#x6EE1;&#x8DB3;&#x4EE5;&#x4E0B;&#x4E24;&#x4E2A;&#x6761;&#x4EF6;" class="plugin-anchor" href="#&#x7B80;&#x5355;&#x8BF7;&#x6C42;&#xFF1A;&#x540C;&#x65F6;&#x6EE1;&#x8DB3;&#x4EE5;&#x4E0B;&#x4E24;&#x4E2A;&#x6761;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B80;&#x5355;&#x8BF7;&#x6C42;&#xFF1A;&#x540C;&#x65F6;&#x6EE1;&#x8DB3;&#x4EE5;&#x4E0B;&#x4E24;&#x4E2A;&#x6761;&#x4EF6;</h5>
+<ul>
+<li>&#x4F7F;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x4E3A;&#xFF1A;get | post | head</li>
+<li>&#x8BF7;&#x6C42;&#x7684;header&#x662F;&#xFF1A;Accept Accept-Language Content-Language Content-Type: application/x-www-form-urlencoded | multipart/formata | text/plain</li>
+</ul>
+</blockquote>
+<p>&#x7B80;&#x5355;&#x8BF7;&#x6C42;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x76F4;&#x63A5;&#x53D1;&#x51FA;cors&#x8BF7;&#x6C42;&#xFF0C;&#x5C31;&#x662F;&#x5728;&#x5934;&#x4FE1;&#x606F;&#x4E2D;&#x589E;&#x52A0;&#x4E00;&#x4E2A;origin&#x5B57;&#x6BB5;&#xFF0C;&#x6307;&#x660E;&#x8BF7;&#x6C42;&#x7684;&#x534F;&#x8BAE;&#x57DF;&#x540D;&#x7AEF;&#x53E3;&#xFF08;&#x6E90;&#xFF09;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x636E;&#x6B64;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x540C;&#x610F;&#x8BF7;&#x6C42;</p>
+<blockquote>
+<p>cors&#x8BF7;&#x6C42;&#x8BBE;&#x7F6E;&#x7684;&#x54CD;&#x5E94;&#x5934;&#x5B57;&#x6BB5;&#x90FD;&#x4EE5;Access-Control-&#x5F00;&#x5934;  </p>
+</blockquote>
+<p>1&#xFF09;Access-Control-Allow-Origin&#xFF1A;&#x5FC5;&#x9009;<br>&#x5B83;&#x7684;&#x503C;&#x8981;&#x4E48;&#x662F;&#x8BF7;&#x6C42;&#x65F6;Origin&#x5B57;&#x6BB5;&#x7684;&#x503C;&#xFF0C;&#x8981;&#x4E48;&#x662F;&#x4E00;&#x4E2A;*&#xFF0C;&#x8868;&#x793A;&#x63A5;&#x53D7;&#x4EFB;&#x610F;&#x57DF;&#x540D;&#x7684;&#x8BF7;&#x6C42;&#x3002; </p>
+<p>2&#xFF09;Access-Control-Allow-Credentials&#xFF1A;&#x53EF;&#x9009;<br>&#x5B83;&#x7684;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x503C;&#xFF0C;&#x8868;&#x793A;&#x662F;&#x5426;&#x5141;&#x8BB8;&#x53D1;&#x9001;Cookie&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;Cookie&#x4E0D;&#x5305;&#x62EC;&#x5728;CORS&#x8BF7;&#x6C42;&#x4E4B;&#x4E2D;&#x3002;&#x8BBE;&#x4E3A;true&#xFF0C;&#x5373;&#x8868;&#x793A;&#x670D;&#x52A1;&#x5668;&#x660E;&#x786E;&#x8BB8;&#x53EF;&#xFF0C;Cookie&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x5728;&#x8BF7;&#x6C42;&#x4E2D;&#xFF0C;&#x4E00;&#x8D77;&#x53D1;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#x3002;&#x8FD9;&#x4E2A;&#x503C;&#x4E5F;&#x53EA;&#x80FD;&#x8BBE;&#x4E3A;true&#xFF0C;&#x5982;&#x679C;&#x670D;&#x52A1;&#x5668;&#x4E0D;&#x8981;&#x6D4F;&#x89C8;&#x5668;&#x53D1;&#x9001;Cookie&#xFF0C;&#x5220;&#x9664;&#x8BE5;&#x5B57;&#x6BB5;&#x5373;&#x53EF;&#x3002;    </p>
+<p>3&#xFF09;Access-Control-Expose-Headers&#xFF1A;&#x53EF;&#x9009;<br>CORS&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;XMLHttpRequest&#x5BF9;&#x8C61;&#x7684;getResponseHeader()&#x65B9;&#x6CD5;&#x53EA;&#x80FD;&#x62FF;&#x5230;6&#x4E2A;&#x57FA;&#x672C;&#x5B57;&#x6BB5;&#xFF1A;Cache-Control&#x3001;Content-Language&#x3001;Content-Type&#x3001;Expires&#x3001;Last-Modified&#x3001;Pragma&#x3002;&#x5982;&#x679C;&#x60F3;&#x62FF;&#x5230;&#x5176;&#x4ED6;&#x5B57;&#x6BB5;&#xFF0C;&#x5C31;&#x5FC5;&#x987B;&#x5728;Access-Control-Expose-Headers&#x91CC;&#x9762;&#x6307;&#x5B9A;&#x3002;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x6307;&#x5B9A;&#xFF0C;getResponseHeader(&apos;FooBar&apos;)&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;FooBar&#x5B57;&#x6BB5;&#x7684;&#x503C;&#x3002;</p>
+<h5 id="&#x975E;&#x7B80;&#x5355;&#x8BF7;&#x6C42;"><a name="&#x975E;&#x7B80;&#x5355;&#x8BF7;&#x6C42;" class="anchor-navigation-ex-anchor" href="#&#x975E;&#x7B80;&#x5355;&#x8BF7;&#x6C42;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x975E;&#x7B80;&#x5355;&#x8BF7;&#x6C42;" class="plugin-anchor" href="#&#x975E;&#x7B80;&#x5355;&#x8BF7;&#x6C42;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x975E;&#x7B80;&#x5355;&#x8BF7;&#x6C42;</h5>
+<p>&#x975E;&#x7B80;&#x5355;&#x8BF7;&#x6C42;&#x662F;&#x90A3;&#x79CD;&#x5BF9;&#x670D;&#x52A1;&#x5668;&#x6709;&#x7279;&#x6B8A;&#x8981;&#x6C42;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x6BD4;&#x5982;&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#x662F;PUT&#x6216;DELETE&#xFF0C;&#x6216;&#x8005;Content-Type&#x5B57;&#x6BB5;&#x7684;&#x7C7B;&#x578B;&#x662F;application/json&#x3002;&#x975E;&#x7B80;&#x5355;&#x8BF7;&#x6C42;&#x7684;CORS&#x8BF7;&#x6C42;&#xFF0C;&#x4F1A;&#x5728;&#x6B63;&#x5F0F;&#x901A;&#x4FE1;&#x4E4B;&#x524D;&#xFF0C;&#x589E;&#x52A0;&#x4E00;&#x6B21;HTTP&#x67E5;&#x8BE2;&#x8BF7;&#x6C42;&#xFF0C;&#x79F0;&#x4E3A;&quot;&#x9884;&#x68C0;&quot;&#x8BF7;&#x6C42;&#xFF08;preflight&#xFF09;</p>
+<blockquote>
+<p>&#x9884;&#x68C0;&#x8BF7;&#x6C42;</p>
+</blockquote>
+<p>&#x9884;&#x68C0;&quot;&#x8BF7;&#x6C42;&#x7528;&#x7684;&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#x662F;OPTIONS&#xFF0C;&#x8868;&#x793A;&#x8FD9;&#x4E2A;&#x8BF7;&#x6C42;&#x662F;&#x7528;&#x6765;&#x8BE2;&#x95EE;&#x7684;&#x3002;&#x8BF7;&#x6C42;&#x5934;&#x4FE1;&#x606F;&#x91CC;&#x9762;&#xFF0C;&#x5173;&#x952E;&#x5B57;&#x6BB5;&#x662F;Origin&#xFF0C;&#x8868;&#x793A;&#x8BF7;&#x6C42;&#x6765;&#x81EA;&#x54EA;&#x4E2A;&#x6E90;&#x3002;&#x9664;&#x4E86;Origin&#x5B57;&#x6BB5;&#xFF0C;&quot;&#x9884;&#x68C0;&quot;&#x8BF7;&#x6C42;&#x7684;&#x5934;&#x4FE1;&#x606F;&#x5305;&#x62EC;&#x4E24;&#x4E2A;&#x7279;&#x6B8A;&#x5B57;&#x6BB5;&#x3002;<br>1&#xFF09;Access-Control-Request-Method&#xFF1A;&#x5FC5;&#x9009;<br>&#x7528;&#x6765;&#x5217;&#x51FA;&#x6D4F;&#x89C8;&#x5668;&#x7684;CORS&#x8BF7;&#x6C42;&#x4F1A;&#x7528;&#x5230;&#x54EA;&#x4E9B;HTTP&#x65B9;&#x6CD5;&#xFF0C;&#x4E0A;&#x4F8B;&#x662F;PUT&#x3002;<br>2&#xFF09;Access-Control-Request-Headers&#xFF1A;&#x53EF;&#x9009;<br>&#x8BE5;&#x5B57;&#x6BB5;&#x662F;&#x4E00;&#x4E2A;&#x9017;&#x53F7;&#x5206;&#x9694;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6307;&#x5B9A;&#x6D4F;&#x89C8;&#x5668;CORS&#x8BF7;&#x6C42;&#x4F1A;&#x989D;&#x5916;&#x53D1;&#x9001;&#x7684;&#x5934;&#x4FE1;&#x606F;&#x5B57;&#x6BB5;&#xFF0C;&#x4E0A;&#x4F8B;&#x662F;X-Custom-Header&#x3002;</p>
+<blockquote>
+<p>&#x9884;&#x68C0;&#x8BF7;&#x6C42;&#x7684;&#x56DE;&#x5E94;</p>
+</blockquote>
+<p>&#x670D;&#x52A1;&#x5668;&#x6536;&#x5230;&quot;&#x9884;&#x68C0;&quot;&#x8BF7;&#x6C42;&#x4EE5;&#x540E;&#xFF0C;&#x68C0;&#x67E5;&#x4E86;Origin&#x3001;Access-Control-Request-Method&#x548C;Access-Control-Request-Headers&#x5B57;&#x6BB5;&#x4EE5;&#x540E;&#xFF0C;&#x786E;&#x8BA4;&#x5141;&#x8BB8;&#x8DE8;&#x6E90;&#x8BF7;&#x6C42;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x505A;&#x51FA;&#x56DE;&#x5E94;&#x3002;
+HTTP&#x56DE;&#x5E94;&#x4E2D;&#xFF0C;&#x9664;&#x4E86;&#x5173;&#x952E;&#x7684;&#x662F;Access-Control-Allow-Origin&#x5B57;&#x6BB5;&#xFF0C;&#x5176;&#x4ED6;CORS&#x76F8;&#x5173;&#x5B57;&#x6BB5;&#x5982;&#x4E0B;&#xFF1A;<br>1&#xFF09;Access-Control-Allow-Methods&#xFF1A;&#x5FC5;&#x9009;<br>&#x5B83;&#x7684;&#x503C;&#x662F;&#x9017;&#x53F7;&#x5206;&#x9694;&#x7684;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8868;&#x660E;&#x670D;&#x52A1;&#x5668;&#x652F;&#x6301;&#x7684;&#x6240;&#x6709;&#x8DE8;&#x57DF;&#x8BF7;&#x6C42;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x6240;&#x6709;&#x652F;&#x6301;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x800C;&#x4E0D;&#x5355;&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x8BF7;&#x6C42;&#x7684;&#x90A3;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x662F;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x591A;&#x6B21;&quot;&#x9884;&#x68C0;&quot;&#x8BF7;&#x6C42;&#x3002;<br>2&#xFF09;Access-Control-Allow-Headers<br>&#x5982;&#x679C;&#x6D4F;&#x89C8;&#x5668;&#x8BF7;&#x6C42;&#x5305;&#x62EC;Access-Control-Request-Headers&#x5B57;&#x6BB5;&#xFF0C;&#x5219;Access-Control-Allow-Headers&#x5B57;&#x6BB5;&#x662F;&#x5FC5;&#x9700;&#x7684;&#x3002;&#x5B83;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x9017;&#x53F7;&#x5206;&#x9694;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8868;&#x660E;&#x670D;&#x52A1;&#x5668;&#x652F;&#x6301;&#x7684;&#x6240;&#x6709;&#x5934;&#x4FE1;&#x606F;&#x5B57;&#x6BB5;&#xFF0C;&#x4E0D;&#x9650;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x5728;&quot;&#x9884;&#x68C0;&quot;&#x4E2D;&#x8BF7;&#x6C42;&#x7684;&#x5B57;&#x6BB5;&#x3002;<br>3&#xFF09;Access-Control-Allow-Credentials&#xFF1A;&#x53EF;&#x9009;<br>&#x8BE5;&#x5B57;&#x6BB5;&#x4E0E;&#x7B80;&#x5355;&#x8BF7;&#x6C42;&#x65F6;&#x7684;&#x542B;&#x4E49;&#x76F8;&#x540C;&#x3002;<br>4&#xFF09;Access-Control-Max-Age&#xFF1A;&#x53EF;&#x9009;<br>&#x7528;&#x6765;&#x6307;&#x5B9A;&#x672C;&#x6B21;&#x9884;&#x68C0;&#x8BF7;&#x6C42;&#x7684;&#x6709;&#x6548;&#x671F;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x79D2;&#x3002;
+1&#x3001;&#x539F;&#x751F;ajax</p>
+<pre><code>var xhr = new XMLHttpRequest(); // IE8/9&#x9700;&#x7528;window.XDomainRequest&#x517C;&#x5BB9;
+
+// &#x524D;&#x7AEF;&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x5E26;cookie
+xhr.withCredentials = true;
+
+xhr.open(&apos;post&apos;, &apos;http://www.domain2.com:8080/login&apos;, true);
+xhr.setRequestHeader(&apos;Content-Type&apos;, &apos;application/x-www-form-urlencoded&apos;);
+xhr.send(&apos;user=admin&apos;);
+
+xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4 &amp;&amp; xhr.status == 200) {
+        alert(xhr.responseText);
+    }
+};
+`
+</code></pre><p>2&#x3001; node</p>
+<pre><code>var http = require(&apos;http&apos;);
+var server = http.createServer();
+var qs = require(&apos;querystring&apos;);
+
+server.on(&apos;request&apos;, function(req, res) {
+    var postData = &apos;&apos;;
+
+    // &#x6570;&#x636E;&#x5757;&#x63A5;&#x6536;&#x4E2D;
+    req.addListener(&apos;data&apos;, function(chunk) {
+        postData += chunk;
+    });
+
+    // &#x6570;&#x636E;&#x63A5;&#x6536;&#x5B8C;&#x6BD5;
+    req.addListener(&apos;end&apos;, function() {
+        postData = qs.parse(postData);
+
+        // &#x8DE8;&#x57DF;&#x540E;&#x53F0;&#x8BBE;&#x7F6E;
+        res.writeHead(200, {
+            &apos;Access-Control-Allow-Credentials&apos;: &apos;true&apos;,     // &#x540E;&#x7AEF;&#x5141;&#x8BB8;&#x53D1;&#x9001;Cookie
+            &apos;Access-Control-Allow-Origin&apos;: &apos;http://www.domain1.com&apos;,    // &#x5141;&#x8BB8;&#x8BBF;&#x95EE;&#x7684;&#x57DF;&#xFF08;&#x534F;&#x8BAE;+&#x57DF;&#x540D;+&#x7AEF;&#x53E3;&#xFF09;
+            /* 
+             * &#x6B64;&#x5904;&#x8BBE;&#x7F6E;&#x7684;cookie&#x8FD8;&#x662F;domain2&#x7684;&#x800C;&#x975E;domain1&#xFF0C;&#x56E0;&#x4E3A;&#x540E;&#x7AEF;&#x4E5F;&#x4E0D;&#x80FD;&#x8DE8;&#x57DF;&#x5199;cookie(nginx&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;)&#xFF0C;
+             * &#x4F46;&#x53EA;&#x8981;domain2&#x4E2D;&#x5199;&#x5165;&#x4E00;&#x6B21;cookie&#x8BA4;&#x8BC1;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x8DE8;&#x57DF;&#x63A5;&#x53E3;&#x90FD;&#x80FD;&#x4ECE;domain2&#x4E2D;&#x83B7;&#x53D6;cookie&#xFF0C;&#x4ECE;&#x800C;&#x5B9E;&#x73B0;&#x6240;&#x6709;&#x7684;&#x63A5;&#x53E3;&#x90FD;&#x80FD;&#x8DE8;&#x57DF;&#x8BBF;&#x95EE;
+             */
+            &apos;Set-Cookie&apos;: &apos;l=a123456;Path=/;Domain=www.domain2.com;HttpOnly&apos;  // HttpOnly&#x7684;&#x4F5C;&#x7528;&#x662F;&#x8BA9;js&#x65E0;&#x6CD5;&#x8BFB;&#x53D6;cookie
+        });
+
+        res.write(JSON.stringify(postData));
+        res.end();
+    });
+});
+
+server.listen(&apos;8080&apos;);
+console.log(&apos;Server is running at port 8080...&apos;);
+</code></pre><h3 id="postmessage"><a name="postmessage" class="anchor-navigation-ex-anchor" href="#postmessage"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. postMessage</h3>
+<p>window.postMessage(data,targetOrigin)<br>&#x662F;html5&#x65B0;&#x5F15;&#x8FDB;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5B83;&#x6765;&#x5411;&#x5176;&#x5B83;&#x7684;window&#x5BF9;&#x8C61;&#x53D1;&#x9001;&#x6D88;&#x606F;&#xFF0C;&#x65E0;&#x8BBA;&#x8FD9;&#x4E2A;window&#x5BF9;&#x8C61;&#x662F;&#x5C5E;&#x4E8E;&#x540C;&#x6E90;&#x6216;&#x4E0D;&#x540C;&#x6E90;&#xFF0C;&#x76EE;&#x524D;IE8+&#x3001;FireFox&#x3001;Chrome&#x3001;Opera&#x7B49;&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x5DF2;&#x7ECF;&#x652F;&#x6301;window.postMessage&#x65B9;&#x6CD5;&#x3002;</p>
+<pre><code>otherWindow.postMessage(message, targetOrigin, [transfer]);
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="跨域.html" class="navigation navigation-prev " aria-label="Previous page: HTTP">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="浏览器缓存.html" class="navigation navigation-next " aria-label="Next page: 浏览器缓存">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"跨域","level":"1.2.1","depth":2,"next":{"title":"浏览器缓存","level":"1.2.2","depth":2,"path":"HTTP/浏览器缓存.md","ref":"HTTP/浏览器缓存.md","articles":[]},"previous":{"title":"HTTP","level":"1.2","depth":1,"path":"HTTP/跨域.MD","ref":"HTTP/跨域.MD","articles":[{"title":"跨域","level":"1.2.1","depth":2,"path":"HTTP/跨域.md","ref":"HTTP/跨域.md","articles":[]},{"title":"浏览器缓存","level":"1.2.2","depth":2,"path":"HTTP/浏览器缓存.md","ref":"HTTP/浏览器缓存.md","articles":[]},{"title":"输入一个URL","level":"1.2.3","depth":2,"path":"HTTP/输入一个URL.md","ref":"HTTP/输入一个URL.md","articles":[]},{"title":"contentType","level":"1.2.4","depth":2,"path":"HTTP/contentType.md","ref":"HTTP/contentType.md","articles":[]},{"title":"cookie-session-web storage","level":"1.2.5","depth":2,"path":"HTTP/cookie-session-web storage.md","ref":"HTTP/cookie-session-web storage.md","articles":[]},{"title":"get和post区别","level":"1.2.6","depth":2,"path":"HTTP/get和post区别.md","ref":"HTTP/get和post区别.md","articles":[]},{"title":"http2多路复用","level":"1.2.7","depth":2,"path":"HTTP/http2多路复用.md","ref":"HTTP/http2多路复用.md","articles":[]},{"title":"HTTP报文","level":"1.2.8","depth":2,"path":"HTTP/HTTP报文.md","ref":"HTTP/HTTP报文.md","articles":[]},{"title":"HTTP和HTTPS","level":"1.2.9","depth":2,"path":"HTTP/HTTP和HTTPS.md","ref":"HTTP/HTTP和HTTPS.md","articles":[]},{"title":"HTTP状态码","level":"1.2.10","depth":2,"path":"HTTP/HTTP状态码.md","ref":"HTTP/HTTP状态码.md","articles":[]},{"title":"tcp三次握手四次挥手","level":"1.2.11","depth":2,"path":"HTTP/tcp三次握手四次挥手.md","ref":"HTTP/tcp三次握手四次挥手.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github-buttons","sharing-plus","anchor-navigation-ex","favicon","livereload"],"styles":{},"pluginsConfig":{"livereload":{},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{},"github-buttons":{},"expandable-chapters-small":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"zouzou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zouzou","language":"zh-hans","gitbook":"*","description":"questions and answers"},"file":{"path":"HTTP/跨域.md","mtime":"2019-08-23T07:19:34.779Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-23T10:31:40.549Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
