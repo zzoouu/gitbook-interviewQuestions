@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>判断数组 · zouzou</title>
+        <title>手动实现call.apply.bind · zouzou</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -63,10 +63,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="观察者模式和发布订阅模式.html" />
+    <link rel="next" href="数组乱序.html" />
     
     
-    <link rel="prev" href="链式取值之函子MayBe.html" />
+    <link rel="prev" href="手动实现promise.html" />
     
 
     
@@ -430,7 +430,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.11" data-path="判断数组.html">
+        <li class="chapter " data-level="1.3.11" data-path="判断数组.html">
             
                 <a href="判断数组.html">
             
@@ -547,7 +547,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.20" data-path="手写call.apply.bind.html">
+        <li class="chapter active" data-level="1.3.20" data-path="手写call.apply.bind.html">
             
                 <a href="手写call.apply.bind.html">
             
@@ -1467,7 +1467,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >判断数组</a>
+        <a href=".." >手动实现call.apply.bind</a>
     </h1>
 </div>
 
@@ -1482,31 +1482,63 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><ul><li><span class="title-icon "></span><a href="#instanceof"><b>1.1.1. </b>instanceof</a></li><li><span class="title-icon "></span><a href="#objectprototypetostringcall"><b>1.1.2. </b>Object.prototype.toString.call()</a></li><li><span class="title-icon "></span><a href="#arrayisarray"><b>1.1.3. </b>Array.isArray</a></li><li><span class="title-icon "></span><a href="#arrconstructor--array"><b>1.1.4. </b>arr.constructor === Array</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h3 id="instanceof"><a name="instanceof" class="anchor-navigation-ex-anchor" href="#instanceof"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. instanceof</h3>
-<p>instanceof&#x662F;&#x901A;&#x8FC7;&#x5224;&#x65AD;&#x5BF9;&#x8C61;&#x7684;&#x539F;&#x578B;&#x94FE;&#x4E0A;&#x662F;&#x5426;&#x5B58;&#x5728;&#x8BE5;&#x7C7B;&#x578B;&#x7684;prototype
-&#x4F7F;&#x7528;instanceof&#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x4E3A;&#x6570;&#x7EC4;&#xFF0C;instanceof&#x4F1A;&#x53BB;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x539F;&#x578B;&#x94FE;&#x4E0A;&#x53BB;&#x5BFB;&#x627E;&#x662F;&#x5426;&#x5B58;&#x5728;Array&#x7684;&#x539F;&#x578B;&#xFF0C;&#x82E5;&#x6709;&#x8FD4;&#x56DE;true&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;false</p>
-<blockquote>
-<p>[] instanceof Array -&gt; true
-instanceof&#x53EA;&#x80FD;&#x5224;&#x65AD;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#xFF0C;&#x4E0D;&#x80FD;&#x5224;&#x65AD;&#x539F;&#x59CB;&#x7C7B;&#x578B;&#xFF0C;&#x4E14;&#x6240;&#x6709;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;instanceof Object&#x90FD;&#x4E3A;true</p>
-</blockquote>
-<h3 id="objectprototypetostringcall"><a name="objectprototypetostringcall" class="anchor-navigation-ex-anchor" href="#objectprototypetostringcall"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. Object.prototype.toString.call()</h3>
-<p>&#x6BCF;&#x4E00;&#x4E2A;&#x7EE7;&#x627F;Object&#x7684;&#x5BF9;&#x8C61;&#x90FD;&#x6709;toString()&#x65B9;&#x6CD5;&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE;[object type]&#xFF0C;type&#x4E3A;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x82E5;&#x975E;Object&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;toString(),&#x4F1A;&#x8FD4;&#x56DE;&#x5185;&#x5BB9;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;call&#x6216;apply&#x6765;&#x6539;&#x53D8;toString&#x7684;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;
-&#x5373;&#x4F7F;&#x662F;null&#x6216;&#x8005;undefine&#x90FD;&#x80FD;&#x8FDB;&#x884C;&#x5224;&#x65AD;</p>
-<pre><code>Object.prototype.toString.call([1,2]) // &quot;[object Array]&quot;
-Object.prototype.toString.call(&apos;An&apos;) // &quot;[object String]&quot;
-Object.prototype.toString.call(1) // &quot;[object Number]&quot;
-Object.prototype.toString.call(Symbol(1)) // &quot;[object Symbol]&quot;
-Object.prototype.toString.call(null) // &quot;[object Null]&quot;
-Object.prototype.toString.call(undefined) // &quot;[object Undefined]&quot;
-Object.prototype.toString.call(function(){}) // &quot;[object Function]&quot;
-Object.prototype.toString.call({name: &apos;An&apos;}) // &quot;[object Object]&quot;
-</code></pre><h3 id="arrayisarray"><a name="arrayisarray" class="anchor-navigation-ex-anchor" href="#arrayisarray"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. Array.isArray</h3>
-<p>&#x6765;&#x5224;&#x65AD;&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x4E3A;&#x6570;&#x7EC4;</p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><ul><li><span class="title-icon "></span><a href="#&#x624B;&#x5199;call"><b>1.1.1. </b>&#x624B;&#x5199;call</a></li><li><span class="title-icon "></span><a href="#&#x624B;&#x5199;apply"><b>1.1.2. </b>&#x624B;&#x5199;apply</a></li><li><span class="title-icon "></span><a href="#&#x624B;&#x5199;bind"><b>1.1.3. </b>&#x624B;&#x5199;bind</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h3 id="&#x624B;&#x5199;call"><a name="&#x624B;&#x5199;call" class="anchor-navigation-ex-anchor" href="#&#x624B;&#x5199;call"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. &#x624B;&#x5199;call</h3>
 <ul>
-<li>Array.isArray&#x662F;es5&#x65B0;&#x589E;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5F53;&#x4E0D;&#x5B58;&#x5728;Array.isArray&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Object.prototype.toString.call()</li>
-<li>&#x82E5;&#x7528;&#x6765;&#x68C0;&#x6D4B;Array&#x5B9E;&#x4F8B;&#xFF0C;Array.isArray&#x6027;&#x80FD;&#x4F18;&#x4E8E;instanceof</li>
+<li>&#x5224;&#x65AD;&#x5F53;&#x524D;this&#x662F;&#x5426;&#x4E3A;&#x51FD;&#x6570;&#xFF0C;&#x9632;&#x6B62;Function.prototype.myCall()&#x76F4;&#x63A5;&#x8C03;&#x7528;</li>
+<li>context&#x4E3A;&#x53EF;&#x9009;&#x53C2;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x4F20;&#x7684;&#x8BDD;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;window</li>
+<li>&#x4E3A;context&#x521B;&#x5EFA;&#x4E00;&#x4E2A;Symbol(&#x4FDD;&#x8BC1;&#x4E0D;&#x56DE;&#x91CD;&#x540D;)&#x5C5E;&#x6027;&#xFF0C;&#x5C06;&#x5F53;&#x524D;&#x51FD;&#x6570;&#x8D4B;&#x503C;&#x7ED9;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;</li>
+<li>&#x5904;&#x7406;&#x53C2;&#x6570;&#xFF0C;&#x4F20;&#x5165;&#x53C2;&#x6570;</li>
+<li>&#x6267;&#x884C;&#x51FD;&#x6570;&#x540E;&#x5220;&#x9664;Symbol&#x5C5E;&#x6027;<pre><code>Function.prorotype.myCall = function(context = window, args){
+  if(this === Function.prototype){
+      // &#x9632;&#x6B62;Function.prototype.myCall()&#x76F4;&#x63A5;&#x8C03;&#x7528;
+      return undefined
+  }
+  context = context || window
+  const fn = Symbo()
+  // this === &#x8C03;&#x7528;myCall&#x7684;&#x51FD;&#x6570;
+  // func.myCall -&gt; this === func
+  context[fn] = this
+  const result = context[fn](...args)
+  delete context[fn]
+  return result
+}
+</code></pre></li>
 </ul>
-<h3 id="arrconstructor--array"><a name="arrconstructor--array" class="anchor-navigation-ex-anchor" href="#arrconstructor--array"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.4. arr.constructor === Array</h3>
+<h3 id="&#x624B;&#x5199;apply"><a name="&#x624B;&#x5199;apply" class="anchor-navigation-ex-anchor" href="#&#x624B;&#x5199;apply"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. &#x624B;&#x5199;apply</h3>
+<pre><code>Function.prototype.myApply = function(context, arr){
+    if(this === Function.prototype){
+        return undefined
+    }
+    const fn = Symbol()
+    context[fn] = this
+    let result
+    if(Array.isArray(args)){
+        result = context[fn](...args)
+    }else {
+        result = context[fn]()
+    }
+    delete context[fn]
+    return result
+}
+</code></pre><h3 id="&#x624B;&#x5199;bind"><a name="&#x624B;&#x5199;bind" class="anchor-navigation-ex-anchor" href="#&#x624B;&#x5199;bind"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. &#x624B;&#x5199;bind</h3>
+<ul>
+<li>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x51FD;&#x6570;</li>
+<li>&#x5224;&#x65AD;&#x662F;&#x5426;&#x4F5C;&#x4E3A;&#x6784;&#x9020;&#x51FD;&#x6570;&#x8C03;&#x7528;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x5219;&#x7528;new&#x8C03;&#x7528;&#x5F53;&#x524D;&#x51FD;&#x6570;</li>
+<li>&#x5982;&#x679C;&#x4E0D;&#x662F;&#xFF0C;&#x7528;apply&#xFF0C;&#x4F20;&#x5165;context&#x548C;&#x5904;&#x7406;&#x597D;&#x7684;&#x53C2;&#x6570;
+```
+Function.prototype.myBind = function(context, ...args1){
+  if(this === Function.prototype){<pre><code>  return undefined
+</code></pre>  }
+  const _this = this
+  return function F(...args2){<pre><code>  // &#x5224;&#x65AD;&#x662F;&#x5426;&#x7528;&#x4E8E;&#x6784;&#x9020;&#x51FD;&#x6570;
+  if(this instanceof F){
+      return new _this(...args1, ...args2)
+  }
+  return _this.apply(context, args1.concat(args2))
+</code></pre>  }
+}</li>
+</ul>
+<p>```</p>
 
                                 
                                 </section>
@@ -1534,12 +1566,12 @@ Object.prototype.toString.call({name: &apos;An&apos;}) // &quot;[object Object]&
 
             
                 
-                <a href="链式取值之函子MayBe.html" class="navigation navigation-prev " aria-label="Previous page: 链式取值之函子MayBe">
+                <a href="手动实现promise.html" class="navigation navigation-prev " aria-label="Previous page: 手动实现promise">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="观察者模式和发布订阅模式.html" class="navigation navigation-next " aria-label="Next page: 观察者模式和发布订阅模式">
+                <a href="数组乱序.html" class="navigation navigation-next " aria-label="Next page: 数组乱序">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1550,7 +1582,7 @@ Object.prototype.toString.call({name: &apos;An&apos;}) // &quot;[object Object]&
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"判断数组","level":"1.3.11","depth":2,"next":{"title":"观察者模式和发布订阅模式","level":"1.3.12","depth":2,"path":"JS/观察者模式和发布订阅模式.md","ref":"JS/观察者模式和发布订阅模式.md","articles":[]},"previous":{"title":"链式取值之函子MayBe","level":"1.3.10","depth":2,"path":"JS/链式取值之函子MayBe.md","ref":"JS/链式取值之函子MayBe.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github-buttons","sharing-plus","anchor-navigation-ex","favicon"],"styles":{},"pluginsConfig":{"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{},"github-buttons":{},"expandable-chapters-small":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"zouzou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zouzou","language":"zh-hans","gitbook":"*","description":"questions and answers"},"file":{"path":"JS/判断数组.md","mtime":"2019-09-16T00:52:38.280Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-16T00:56:51.666Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"手动实现call.apply.bind","level":"1.3.20","depth":2,"next":{"title":"数组乱序","level":"1.3.21","depth":2,"path":"JS/数组乱序.md","ref":"JS/数组乱序.md","articles":[]},"previous":{"title":"手动实现promise","level":"1.3.19","depth":2,"path":"JS/手动实现promise.md","ref":"JS/手动实现promise.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github-buttons","sharing-plus","anchor-navigation-ex","favicon"],"styles":{},"pluginsConfig":{"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{},"github-buttons":{},"expandable-chapters-small":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"zouzou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zouzou","language":"zh-hans","gitbook":"*","description":"questions and answers"},"file":{"path":"JS/手写call.apply.bind.md","mtime":"2019-09-16T00:50:51.972Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-16T00:56:51.666Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
